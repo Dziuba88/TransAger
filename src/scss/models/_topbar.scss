@@ -1,0 +1,110 @@
+.topbar {
+  background-color: $darkColor;
+  color: $lightColor;
+  padding: 5px 0;
+  font-size: 12px;
+  line-height: 20px;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contacts {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  &__phone {
+    padding-right: 1em;
+    .fa {
+      width: 1.5em;
+    }
+    a {
+      color: $lightColor;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__schedule {
+    .fa {
+      width: 1.5em;
+    }
+
+    span {
+      margin-right: 1em;
+    }
+  }
+
+  &__contols {
+    flex: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__cabinet {
+    display: block;
+    padding-right: 1em;
+    color: $lightColor;
+    text-decoration: none;
+
+    .fa {
+      width: 1.5em;
+    }
+    &:hover {
+      color: $lightColor;
+      opacity: 0.75;
+    }
+  }
+
+  &__lang {
+    .dropdown__toggle {
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+    .dropdown__menu {
+      right: 0;
+      margin-top: 6px;
+      background-color: $darkColor;
+
+      li {
+        border-bottom: 1px solid $grayColor;
+
+        &.current {
+          display: none;
+        }
+
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        a {
+          display: block;
+          color: white;
+          text-decoration: none;
+          padding: 5px 10px;
+          white-space: nowrap;
+
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    &__schedule {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,230 @@
+.form {
+  &__input {
+    margin-bottom: 10px;
+
+    input {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      height: 45px;
+      border: 1px solid $lightColor;
+      border-radius: 3px;
+      color: $baseColor;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      text-align: left;
+      outline: none;
+      padding: 5px 10px;
+      transition: .15s ease-in-out;
+
+        &::-webkit-input-placeholder {transition: .15s ease-in-out}
+        &::-moz-placeholder {transition: .15s ease-in-out}
+        &:-ms-input-placeholder {transition: .15s ease-in-out}
+        &:-moz-placeholder {transition: .15s ease-in-out}
+
+        &:focus {
+        border-color: $grayColor;
+        &::-webkit-input-placeholder {color: white;}
+        &::-moz-placeholder {color: white;}
+        &:-ms-input-placeholder {color: white;}
+        &:-moz-placeholder {color: white;}
+      }
+    }
+
+    &.error input {
+      color: $accentColor; 
+      border-color: $accentColor;
+
+      &::-webkit-input-placeholder {color: $accentColor;}
+      &::-moz-placeholder {color: $accentColor;}
+      &:-ms-input-placeholder {color: $accentColor;}
+      &:-moz-placeholder {color: $accentColor;}
+
+      &:focus {
+        color: $baseColor;
+        border-color: $grayColor;
+      }
+    }
+  }
+
+  &__checkbox {
+    text-align: left;
+    margin-bottom: 10px;
+
+    input {
+      display: none;
+
+      & + label {
+        display: inline-flex;
+        align-items: center;
+        text-align: left;
+        cursor: pointer;
+
+        .icon {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 3px;
+          color: $successColor;
+          border: 1px solid $lightColor;
+          box-sizing: border-box;
+          transition: .15s ease-in-out;
+
+          .fa {
+            display: block;
+            font-size: 16px;
+            transition: .15s ease-in-out;
+            transform: scale(0);
+          }
+        }
+
+        .text {
+          display: block;
+          padding-left: 10px;
+        }
+
+        &:hover .icon {
+          border-color: $grayColor;
+          color: $grayColor;
+        }
+      }
+
+      &:checked + label {
+        .icon {
+          border-color: $successColor;
+
+          .fa {
+            transform: scale(1)
+          }
+        }
+      }
+    }
+  }
+
+  &__control {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+
+    &--separator {
+      flex: 1;
+    }
+
+    .btn {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__links {
+    font-size: 0;
+    ul > li {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 20px;
+      vertical-align: middle;
+      font-weight: 700;
+
+      &:after {
+        content: "";
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+        height: 15px;
+        width: 1px;
+        background-color: $grayColor;
+        margin: 0 10px;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+      > a {
+        color: $primaryColor;
+        text-decoration: none;
+
+        &:hover {
+        color: $accentColor;
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin: 0 -10px;
+  }
+
+}
+
+.auth-form {
+  text-align: center;
+  padding: 20px 100px;
+
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primaryColor;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    border-top: 1px solid $lightColor;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 1.2;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .form__row .form__checkbox {
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  &.thanks {
+
+    .auth-form__title {
+      color: $baseColor;
+      margin: 0 0 10px;
+    }
+
+    .thanks__icon {
+      color: $successColor;
+      border: 4px solid currentColor;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 64px;
+      line-height: 1;
+
+      .fa {
+        display: block;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  @include medium-down {
+    padding: 40px;
+  }
+
+  @include tablet-down {
+    padding: 40px 150px;
+  }
+
+  @include mobile {
+    padding: 20px 0;
+  }
+}

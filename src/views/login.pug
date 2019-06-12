@@ -1,3 +1,25 @@
 extends layouts/auth.pug
 block variables
   - pageTitle = 'Войти'
+block content
+  .container: .row.align-end
+      .col.md-6
+        .form.auth-form
+          h3.auth-form__title Войти в кабинет
+          .form__input: input(type="email", name="loginEmail", placeholder="Введите Ваш e-Mail")
+          .form__input: input(type="password", name="loginPassword", placeholder="Введите пароль")
+          .form__control
+            .form__checkbox
+              input(type="checkbox", name="loginRmember", checked="")#login-remember
+              label(for="login-remember")
+                span.icon: i.fa.fa-check(aria-hidden="true")
+                span.text Запомнить меня
+            .form__control--separator
+            button.btn.primary войти
+          .auth-form__footer
+            nav.form__links: ul
+              li: a(href="forgot.html") Забыли пароль?
+              li.text__upper: a(href="register.html") Регистрация
+
+
+

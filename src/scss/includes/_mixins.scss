@@ -1,0 +1,45 @@
+// Media Breakpoints //
+@mixin mobile {
+  @media only screen and (max-width: #{$smScreen}) {
+    @content;
+  }
+}
+@mixin tablet-up {
+  @media only screen and (min-width: #{$smScreen}) {
+    @content;
+  }
+}
+@mixin tablet-down {
+  @media only screen and (max-width: #{$mdScreen - 1}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (min-width: #{$smScreen}) and (max-width: #{$mdScreen - 1}) {
+    @content;
+  }
+}
+@mixin medium-up {
+  @media only screen and (min-width: #{$mdScreen}) {
+    @content;
+  }
+}
+@mixin medium-down {
+  @media only screen and (max-width: #{$lgScreen - 1}) {
+    @content;
+  }
+}
+@mixin medium {
+  @media only screen and (min-width: #{$mdScreen}) and (max-width: #{$lgScreen - 1}) {
+    @content;
+  }
+}
+@mixin large {
+  @media only screen and (min-width: #{$lgScreen}) {
+    @content;
+  }
+}
+
+@function colWidth($num) {
+  @return $num / $columns * 100%;
+}

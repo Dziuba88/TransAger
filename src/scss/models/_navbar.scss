@@ -1,0 +1,353 @@
+.navbar {
+  height: 50px;
+
+  &__wraper {
+    background-color: #fff;
+    height: 50px;
+    box-shadow: 0 3px 7px rgba(black, .15);
+
+    .row {
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  &__brand {
+    display: block;
+    margin-right: 20px;
+
+    img {
+      display: block;
+      height: 32px;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  &__catalog {
+    .btn.primary {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      text-align: left;
+      line-height: 1;
+
+      span {
+        display: block;
+        padding: 0 10px 0 5px;
+        
+        &.icon {
+          background-color: rgba($baseColor, .5);
+          padding: 5px;
+          font-size: 16px;
+
+          .fa {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__separator {
+    flex: 1;
+  }
+
+  &__nav {
+    //padding: 0 10px;
+
+    .main-menu {
+      display: flex;
+
+      > li {
+        display: block;
+        border-right: 1px solid #ffffff;
+
+        > a {
+          display: block;
+          line-height: 1;
+          padding: 20px 10px 16px;
+          color: $primaryColor;
+          text-decoration: none;
+          position: relative;
+
+          span {
+            display: block;
+          }
+
+          &:after {
+            display: block;
+            content: '';
+            transform: scaleX(0);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $primaryColor;
+            transition: .25s ease-in-out;
+          }
+
+          &:hover, &.current {
+            background-color: rgba($primaryColor, .05);
+
+            &:after {
+              transform: scaleX(1)
+            }
+          }
+
+          &.dropdown__toggle {
+            display: flex;
+            align-items: center;
+
+            span {
+              margin-right: 0.25em;
+            }
+            .fa {
+            width: 1em;
+          }
+          }
+        }
+
+        &.open .dropdown__toggle {
+          background-color: rgba($primaryColor, .1);
+
+          &:after {
+            transform: scaleX(1)
+          }
+        }
+
+        .dropdown__menu {
+          background-color: white;
+          box-shadow: 0 3px 7px rgba(black, .15);
+          left: 0;
+        }
+
+      }
+
+
+    }
+    .child-menu {
+      font-size: 12px;
+      line-height: 20px;
+      padding: 1px 0;
+
+      > li {
+        border-bottom: 1px solid $lightColor;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        > a {
+          display: block;
+          white-space: nowrap;
+          padding: 5px 20px;
+          text-decoration: none;
+          text-decoration: none;
+          color: $baseColor;
+          position: relative;
+
+          &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            height: 2px;
+            background-color: $primaryColor;
+            width: 0;
+            transition: .25s ease-in-out;
+          }
+
+          &.current, &:hover {
+            background-color: rgba($primaryColor, .05);
+
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 1;
+    border: 0;
+    color: $grayColor;
+    background-color: #fff;
+    display: none;
+    border-left: 1px solid $lightColor;
+    align-items: center;
+    justify-content: space-around;
+
+    .fa {
+      display: block;
+    }
+
+    &:hover, &:focus {
+      color: $baseColor;
+    }
+  }
+
+  &__basket {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    line-height: 1;
+    font-size: 24px;
+    border-radius: 0;
+    padding: 0;
+
+    small {
+      font-size: 8px;
+      font-weight: 700;
+      color: white;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: space-around;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      background-color: rgba($baseColor, .5);
+      line-height: 1;
+      border-radius: 100%
+    }
+  }
+
+  &.sticky &__wraper {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    right: 0;
+    transition: .25s ease-in-out;
+  }
+  
+  &.sticky.in &__wraper {
+    top: 0px;
+  }
+
+  @include mobile {
+    height: 40px;
+
+    .container {
+      position: relative;
+    }
+
+    &__wraper {
+      position: static !important;
+      height: 40px;
+    }
+
+    &__brand {
+      margin-right: 10px;
+      img {
+        height: 24px;
+      }
+    }
+
+    &__catalog .btn.primary {
+      span {
+        display: none;
+
+        &.icon {
+          display: block;
+        }
+      }
+    }
+
+    &__nav {
+
+      .main-menu {
+        display: block;
+        position: absolute;
+        background-color: white;
+        left: 10px;
+        right: 10px;
+        top: 100%;
+        margin-top: 1px;
+        box-shadow: 0 3px 7px rgba(black, .15);
+        opacity: 0;
+        transform-origin: top center;
+        transform: scaleY(0);
+        transition: .15s ease-in-out;
+
+        > li {
+          border-right: 0;
+          border-bottom: 1px solid $lightColor;
+
+          .dropdown__menu {
+            position: static;
+            transition: none;
+            box-shadow: none;
+            background-color: $primaryColor;
+            margin: 0;
+          }
+
+          > a {
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 15px 10px 11px;
+
+            &.dropdown__toggle span {
+              flex: 1;
+            }
+
+            &:after {
+              transition: none;
+            }
+          }
+        }
+      }
+
+      .child-menu {
+        padding: 0;
+
+        > li {
+          border-bottom: 1px solid $lightColor;
+
+          > a {
+            color: white;
+            padding: 8px 10px;
+
+            &:after {
+              display: none;
+            }
+
+            &:hover, &.current {
+              background-color: $baseColor;
+            }
+          }
+        }
+      }
+
+      &.show .main-menu {
+        opacity: 1;
+        transform: scaleY(1);
+
+      }
+
+    }
+
+    &__toggle {
+      display: flex;
+    }
+
+    &__basket {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

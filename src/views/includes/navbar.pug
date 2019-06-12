@@ -1,0 +1,25 @@
+.navbar
+  .navbar__wraper
+    .container: .row
+      a(href="index.html").navbar__brand: img(src="img/logo.svg", alt="")
+      .navbar__catalog: a(href="" ).btn.sm.primary
+        span.icon: i.fa.fa-tasks(aria-hidden="true")
+        span магазин<br>запчастей
+      .navbar__separator
+      nav.navbar__nav
+        ul.main-menu
+          li.dropdown
+            a.dropdown__toggle(href="" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false")
+              span Услуги
+              i.fa.fa-angle-down(aria-hidden="true")
+            .dropdown__menu: ul.child-menu
+              li: a(href=""): span Магазин запчастей
+              li: a(href="").current: span Ремонт и эвакуация транспорта
+              li: a(href=""): span Грузоперевозки и экспедиция 
+          li: a(href="").current: span Акции
+          li: a(href=""): span О компании
+          li: a(href=""): span Контакты
+      button.navbar__toggle: i.fa.fa-navicon(aria-hidden="true")
+      a(href="").btn.accent.navbar__basket
+        i.fa.fa-shopping-cart(aria-hidden="true")
+        small 25

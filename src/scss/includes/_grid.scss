@@ -1,0 +1,74 @@
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 ($gutter / 2);
+
+  @include large {
+    width: $lgScreen - $gutter;
+  }
+  @include medium {
+    width: $mdScreen - $gutter;
+  }
+  @include tablet {
+    width: $smScreen - $gutter;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 ($gutter / -2);
+
+  &.align-end {
+    justify-content: flex-end;
+  }
+}
+.col {
+  margin: 0;
+  padding: 0 ($gutter / 2);
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  min-width: 0;
+
+  &.xs {
+    @for $i from 1 through $columns {
+      &-#{$i} {
+        flex: 0 0 colWidth($i);
+      }
+    }
+  }
+
+  @include tablet-up {
+    &.sm {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          flex: 0 0 colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include medium-up {
+    &.md {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          flex: 0 0 colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include large {
+    &.lg {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          flex: 0 0 colWidth($i);
+        }
+      }
+    }
+  }
+}

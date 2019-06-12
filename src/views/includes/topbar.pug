@@ -1,2 +1,21 @@
 .topbar
   .container
+    .topbar__contacts
+      .topbar__phone
+        i.fa.fa-phone(aria-hidden="true")
+        a(href="tel:+37322472525") +373 22 47 25 25
+      .topbar__schedule
+        i.fa.fa-clock-o(aria-hidden="true")
+        span Пн-Пт 9:00 - 18:00
+        span Сб 09:00 - 13:00 
+    .topbar__contols
+      a(href="").topbar__cabinet
+        i.fa.fa-address-book(aria-hidden="true")
+        span Личный кабинет
+      .dropdown.topbar__lang
+        .dropdown__toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+          span Ru
+          i.fa.fa-angle-down(aria-hidden="true")
+        .dropdown__menu: ul
+          li: a(href="") Română (Md)
+          li.current: a(href="") Русский (Ru)

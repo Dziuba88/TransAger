@@ -1,0 +1,67 @@
+a, button, .btn {
+  transition: .15s ease-in-out;
+  outline: 0;
+  cursor: pointer;
+}
+
+a {
+  color: $primaryColor;
+  text-decoration: none;
+
+  &:hover {
+  color: $accentColor;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 20px;
+  padding: 13px 20px 12px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 0;
+  user-select: none;
+
+  &:active, &:hover {
+    text-decoration: none;
+  }
+
+  &.sm {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 10px;
+  }
+
+  &.md {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 7px 20px 5px;
+  }
+
+  &.primary {
+    background-color: $primaryColor;
+    color: #ffffff;
+
+    &:hover {
+      background-color: darken($primaryColor, 10%);
+    }
+
+  }
+  &.accent {
+    background-color: $accentColor;
+    color: #ffffff;
+
+    &:hover {
+      background-color: darken($accentColor, 10%);
+    }
+
+  }
+}

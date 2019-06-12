@@ -1,0 +1,16 @@
+extends layouts/auth.pug
+block variables
+  - pageTitle = 'Регистрация'
+block content
+  .container: .row.align-end
+      .col.md-6
+        .form.auth-form.thanks
+          .thanks__icon: i.fa.fa-check(aria-hidden="true")
+          h3.auth-form__title СПАСИБО!
+          p Вам на почту было выслано письмо, Откройте Вашу почту и подтвердите регистрацию в интернет-магазине.
+          p.text__danger Не забудьте заполнить персональные данные в личном кабинете после регистрации. Они необходимы при оформлении заказа.
+          .auth-form__footer
+            a(href="index.html").btn.md.primary на главную
+
+
+

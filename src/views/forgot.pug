@@ -1,0 +1,19 @@
+extends layouts/auth.pug
+block variables
+  - pageTitle = 'Забыли пароль'
+block content
+  .container: .row.align-end
+      .col.md-6
+        .form.auth-form
+          h3.auth-form__title Забыли пароль?
+          .form__input: input(type="email", name="forgotEmail", placeholder="Введите Ваш e-Mail")
+          .form__control
+            .form__control--separator
+            button.btn.primary отправить
+          .auth-form__footer
+            nav.form__links: ul
+              li.text__upper: a(href="login.html") Войти
+              li.text__upper: a(href="register.html") Регистрация
+
+
+

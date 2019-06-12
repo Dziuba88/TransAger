@@ -1,0 +1,31 @@
+extends layouts/auth.pug
+block variables
+  - pageTitle = 'Регистрация'
+block content
+  .container: .row.align-end
+      .col.md-6
+        .form.auth-form
+          h3.auth-form__title Создать аккаунт
+          .form__row
+            .form__checkbox
+              input(type="radio", name="account", checked="")#account-single
+              label(for="account-single")
+                span.icon: i.fa.fa-check(aria-hidden="true")
+                span.text Физическое лицо
+            .form__checkbox
+              input(type="radio", name="account")#account-company
+              label(for="account-company")
+                span.icon: i.fa.fa-check(aria-hidden="true")
+                span.text Юридическое лицо
+          .form__input.error: input(type="email", name="createEmail", placeholder="Введите Ваш e-Mail", value="wrong email")
+          .form__input: input(type="password", name="createPassword", placeholder="Введите пароль")
+          .form__input: input(type="password", name="confirmPassword", placeholder="Повторите пароль")
+          .form__control
+            a(href="login.html") У меня есть аккаунт
+            .form__control--separator
+            a(href="thanks.html").btn.primary регистрация
+          .auth-form__footer
+            p Ознакомтесь с <a href="">Общими положениями и условиями</a> использования интернет-магазина компании TransAger SRL
+
+
+

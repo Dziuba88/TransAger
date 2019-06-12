@@ -1,0 +1,34 @@
+.page-footer {
+  color: white;
+  background-color: $footerColor;
+
+  &__copy {
+    color: white;
+    background-color: rgba($baseColor, .2);
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px 0;
+    text-align: center;
+
+    span, a {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+
+      &:hover {
+        color: $grayColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.dropdown {
+  position: relative;
+
+  &__toggle {
+    user-select: none;
+    transition: .25s ease-in-out;
+    cursor: pointer;
+    .fa {
+      width: 1.5em;
+      text-align: center;
+      transition: .15s ease-in-out;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    overflow: hidden;
+    height: 0;
+    margin: 1px 0 0;
+    padding: 0;
+    transition: .15s .15s ease-in-out;
+    transform-origin: top center;
+    opacity: 0;
+    transform: scaleY(0);
+
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &.open {
+    .dropdown__toggle .fa {
+      transform: rotate(180deg);
+    }
+    .dropdown__menu {
+      height: auto;
+      opacity: 1;
+      transform: scaleY(1)
+    }
+  }
+}
