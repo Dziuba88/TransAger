@@ -1,0 +1,49 @@
+.content__breadcrumbs {
+  border-bottom: 1px solid $lightColor;
+  padding: 5px 0;
+  margin-bottom: 20px;
+
+  .breadcrumb {
+    font-size: 0;
+    color: $grayColor;
+
+    &-item {
+      font-size: 12px;
+      display: inline-block;
+      line-height: 20px;
+      vertical-align: middle;
+      user-select: none;
+
+      &:after {
+        content: '\f105';
+        display: inline-block;
+        font-family: FontAwesome;
+        width: 2em;
+        text-align: center;
+      }
+
+      &:first-child::before {
+        content: '\f015';
+        display: inline-block;
+        font-family: FontAwesome;
+        color: $baseColor;
+        width: 1.5em;
+        text-align: left;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+
+
+      @include mobile {
+        font-size: 10px;
+      }
+
+
+
+    }
+  }
+
+
+}

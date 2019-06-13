@@ -1,9 +1,9 @@
 .page-footer {
-  color: $infoColor;
-  background-color: $footerColor;
 
   &__wraper {
     padding: 40px 0 20px;
+    color: $infoColor;
+    background-color: $footerColor;
 
     .nav,
     .contacts {
@@ -77,7 +77,7 @@
 
   &__copy {
     color: white;
-    background-color: rgba($baseColor, .2);
+    background-color: darken($footerColor, 5%);
     font-size: 12px;
     line-height: 20px;
     padding: 5px 0;

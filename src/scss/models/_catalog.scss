@@ -1,10 +1,13 @@
 .catalog-list {
+
   &__item {
     background-color: white;
     border: 1px solid $lightColor;
     border-radius: 3px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
+    z-index: 0;
 
     box-shadow: 0 0 3px rgba($baseColor, .05);
 
@@ -151,5 +154,183 @@
     }
 
 
+  }
+
+}
+
+.catalog-categories {
+  padding-bottom: 15px;
+
+  .category-link {
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 0 4px white;
+    background-color: $primaryColor;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid $primaryColor;
+    margin: 0 0 5px;
+    padding: 10px;
+
+    .item-icon {
+      display: block;
+      width: 60px;
+      height: 60px;
+      flex: none;
+    }
+
+    .item-name {
+      display: block;
+      padding: 0 10px;
+      flex: 1;
+      font-size: 16px;
+      text-transform: uppercase;
+
+      .item-title,
+      .item-action {
+        display: block;
+        line-height: 1.2;
+      }
+
+      .item-action {
+        font-size: 10px;
+      }
+    }
+
+    .item-counts {
+      display: block;
+      text-align: center;
+      flex: none;
+      font-size: 16px;
+      width: 60px;
+
+      .counter,
+      .counter-type {
+        display: block;
+      }
+
+      .counter-type {
+        text-transform: uppercase;
+        font-size: 10px;
+      }
+    }
+
+    &:hover {
+      background-color: $baseColor;
+      border: 1px solid $baseColor;
+    }
+
+    &.current {
+      background-color: $accentColor;
+      border: 1px solid $accentColor;
+    }
+  }
+}
+
+.catalog-filters {
+  background-color: $lightColor;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+
+  &__views {
+    flex: 1;
+
+    ul {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+
+      li {
+        display: block;
+        margin-right: 10px;
+        user-select: none;
+      }
+    }
+
+    .views {
+      &__title {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $grayColor;
+      }
+
+      &__item {
+        cursor: pointer;
+
+        span {
+          display: block;
+          padding: 0 5px;
+          border-radius: 3px;
+          transition: .15s ease-in-out;
+          background-color: rgba(white, .75);
+        }
+
+        &:hover span {
+          background-color: #fff;
+        }
+
+        &.active span {
+          background-color: $primaryColor;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__sort {
+    flex: none;
+
+    ul {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+
+      li {
+        display: block;
+        margin-left: 10px;
+        user-select: none;
+      }
+    }
+
+    .sort {
+      &__title {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $grayColor;
+      }
+
+      &__item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        span {
+          display: block;
+          padding: 0 5px;
+          border-radius: 3px;
+          transition: .15s ease-in-out;
+          margin-right: 3px;
+          background-color: rgba(white, .75);
+        }
+
+        .fa {
+          color: $grayColor;
+        }
+
+        &:hover span {
+          background-color: #fff;
+        }
+
+        &.active span {
+          background-color: $accentColor;
+          color: white;
+        }
+      }
+    }
   }
 }

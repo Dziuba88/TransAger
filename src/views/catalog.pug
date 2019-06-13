@@ -1,0 +1,71 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Каталог товаров'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container: nav(aria-label='breadcrumb').content__breadcrumbs
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href='#') Главная
+      li.breadcrumb-item
+        a(href='#') Магазин запчастей
+      li.breadcrumb-item.active(aria-current='page') Аккумуляторы
+  section.catalog-list: .container
+    h1.page__title Магазин аккумуляторов
+    .catalog-categories: .row
+      .col.md-4: a(href="").category-link
+        svg.item-icon: use(xlink:href="#tools")
+        span.item-name 
+          strong.item-title запчасти 
+          small.item-action перейти в каталог
+        span.item-counts 
+          strong.counter 1756 
+          small.counter-type товаров
+      .col.md-4: a(href="").category-link.current
+        svg.item-icon: use(xlink:href="#batteries")
+        span.item-name 
+          strong.item-title Аккумуляторы 
+          small.item-action перейти в каталог
+        span.item-counts 
+          strong.counter 1756 
+          small.counter-type товаров
+      .col.md-4: a(href="").category-link
+        svg.item-icon: use(xlink:href="#tyres")
+        span.item-name 
+          strong.item-title Шины 
+          small.item-action перейти в каталог
+        span.item-counts 
+          strong.counter 1756 
+          small.counter-type товаров
+    .catalog-filters
+      .catalog-filters__views: nav.nav-tabs: ul
+        li.views__title Показать:
+        li.views__item.active(role="presentation"): span(role="tab" data-toggle="tab") Все
+        li.views__item(role="presentation"): span(role="tab" data-toggle="tab") Новинки
+        li.views__item(role="presentation"): span(role="tab" data-toggle="tab") Акции
+      .catalog-filters__sort: nav.nav-tabs: ul
+        li.sort__title Сортировать:
+        li.sort__item.active(role="presentation")
+          span(role="tab" data-toggle="tab") Цена
+          i.fa.fa-sort-amount-asc(aria-hidden="true")
+        li.sort__item(role="presentation")
+          span(role="tab" data-toggle="tab") Название
+          i.fa.fa-sort-alpha-asc(aria-hidden="true")
+    .catalog-list__items
+      .row: include ./includes/catalog_items.pug
+      .catalog-list__inject: .row: .col.lg-6.lg-off-3.md-8.md-off-2.sm-10.sm-off-1
+        a(href="").service-add.repair
+          img(src="img/repair_add_img.png", alt="").service-add__img
+          span.service-add__text
+            span Ремонт и эвакуация транспорта
+            strong +373 79 408 806
+      .row: include ./includes/catalog_items.pug
+      .catalog-list__pagination: include ./includes/pagination.pug
+      .catalog-list__inject: .row: .col.lg-6.lg-off-3.md-8.md-off-2.sm-10.sm-off-1
+        a(href="").service-add.cargo
+          img(src="img/cargo_add_img.png", alt="").service-add__img
+          span.service-add__text
+            span Грузоперевозки и экспедиция
+            strong +373 22 474 282

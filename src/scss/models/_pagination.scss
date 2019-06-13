@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  user-select: none;
+
+  li {
+
+    .page-link {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      background-color: $accentColor;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      text-align: center;
+      box-sizing: border-box;
+      min-width: 30px;
+      border: 1px solid white;
+
+      &:hover {
+        color: white;
+        background-color: darken($accentColor, 10%);
+      }
+
+      &.active {
+        color: white;
+        background-color: $baseColor;
+      }
+
+      &.disabled {
+        color: $grayColor;
+        background-color: $lightColor;
+        cursor: default;
+      }
+
+      @include mobile {
+        display: none;
+
+        &.active,
+        &.first,
+        &.prev,
+        &.next,
+        &.last {
+          display: block;
+        }
+      }
+    }
+  }
+}

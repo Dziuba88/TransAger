@@ -25,8 +25,8 @@ block headerContent
 
 block content
   section.anounses-list: .container
-    h2.section__header: span Новое в каталоге
-    include ./includes/items_carousel.pug
+    h2.section__title: span Новое в каталоге
+    .owl-carousel: include ./includes/items_carousel.pug
     .anounses-list__footer
       p У нас можете найти более 7000 наименований запчастей
       p: a(href="").btn.primary перейти в каталог
@@ -37,7 +37,7 @@ block content
       p В 2005 году, после приобретения автотранспортной базы площадью 3,5 га, компания «Trans Ager» ООО начала практиковать новые виды деятельности: оптовую торговлю запасными частями и принадлежностями для автомобилей – посредством открытия в Кишинёве одного магазина, а позже еще 3-х по всей стране, а также техническое обслуживание и ремонт автотранспортных средств.
       p: a(href="").btn.white узнать больше
   section.company-whyus: .container
-    h2.section__header: span ПОЧЕМУ МЫ?
+    h2.section__title: span ПОЧЕМУ МЫ?
     .section__subheader: .row: .col.lg-8.lg-off-2.md-10.md-off-1
       p Благодаря стремлению к постоянному развитию, компания «Trans Ager» стала неоспоримым лидером на молдавском рынке, предлагающим самый полный спектр услуг для клиентов, которые ищут надёжного партнера в дальней дороге.
       h5 Основные конкурентные преимущества нашей компании: 
@@ -59,8 +59,8 @@ block content
         h4 Бесплатная доставка!
         p По Кишиневу при заказе свыше 500 лей!
   section.anounses-list: .container
-    h2.section__header: span популярные товары
-    include ./includes/items_carousel.pug
+    h2.section__title: span популярные товары
+    .owl-carousel: include ./includes/items_carousel.pug
     .anounses-list__footer
       p Trans Ager - это сеть магазинов в Республике Молдова
       p: a(href="").btn.primary перейти в каталог

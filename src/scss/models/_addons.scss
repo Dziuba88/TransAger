@@ -128,3 +128,73 @@
     filter: grayscale(0);
   }
 }
+
+
+.service-add {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px $lightColor;
+  user-select: none;
+  width: 100%;
+  min-height: 80px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: $baseColor;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.2;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $grayColor;
+    color: white;
+  }
+
+  &__img {
+    display: block;
+    flex: none;
+    width: 120px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+  }
+
+  &__text {
+    padding: 10px;
+    flex: 1;
+
+    span,
+    strong {
+      display: block;
+    }
+
+    strong {
+      font-size: 24px;
+    }
+  }
+
+  &.repair {
+    background: url(../img/repair_add_bg.png) no-repeat right center;
+    background-size: cover;
+  }
+
+  &.cargo {
+    background: url(../img/cargo_add_bg.png) no-repeat right center;
+    background-size: cover;
+  }
+
+
+
+
+
+  @include mobile {
+    font-size: 14px;
+
+    &__img {
+      display: none;
+    }
+  }
+}
