@@ -1,6 +1,79 @@
 .page-footer {
-  color: white;
+  color: $infoColor;
   background-color: $footerColor;
+
+  &__wraper {
+    padding: 40px 0 20px;
+
+    .nav,
+    .contacts {
+      padding-bottom: 20px;
+      font-size: 12px;
+      line-height: 1;
+
+      ul {
+        li {
+          padding-left: 1.5em;
+          margin-bottom: 10px;
+
+          &.title {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            padding-left: 0;
+            margin-bottom: 10px;
+          }
+
+          .fa {
+            width: 1.5em;
+            text-align: left;
+            margin-left: -1.5em;
+          }
+
+          a,
+          span {
+            color: white;
+          }
+
+          a:hover {
+            opacity: 0.5;
+          }
+
+          &.social {
+            padding: 5px 0 0;
+            margin: 0;
+            font-size: 24px;
+            line-height: 1;
+
+            .fa {
+              margin: 0;
+              width: auto;
+            }
+
+            a {
+              margin-right: 10px;
+              color: $infoColor;
+
+              &:hover {
+                opacity: 1;
+                color: white;
+              }
+            }
+          }
+
+          @include tablet-down {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    @include mobile {
+      padding: 40px 20px 20px;
+    }
+  }
 
   &__copy {
     color: white;
@@ -10,7 +83,8 @@
     padding: 5px 0;
     text-align: center;
 
-    span, a {
+    span,
+    a {
       display: inline-block;
       line-height: 1;
       vertical-align: middle;
@@ -28,6 +102,12 @@
 
       &:hover {
         color: $grayColor;
+      }
+    }
+
+    @include mobile {
+      span {
+        display: block;
       }
     }
   }

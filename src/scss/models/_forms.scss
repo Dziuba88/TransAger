@@ -17,35 +17,301 @@
       outline: none;
       padding: 5px 10px;
       transition: .15s ease-in-out;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
-        &::-webkit-input-placeholder {transition: .15s ease-in-out}
-        &::-moz-placeholder {transition: .15s ease-in-out}
-        &:-ms-input-placeholder {transition: .15s ease-in-out}
-        &:-moz-placeholder {transition: .15s ease-in-out}
+      &::-webkit-input-placeholder {
+        transition: .15s ease-in-out
+      }
 
-        &:focus {
+      &::-moz-placeholder {
+        transition: .15s ease-in-out
+      }
+
+      &:-ms-input-placeholder {
+        transition: .15s ease-in-out
+      }
+
+      &:-moz-placeholder {
+        transition: .15s ease-in-out
+      }
+
+      &:focus {
         border-color: $grayColor;
-        &::-webkit-input-placeholder {color: white;}
-        &::-moz-placeholder {color: white;}
-        &:-ms-input-placeholder {color: white;}
-        &:-moz-placeholder {color: white;}
+
+        &::-webkit-input-placeholder {
+          color: white;
+        }
+
+        &::-moz-placeholder {
+          color: white;
+        }
+
+        &:-ms-input-placeholder {
+          color: white;
+        }
+
+        &:-moz-placeholder {
+          color: white;
+        }
       }
     }
 
     &.error input {
-      color: $accentColor; 
+      color: $accentColor;
       border-color: $accentColor;
 
-      &::-webkit-input-placeholder {color: $accentColor;}
-      &::-moz-placeholder {color: $accentColor;}
-      &:-ms-input-placeholder {color: $accentColor;}
-      &:-moz-placeholder {color: $accentColor;}
+      &::-webkit-input-placeholder {
+        color: $accentColor;
+      }
+
+      &::-moz-placeholder {
+        color: $accentColor;
+      }
+
+      &:-ms-input-placeholder {
+        color: $accentColor;
+      }
+
+      &:-moz-placeholder {
+        color: $accentColor;
+      }
 
       &:focus {
         color: $baseColor;
         border-color: $grayColor;
       }
     }
+
+    .selectric-wrapper {
+      position: relative;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .selectric {
+      border: 1px solid $lightColor;
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+      transition: .15s ease-in-out;
+      box-sizing: border-box;
+    }
+
+    .selectric .label {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 12px 24px 11px 10px;
+      font-size: 14px;
+      line-height: 20px;
+      color: $baseColor;
+      user-select: none;
+      box-sizing: border-box;
+    }
+
+    .selectric .fa {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -6px;
+      font-size: 12px;
+      transition: .25s ease-in-out;
+    }
+
+    .selectric-open .fa {
+      transform: rotate(180deg)
+    }
+
+
+    .selectric-focus .selectric {
+      border-color: $grayColor;
+    }
+
+    .selectric-hover .selectric {
+      border-color: $grayColor;
+    }
+
+    .selectric-open {
+      z-index: 9999;
+    }
+
+    .selectric-open .selectric {
+      border-color: $grayColor;
+    }
+
+    .selectric-open .selectric-items {
+      display: block;
+    }
+
+    .selectric-disabled {
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+      cursor: default;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .selectric-hide-select {
+      position: relative;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+    }
+
+    .selectric-hide-select select {
+      position: absolute;
+      left: -100%;
+    }
+
+    .selectric-hide-select.selectric-is-native {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+
+    .selectric-hide-select.selectric-is-native select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+      z-index: 1;
+      box-sizing: border-box;
+      opacity: 0;
+    }
+
+    .selectric-input {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 1px !important;
+      height: 1px !important;
+      outline: none !important;
+      border: none !important;
+      *font: 0/0 a !important;
+      background: none !important;
+    }
+
+    .selectric-temp-show {
+      position: absolute !important;
+      visibility: hidden !important;
+      display: block !important;
+    }
+
+    /* Items box */
+    .selectric-items {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      z-index: -1;
+      box-shadow: 0 3px 7px rgba($baseColor, .15);
+    }
+
+    .selectric-items .selectric-scroll {
+      height: 100%;
+      overflow: auto;
+    }
+
+    .selectric-above .selectric-items {
+      top: auto;
+      bottom: 100%;
+    }
+
+    .selectric-items ul,
+    .selectric-items li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      min-height: 20px;
+    }
+
+    .selectric-items li {
+      display: block;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: $baseColor;
+      border-bottom: 1px solid $lightColor;
+
+      &:first-child {
+        display: none;
+      }
+    }
+
+    .selectric-items li.selected,
+    .selectric-items li.highlighted {
+      background: $baseColor;
+      color: white;
+    }
+
+    .selectric-items li:hover {
+      background: $lightColor;
+      color: $baseColor;
+    }
+
+    .selectric-items .disabled {
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+      cursor: default !important;
+      background: none !important;
+      color: #666 !important;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .selectric-items .selectric-group .selectric-group-label {
+      font-weight: bold;
+      padding-left: 10px;
+      cursor: default;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background: none;
+      color: #444;
+    }
+
+    .selectric-items .selectric-group.disabled li {
+      filter: alpha(opacity=100);
+      opacity: 1;
+    }
+
+    .selectric-items .selectric-group li {
+      padding-left: 25px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 
   &__checkbox {
@@ -55,7 +321,7 @@
     input {
       display: none;
 
-      & + label {
+      &+label {
         display: inline-flex;
         align-items: center;
         text-align: left;
@@ -92,7 +358,7 @@
         }
       }
 
-      &:checked + label {
+      &:checked+label {
         .icon {
           border-color: $successColor;
 
@@ -120,7 +386,8 @@
 
   &__links {
     font-size: 0;
-    ul > li {
+
+    ul>li {
       display: inline-block;
       font-size: 14px;
       line-height: 20px;
@@ -142,12 +409,12 @@
         display: none;
       }
 
-      > a {
+      >a {
         color: $primaryColor;
         text-decoration: none;
 
         &:hover {
-        color: $accentColor;
+          color: $accentColor;
         }
       }
     }
@@ -226,5 +493,47 @@
 
   @include mobile {
     padding: 20px 0;
+  }
+}
+
+.search-form {
+  display: flex;
+  margin: 0 -10px;
+
+  .col {
+    flex: none;
+
+    &.flex {
+      flex: 1;
+    }
+  }
+
+
+  .btn {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding: 13px 10px 12px;
+
+    .fa {
+      margin-right: 5px;
+      font-size: 14px;
+    }
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+
+    .btn {
+      display: block;
+      width: 100%;
+    }
+
+    .col,
+    .col.flex {
+      flex: none;
+      width: 100%;
+    }
   }
 }

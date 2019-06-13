@@ -1,0 +1,69 @@
+extends layouts/default.pug
+block variables
+  - pageTitle = 'Главная страница'
+block headerContent
+  section.header-intro: .container 
+    .jumbotron
+      h1.jumbotron__title Trans Ager
+      p.jumbotron__subtitle ваш надёжный партнёр в дальней дороге!
+    .row
+      .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+  section.header-services: .container 
+    .row.services-title: .col.lg-6.md-8.sm10
+      h2 ЧТО МЫ ПРЕДЛАГАЕМ?
+      p Мы предлагаем услуги, качество и эффективность которых нам удалось доказать на протяжении многолетней деятельности
+    .row.services-list
+      .col.md-3.sm-6: a(href="").services-list__item
+        img(src="img/th_service_1.png", alt="")
+        .caption: span Международные грузоперевозки и экспедиция
+      .col.md-6: a(href="").services-list__item
+        img(src="img/th_service_2.png", alt="")
+        .caption: span Магазин автозапчастей, аккумуляторов и шин
+      .col.md-3.sm-6: a(href="").services-list__item
+        img(src="img/th_service_3.png", alt="")
+        .caption: span Ремонт и обслуживание, Буксировка грузовых авто
+
+block content
+  section.anounses-list: .container
+    h2.section__header: span Новое в каталоге
+    include ./includes/items_carousel.pug
+    .anounses-list__footer
+      p У нас можете найти более 7000 наименований запчастей
+      p: a(href="").btn.primary перейти в каталог
+  section.company-about: .container
+    .row: .col.md-8.md-off-4.lg-6.lg-off-6
+      h2 НАША КОМПАНИЯ
+      p Основанная 25 лет назад, «Trans Ager» является первопроходцем на местном рынке транспортных услуг, став первой компанией, специализирующейся на международных грузовых перевозках, с момента обретения Республикой Молдова независимости.
+      p В 2005 году, после приобретения автотранспортной базы площадью 3,5 га, компания «Trans Ager» ООО начала практиковать новые виды деятельности: оптовую торговлю запасными частями и принадлежностями для автомобилей – посредством открытия в Кишинёве одного магазина, а позже еще 3-х по всей стране, а также техническое обслуживание и ремонт автотранспортных средств.
+      p: a(href="").btn.white узнать больше
+  section.company-whyus: .container
+    h2.section__header: span ПОЧЕМУ МЫ?
+    .section__subheader: .row: .col.lg-8.lg-off-2.md-10.md-off-1
+      p Благодаря стремлению к постоянному развитию, компания «Trans Ager» стала неоспоримым лидером на молдавском рынке, предлагающим самый полный спектр услуг для клиентов, которые ищут надёжного партнера в дальней дороге.
+      h5 Основные конкурентные преимущества нашей компании: 
+    .row
+      .col.md-3.sm-6: .why-us__item
+        svg: use(xlink:href="#whyus_1")
+        h4 Конкурентные цены!
+        p Разные категории цен, от разных производителей!
+      .col.md-3.sm-6: .why-us__item
+        svg: use(xlink:href="#whyus_2")
+        h4 Система скидок!
+        p Для физических и юридических лиц!
+      .col.md-3.sm-6: .why-us__item
+        svg: use(xlink:href="#whyus_3")
+        h4 Гарантия качества!
+        p Гарантия на товар от 3-х месяцев до года!
+      .col.md-3.sm-6: .why-us__item
+        svg: use(xlink:href="#whyus_4")
+        h4 Бесплатная доставка!
+        p По Кишиневу при заказе свыше 500 лей!
+  section.anounses-list: .container
+    h2.section__header: span популярные товары
+    include ./includes/items_carousel.pug
+    .anounses-list__footer
+      p Trans Ager - это сеть магазинов в Республике Молдова
+      p: a(href="").btn.primary перейти в каталог
+  include ./includes/brands.pug
+block footerContent
+  include ./includes/footer_links.pug

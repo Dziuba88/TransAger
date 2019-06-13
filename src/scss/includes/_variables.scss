@@ -1,19 +1,21 @@
 // colors
-  $baseColor:     #2d2d2d !default;
-  $darkColor:     #484848 !default;
-  $grayColor:     #888888 !default;
-  $lightColor:    #edf0f7 !default;
-  $footerColor:   #32426e !default;
+$baseColor: #2d2d2d !default;
+$darkColor: #484848 !default;
+$grayColor: #888888 !default;
+$lightColor: #edf0f7 !default;
+$footerColor: #32426e !default;
 
 
-  $primaryColor:  #4d67ac !default;
-  $accentColor:   #da6f5b !default;
-  $successColor:  #77b97e !default;
-  
+$primaryColor: #4d67ac !default;
+$accentColor: #da6f5b !default;
+$successColor: #77b97e !default;
+$warningColor: #e8a765 !default;
+$infoColor: #8ecdf6 !default;
+
 // Media Query & Drid //
-  $columns:       12 !default;
-  $gutter:        20px !default;
+$columns: 12 !default;
+$gutter: 20px !default;
 
-  $smScreen:      800px !default;
-  $mdScreen:      1000px !default;
-  $lgScreen:      1220px !default;
+$smScreen: 800px !default;
+$mdScreen: 1000px !default;
+$lgScreen: 1220px !default;

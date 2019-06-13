@@ -1,0 +1,130 @@
+.anounses-list {
+  padding: 40px 0;
+
+  &__footer {
+    color: $grayColor;
+    padding-top: 20px;
+    font-size: 16px;
+    text-align: center;
+
+    p {
+      margin: 0 0 10px;
+    }
+  }
+
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel .owl-nav button.owl-prev {
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: $baseColor;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    opacity: 0.25;
+
+    &:hover {
+      opacity: .8;
+    }
+
+
+    .fa {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -15px;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    right: -15px;
+  }
+
+  @include mobile {
+    .owl-carousel .owl-nav button.owl-prev {
+      left: -5px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+      right: -5px;
+    }
+  }
+}
+
+.company-about {
+  background: url(../img/road-truck.png) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.company-whyus {
+  padding: 40px 0 0;
+
+  .why-us__item {
+    text-align: center;
+    padding: 0 20px 20px;
+    user-select: none;
+
+    svg {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+    }
+
+    h4 {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+}
+
+.brands .brand {
+  width: 80px;
+  margin: 0 auto;
+  padding: 10px 0;
+  filter: grayscale(1);
+  user-select: none;
+  transition: .15s ease-in-out;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}

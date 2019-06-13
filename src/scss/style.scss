@@ -9,12 +9,17 @@
 @import './includes/core';
 @import './includes/buttons';
 @import './includes/dropdown';
+@import './includes/carousel';
 
 
 // MODULES
+@import './models/header';
 @import './models/topbar';
 @import './models/navbar';
+@import './models/search';
+@import './models/catalog';
 @import './models/forms';
+@import './models/addons';
 
 
 
@@ -33,8 +38,3 @@
 
 
 @import './models/footer';
-
-
-
-
-

@@ -1,4 +1,6 @@
-a, button, .btn {
+a,
+button,
+.btn {
   transition: .15s ease-in-out;
   outline: 0;
   cursor: pointer;
@@ -9,7 +11,7 @@ a {
   text-decoration: none;
 
   &:hover {
-  color: $accentColor;
+    color: $accentColor;
   }
 }
 
@@ -18,6 +20,7 @@ a {
   font-size: 14px;
   text-transform: uppercase;
   line-height: 20px;
+  font-weight: 700;
   padding: 13px 20px 12px;
   vertical-align: middle;
   text-decoration: none;
@@ -27,7 +30,8 @@ a {
   border: 0;
   user-select: none;
 
-  &:active, &:hover {
+  &:active,
+  &:hover {
     text-decoration: none;
   }
 
@@ -55,12 +59,59 @@ a {
     }
 
   }
+
+  &.white {
+    background-color: white;
+    color: $primaryColor;
+
+    &:hover {
+      background-color: $lightColor;
+    }
+
+  }
+
   &.accent {
     background-color: $accentColor;
     color: #ffffff;
 
     &:hover {
       background-color: darken($accentColor, 10%);
+    }
+
+  }
+
+  &.add-to-basket {
+    padding: 5px 10px;
+    font-size: 10px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: $accentColor;
+    color: #ffffff;
+
+    .fa,
+    span {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .fa {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+    span {
+      padding-top: 2px;
+    }
+
+    &:hover {
+      background-color: darken($accentColor, 10%);
+    }
+
+    &.disabled {
+      background-color: $grayColor;
+      cursor: default;
     }
 
   }

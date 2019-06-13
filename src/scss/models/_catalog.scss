@@ -1,0 +1,155 @@
+.catalog-list {
+  &__item {
+    background-color: white;
+    border: 1px solid $lightColor;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+
+    box-shadow: 0 0 3px rgba($baseColor, .05);
+
+    .item-stats {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: flex;
+      z-index: 2;
+
+      svg {
+        display: block;
+        width: 15px;
+        height: 40px;
+        margin-right: 1px;
+      }
+    }
+
+    .item-image {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      user-select: none;
+
+      &__link {
+        display: block;
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+
+      .item-count {
+        display: block;
+        width: 140px;
+        padding: 0 5px;
+        line-height: 15px;
+        font-size: 10px;
+        font-weight: 700;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -70px;
+        box-sizing: border-box;
+
+        &.plenty {
+          background-color: $successColor;
+        }
+
+        &.stocks {
+          background-color: $warningColor;
+        }
+
+        &.not-available {
+          background-color: $grayColor;
+        }
+      }
+
+      img {
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        object-fit: cover;
+      }
+    }
+
+    .item-body {
+      border-top: 1px solid $lightColor;
+      border-bottom: 1px solid $lightColor;
+      padding: 10px;
+    }
+
+    .item-title {
+      overflow: hidden;
+      height: 40px;
+
+      h4 {
+        margin: 0;
+        line-height: 20px;
+        font-weight: 700;
+
+        a {
+          color: $baseColor;
+
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+
+    .item-info {
+      padding: 10px 0 0;
+
+      p {
+        margin: 0;
+        font-size: 12px;
+        color: $grayColor;
+        display: flex;
+        align-items: center;
+
+        span {
+          display: block;
+          flex: 1;
+          padding-right: 10px;
+        }
+
+        strong {
+          font-weight: 400;
+          flex: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+
+      }
+    }
+
+    .item-footer {
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .item-price {
+      flex: 1;
+      padding-right: 10px;
+      line-height: 1.2;
+      user-select: none;
+
+      .current {
+        font-size: 18px;
+        font-weight: 700;
+        color: $baseColor;
+      }
+
+      .old {
+        font-size: 12px;
+        text-decoration: line-through;
+        color: $grayColor;
+      }
+    }
+
+
+  }
+}

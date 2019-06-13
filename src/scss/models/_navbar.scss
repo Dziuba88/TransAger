@@ -1,5 +1,7 @@
 .navbar {
   height: 50px;
+  position: relative;
+  z-index: 99;
 
   &__wraper {
     background-color: #fff;
@@ -37,7 +39,7 @@
       span {
         display: block;
         padding: 0 10px 0 5px;
-        
+
         &.icon {
           background-color: rgba($baseColor, .5);
           padding: 5px;
@@ -61,11 +63,11 @@
     .main-menu {
       display: flex;
 
-      > li {
+      >li {
         display: block;
         border-right: 1px solid #ffffff;
 
-        > a {
+        >a {
           display: block;
           line-height: 1;
           padding: 20px 10px 16px;
@@ -90,7 +92,8 @@
             transition: .25s ease-in-out;
           }
 
-          &:hover, &.current {
+          &:hover,
+          &.current {
             background-color: rgba($primaryColor, .05);
 
             &:after {
@@ -105,9 +108,10 @@
             span {
               margin-right: 0.25em;
             }
+
             .fa {
-            width: 1em;
-          }
+              width: 1em;
+            }
           }
         }
 
@@ -129,19 +133,20 @@
 
 
     }
+
     .child-menu {
       font-size: 12px;
       line-height: 20px;
       padding: 1px 0;
 
-      > li {
+      >li {
         border-bottom: 1px solid $lightColor;
 
         &:last-child {
           border-bottom: none;
         }
 
-        > a {
+        >a {
           display: block;
           white-space: nowrap;
           padding: 5px 20px;
@@ -162,7 +167,8 @@
             transition: .25s ease-in-out;
           }
 
-          &.current, &:hover {
+          &.current,
+          &:hover {
             background-color: rgba($primaryColor, .05);
 
             &:after {
@@ -191,7 +197,8 @@
       display: block;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $baseColor;
     }
   }
@@ -225,6 +232,11 @@
       line-height: 1;
       border-radius: 100%
     }
+
+    &.animated .fa {
+      transition: none;
+      animation: shake 1s .15s both;
+    }
   }
 
   &.sticky &__wraper {
@@ -234,7 +246,7 @@
     right: 0;
     transition: .25s ease-in-out;
   }
-  
+
   &.sticky.in &__wraper {
     top: 0px;
   }
@@ -253,6 +265,7 @@
 
     &__brand {
       margin-right: 10px;
+
       img {
         height: 24px;
       }
@@ -284,7 +297,7 @@
         transform: scaleY(0);
         transition: .15s ease-in-out;
 
-        > li {
+        >li {
           border-right: 0;
           border-bottom: 1px solid $lightColor;
 
@@ -296,7 +309,7 @@
             margin: 0;
           }
 
-          > a {
+          >a {
             text-transform: uppercase;
             font-weight: 700;
             padding: 15px 10px 11px;
@@ -315,10 +328,10 @@
       .child-menu {
         padding: 0;
 
-        > li {
+        >li {
           border-bottom: 1px solid $lightColor;
 
-          > a {
+          >a {
             color: white;
             padding: 8px 10px;
 
@@ -326,7 +339,8 @@
               display: none;
             }
 
-            &:hover, &.current {
+            &:hover,
+            &.current {
               background-color: $baseColor;
             }
           }
@@ -349,5 +363,28 @@
       width: 40px;
       height: 40px;
     }
+  }
+}
+
+@keyframes shake {
+
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(5px, 0, 0);
   }
 }

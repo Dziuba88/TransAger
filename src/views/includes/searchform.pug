@@ -1,0 +1,80 @@
+.search
+  nav: ul.nav-tabs(role="tablist")
+    li.active(role="presentation"): a(href="#autoparts" aria-controls="autoparts" role="tab" data-toggle="tab")
+      svg.icon: use(xlink:href="#tools")
+      span запчасти
+    li(role="presentation"): a(href="#accumulators" aria-controls="accumulators" role="tab" data-toggle="tab")
+      svg.icon: use(xlink:href="#batteries")
+      span аккумуляторы
+    li(role="presentation"): a(href="#autotyres" aria-controls="autotyres" role="tab" data-toggle="tab")
+      svg.icon: use(xlink:href="#tyres")
+      span автошины
+  .tab-content
+    .tab-pane.active.fade.in(role="tabpanel")#autoparts
+      .form.search-form.autoparts
+        .col.flex: .form__input: input(type="search", name="partsSearch", placeholder="Введите код товара или название")
+        .col: button.btn.primary <i class="fa fa-search" aria-hidden="true"></i> поиск
+    .tab-pane.fade(role="tabpanel")#accumulators 
+      .form.search-form.accumulators
+        .col.flex: .form__input
+          select(name="capacity")
+            option Емкость (Ah)
+            option Емкость 1
+            option Емкость 2
+            option Емкость 3
+            option Емкость 4
+        .col.flex: .form__input
+          select(name="voltage")
+            option Напряжение (В)
+            option Напряжение 1
+            option Напряжение 2
+            option Напряжение 3
+            option Напряжение 4
+        .col.flex: .form__input
+          select(name="polarity")
+            option Полярность
+            option Полярность 1
+            option Полярность 2
+            option Полярность 3
+        .col.flex: .form__input
+          select(name="auto")
+            option Тип авто
+            option Легковой
+            option Грузовой
+        .col: button.btn.primary <i class="fa fa-search" aria-hidden="true"></i> поиск
+
+
+
+
+    .tab-pane.fade(role="tabpanel")#autotyres 
+      .form.search-form.autotyres
+        .col.flex: .form__input
+          select(name="diameter")
+            option Диаметр
+            option Диаметр 1
+            option Диаметр 2
+            option Диаметр 3
+            option Диаметр 4
+        .col.flex: .form__input
+          select(name="width")
+            option Ширина
+            option Ширина 1
+            option Ширина 2
+            option Ширина 3
+            option Ширина 4
+        .col.flex: .form__input
+          select(name="height")
+            option Высота
+            option Высота 1
+            option Высота 2
+            option Высота 3
+            option Высота 4
+        .col.flex: .form__input
+          select(name="season")
+            option Сезонность
+            option Зимние
+            option Летние
+        .col: button.btn.primary <i class="fa fa-search" aria-hidden="true"></i> поиск
+
+
+

@@ -8,13 +8,15 @@ html(lang="ru")
     title TransAger | #{pageTitle}
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=cyrillic-ext,latin-ext")
     link(rel="stylesheet", href="css/style.css")
-  body.page.auth-layout
+  body.page
     header.page-header
       include ../includes/topbar.pug
       include ../includes/navbar.pug
+      block headerContent
     main.page-content
       block content
     footer.page-footer
+      block footerContent
       include ../includes/copyrights.pug
     script(src="js/scripts.js")
     script(src="js/app.js")

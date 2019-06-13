@@ -1,0 +1,62 @@
+.search {
+  padding: 40px 0;
+
+  .nav-tabs {
+    display: flex;
+    background-color: $primaryColor;
+
+    li {
+      display: block;
+      border-right: 1px solid $primaryColor;
+
+      a {
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 5px 10px;
+        background-color: rgba(white, .1);
+        white-space: nowrap;
+        user-select: none;
+        font-weight: 700;
+
+        span,
+        .icon {
+          display: inline-block;
+          line-height: 1;
+          vertical-align: middle;
+        }
+
+        .icon {
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+        }
+
+        span {
+          font-size: 10px;
+          text-transform: uppercase;
+        }
+
+        &:hover {
+          background-color: rgba(white, .25);
+        }
+      }
+
+      &.active a {
+        background-color: #fff;
+        color: $primaryColor;
+      }
+    }
+
+    @include mobile {
+      li a span {
+        display: none;
+      }
+    }
+  }
+
+  .tab-content {
+    background-color: #fff;
+    padding: 10px 10px 0;
+  }
+}

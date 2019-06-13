@@ -6,16 +6,20 @@
   @include large {
     width: $lgScreen - $gutter;
   }
+
   @include medium {
     width: $mdScreen - $gutter;
   }
+
   @include tablet {
     width: $smScreen - $gutter;
   }
+
   @include mobile {
     width: 100%;
   }
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +31,7 @@
     justify-content: flex-end;
   }
 }
+
 .col {
   margin: 0;
   padding: 0 ($gutter / 2);
@@ -67,6 +72,46 @@
       @for $i from 1 through $columns {
         &-#{$i} {
           flex: 0 0 colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    &.xs-off {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          margin-left: colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    &.sm-off {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          margin-left: colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include medium {
+    &.md-off {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          margin-left: colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include large {
+    &.lg-off {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          margin-left: colWidth($i);
         }
       }
     }
