@@ -159,7 +159,9 @@
 }
 
 .catalog-categories {
-  padding-bottom: 15px;
+  .row {
+    justify-content: center;
+  }
 
   .category-link {
     display: flex;
@@ -169,7 +171,7 @@
     color: white;
     border-radius: 3px;
     border: 1px solid $primaryColor;
-    margin: 0 0 5px;
+    margin: 0 0 20px;
     padding: 10px;
 
     .item-icon {
@@ -224,6 +226,19 @@
       background-color: $accentColor;
       border: 1px solid $accentColor;
     }
+  }
+
+  @include mobile {
+    .category-link {
+      margin-bottom: 5px;
+
+      .item-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    padding-bottom: 15px;
   }
 }
 

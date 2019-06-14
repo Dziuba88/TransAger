@@ -9,6 +9,12 @@
     li(role="presentation"): a(href="#autotyres" aria-controls="autotyres" role="tab" data-toggle="tab")
       svg.icon: use(xlink:href="#tyres")
       span автошины
+    li(role="presentation"): a(href="#oils" aria-controls="oils" role="tab" data-toggle="tab")
+      svg.icon: use(xlink:href="#gasoline")
+      span Масла
+    li(role="presentation"): a(href="#other" aria-controls="other" role="tab" data-toggle="tab")
+      svg.icon: use(xlink:href="#otherparts")
+      span Разное
   .tab-content
     .tab-pane.active.fade.in(role="tabpanel")#autoparts
       .form.search-form.autoparts
@@ -42,10 +48,6 @@
             option Легковой
             option Грузовой
         .col: button.btn.primary <i class="fa fa-search" aria-hidden="true"></i> поиск
-
-
-
-
     .tab-pane.fade(role="tabpanel")#autotyres 
       .form.search-form.autotyres
         .col.flex: .form__input
@@ -75,6 +77,11 @@
             option Зимние
             option Летние
         .col: button.btn.primary <i class="fa fa-search" aria-hidden="true"></i> поиск
-
-
-
+    .tab-pane.fade(role="tabpanel")#oils
+      .form.search-form.autoparts
+        .col.flex: .form__input: input(type="search", name="partsSearch", placeholder="Введите название товара")
+        .col: button.btn.primary <i class="fa fa-search" aria-hidden="true"></i> поиск
+    .tab-pane.fade(role="tabpanel")#other
+      .form.search-form.autoparts
+        .col.flex: .form__input: input(type="search", name="partsSearch", placeholder="Введите название товара")
+        .col: button.btn.primary <i class="fa fa-search" aria-hidden="true"></i> поиск

@@ -1,0 +1,11 @@
+.feedback
+  svg.feedback__icon: use(xlink:href="#feedback")
+  h2.feedback__header Задать вопрос
+  .feedback__form
+    .row
+      .col.md-6: .row
+        .col.sm-6: .form__input: input(type="text", name="feedbackName", placeholder="Ваше имя")
+        .col.sm-6: .form__input: input(type="email", name="feedbackEmail", placeholder="Ваш e-Mail")
+        .col.xs-12: .form__input: input(type="text", name="feedbackCompany", placeholder="Название компании")
+      .col.md-6: .form__input: textarea(name="feedbackMessage", cols="30", rows="10", placeholder="Текст сообщения")
+    .form__control: button.btn.yellow отправить сообщение

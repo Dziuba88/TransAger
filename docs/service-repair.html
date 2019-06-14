@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>TransAger | Ремонт и эвакуация транспорта</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body class="page">
+    <header class="page-header inside">
+      <div class="topbar">
+        <div class="container">
+          <div class="topbar__contacts">
+            <div class="topbar__phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37360097755">+373 60 097 755</a></div>
+            <div class="topbar__schedule"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Пн-Пт 9:00 - 18:00</span><span>Сб 09:00 - 13:00 </span></div>
+          </div>
+          <div class="topbar__contols"><a class="topbar__cabinet" href=""><i class="fa fa-address-book" aria-hidden="true"></i><span>Личный кабинет</span></a>
+            <div class="dropdown topbar__lang">
+              <div class="dropdown__toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Ru</span><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+              <div class="dropdown__menu">
+                <ul>
+                  <li><a href="">Română (Md)</a></li>
+                  <li class="current"><a href="">Русский (Ru)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="navbar__wraper">
+          <div class="container">
+            <div class="row"><a class="navbar__brand" href="index.html"><img src="img/logo.svg" alt=""/></a>
+              <div class="navbar__catalog"><a class="btn sm primary" href=""><span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span><span>магазин<br>запчастей</span></a></div>
+              <div class="navbar__separator"></div>
+              <nav class="navbar__nav">
+                <ul class="main-menu">
+                  <li class="dropdown"><a class="dropdown__toggle" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Услуги</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown__menu">
+                      <ul class="child-menu">
+                        <li><a href=""><span>Магазин запчастей</span></a></li>
+                        <li><a class="current" href=""><span>Ремонт и эвакуация транспорта</span></a></li>
+                        <li><a href=""><span>Грузоперевозки и экспедиция </span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a class="current" href=""><span>Акции</span></a></li>
+                  <li><a href=""><span>О компании</span></a></li>
+                  <li><a href=""><span>Контакты</span></a></li>
+                </ul>
+              </nav>
+              <button class="navbar__toggle"><i class="fa fa-navicon" aria-hidden="true"></i></button><a class="btn accent navbar__basket" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i><small>0</small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col lg-8 lg-off-2 md-10 md-off-1">
+            <div class="search">
+              <nav>
+                <ul class="nav-tabs" role="tablist">
+                  <li class="active" role="presentation"><a href="#autoparts" aria-controls="autoparts" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tools"></use>
+                      </svg><span>запчасти</span></a></li>
+                  <li role="presentation"><a href="#accumulators" aria-controls="accumulators" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#batteries"></use>
+                      </svg><span>аккумуляторы</span></a></li>
+                  <li role="presentation"><a href="#autotyres" aria-controls="autotyres" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tyres"></use>
+                      </svg><span>автошины</span></a></li>
+                  <li role="presentation"><a href="#oils" aria-controls="oils" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#gasoline"></use>
+                      </svg><span>Масла</span></a></li>
+                  <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#otherparts"></use>
+                      </svg><span>Разное</span></a></li>
+                </ul>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active fade in" role="tabpanel" id="autoparts">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите код товара или название"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="accumulators"> 
+                  <div class="form search-form accumulators">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="capacity">
+                          <option>Емкость (Ah)</option>
+                          <option>Емкость 1</option>
+                          <option>Емкость 2</option>
+                          <option>Емкость 3</option>
+                          <option>Емкость 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="voltage">
+                          <option>Напряжение (В)</option>
+                          <option>Напряжение 1</option>
+                          <option>Напряжение 2</option>
+                          <option>Напряжение 3</option>
+                          <option>Напряжение 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="polarity">
+                          <option>Полярность</option>
+                          <option>Полярность 1</option>
+                          <option>Полярность 2</option>
+                          <option>Полярность 3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="auto">
+                          <option>Тип авто</option>
+                          <option>Легковой</option>
+                          <option>Грузовой</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="autotyres"> 
+                  <div class="form search-form autotyres">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="diameter">
+                          <option>Диаметр</option>
+                          <option>Диаметр 1</option>
+                          <option>Диаметр 2</option>
+                          <option>Диаметр 3</option>
+                          <option>Диаметр 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="width">
+                          <option>Ширина</option>
+                          <option>Ширина 1</option>
+                          <option>Ширина 2</option>
+                          <option>Ширина 3</option>
+                          <option>Ширина 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="height">
+                          <option>Высота</option>
+                          <option>Высота 1</option>
+                          <option>Высота 2</option>
+                          <option>Высота 3</option>
+                          <option>Высота 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="season">
+                          <option>Сезонность</option>
+                          <option>Зимние</option>
+                          <option>Летние</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="oils">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="other">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page-content">
+      <div class="container">
+        <nav class="content__breadcrumbs" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ремонт и эвакуация транспорта</li>
+          </ol>
+        </nav>
+        <h1 class="page__title">Ремонт и эвакуация транспорта</h1>
+      </div>
+      <section class="service-page__description">
+        <div class="container">
+          <div class="row">
+            <div class="col md-7">
+              <div class="intro-subtitle">
+                <h2>РЕМОНТ И ОБСЛУЖИВАНИЕ АВТОПАРКА</h2>
+                <p>26 ремонтных залов и 50 автомехаников</p>
+              </div>
+              <div class="intro-text">
+                <h3>твой автопарк в надёжных руках!</h3>
+                <p>Компания «Trans Ager» располагает наибольшим количеством ремонтных залов в стране, что позволяет одновременно оказывать техническую помощь 26 грузовым авто. Команда из 50 автомехаников предлагает клиентам уникальную комбинацию услуг, направленных на обеспечение оптимального функционирования транспортного средства, прицепа и шин – в рамках одного осмотра.</p>
+              </div>
+              <div class="service-page__contacts">
+                <h4>Позвоните сейчас</h4>
+                <div class="actions"><a href="tel:+37379400416">+373 79 400 416</a> или <a href="tel:+37322475379">+373 22 47 53 79</a></div>
+                <p>сотрудиники нашего автосервиса ответят на ваши вопросы</p>
+              </div>
+            </div>
+            <div class="col md-5">
+              <div class="slider-module owl-carousel"><img src="img/slides_repair/1.png" alt=""/><img src="img/slides_repair/2.png" alt=""/><img src="img/slides_repair/3.png" alt=""/><img src="img/slides_repair/4.png" alt=""/><img src="img/slides_repair/5.png" alt=""/><img src="img/slides_repair/6.png" alt=""/><img src="img/slides_repair/7.png" alt=""/><img src="img/slides_repair/8.png" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-page__directions">
+        <div class="container">
+          <div class="row">
+            <div class="col lg-8 lg-off-2 md-10 md-off-1">
+              <h3>Виды ремонтных работ грузовых транспортных средств</h3>
+              <p>Сервис «Trans Ager» предоставляет услуги по техническому обслуживанию, техническому осмотру и ВСЕ виды ремонтных работ ВСЕХ типов грузовых транспортных средств:</p>
+            </div>
+          </div>
+          <div class="directions-list">
+            <div class="row">
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_1"></use>
+                    </svg>
+                  </div>
+                  <h5>шиномонтаж</h5>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_2"></use>
+                    </svg>
+                  </div>
+                  <h5>Подвеска и направление</h5>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_3"></use>
+                    </svg>
+                  </div>
+                  <h5>ремонт двигателей</h5>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_4"></use>
+                    </svg>
+                  </div>
+                  <h5>Покраска</h5>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_5"></use>
+                    </svg>
+                  </div>
+                  <h5>Рихтовка кузова</h5>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_6"></use>
+                    </svg>
+                  </div>
+                  <h5>Электрика и электроника</h5>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_7"></use>
+                    </svg>
+                  </div>
+                  <h5>Сварочные работы</h5>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="direction-item">
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="#repair_8"></use>
+                    </svg>
+                  </div>
+                  <h5>Ремонт холодильных агрегатов</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col lg-8 lg-off-2 md-10 md-off-1">
+              <p>С нами срок службы вашего грузового автомобиля будет максимальным. Сосредоточьтесь на бизнесе, а мы обеспечим вам уверенность в хорошо выполненной работе!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-page__description">
+        <div class="container">
+          <div class="row">
+            <div class="col md-5">
+              <div class="slider-module owl-carousel"><img src="img/slides_evacuation/1.png" alt=""/><img src="img/slides_evacuation/2.png" alt=""/><img src="img/slides_evacuation/3.png" alt=""/><img src="img/slides_evacuation/4.png" alt=""/><img src="img/slides_evacuation/5.png" alt=""/><img src="img/slides_evacuation/6.png" alt=""/><img src="img/slides_evacuation/7.png" alt=""/>
+              </div>
+            </div>
+            <div class="col md-7">
+              <div class="intro-text more-info">
+                <h2>БУКСИРОВКА ГРУЗОВЫХ АВТО в МОЛДОВе и  ЗА РУБЕЖОМ</h2>
+                <p>Дорожно-транспортные происшествия – весьма неприятный опыт, особенно когда они случаются за пределами страны. В любой точке Молдовы и не только вы можете рассчитывать на услугу буксировки грузовых авто в режиме 24/7.</p>
+                <p>При необходимости мы можем предоставить грузовой авто с водителем на замену, осуществить перегрузку груза и т. д.</p>
+              </div>
+              <div class="service-page__contacts">
+                <h4>Позвоните сейчас</h4>
+                <div class="actions"><a href="tel:+37379408806">+373 79 408 806</a></div>
+                <p>закажите доставку аварийного транспортного средства</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-feedback">
+        <div class="container">
+          <div class="feedback">
+            <svg class="feedback__icon">
+              <use xlink:href="#feedback"></use>
+            </svg>
+            <h2 class="feedback__header">Задать вопрос</h2>
+            <div class="feedback__form">
+              <div class="row">
+                <div class="col md-6">
+                  <div class="row">
+                    <div class="col sm-6">
+                      <div class="form__input">
+                        <input type="text" name="feedbackName" placeholder="Ваше имя"/>
+                      </div>
+                    </div>
+                    <div class="col sm-6">
+                      <div class="form__input">
+                        <input type="email" name="feedbackEmail" placeholder="Ваш e-Mail"/>
+                      </div>
+                    </div>
+                    <div class="col xs-12">
+                      <div class="form__input">
+                        <input type="text" name="feedbackCompany" placeholder="Название компании"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md-6">
+                  <div class="form__input">
+                    <textarea name="feedbackMessage" cols="30" rows="10" placeholder="Текст сообщения"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="form__control">
+                <button class="btn yellow">отправить сообщение</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="brands">
+        <div class="container">
+          <div class="owl-carousel">
+            <div class="brand"><img src="img/brand_1.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_2.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_3.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_4.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_5.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_6.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_7.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_8.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__wraper">
+        <div class="container">
+          <div class="row">
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Информация</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">О компании</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Поставщикам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Розничным клиентам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Услуги</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин автошин </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин аккумуляторов</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Ремонт и эвакуация автотранспорта</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Грузоперевозки и экспедиция</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Покупателю</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Акции</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Личный кабинет</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Гарантия и возврат </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Доставка и оплата</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="contacts">
+                <ul>
+                  <li class="title">КОНТАКТЫ</li>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>MD-2037, mun.Chișinău,<br>str.Uzinelor, 171-A</span></li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37360097755">+373 60 097 755</a></li>
+                  <li><i class="fa fa-print" aria-hidden="true"></i><a href="tel:+37322428749">+373 22 42 87 49</a></li>
+                  <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:transager@yandex.ru">transager@yandex.ru</a></li>
+                  <li class="social"><a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square" aria-hidden="true"></i></a><a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a><a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__copy">
+        <div class="container"><span>© 2019 Trans Ager SRL.</span><a href="">Политика конфидициальности</a><a href="">Общие положения и условия</a></div>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

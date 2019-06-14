@@ -50,6 +50,19 @@ $('.anounses-list .owl-carousel').owlCarousel({
     }
   }
 });
+// IMAGE SLIDER
+$('.slider-module').owlCarousel({
+  loop: true,
+  nav: true,
+  dots: false,
+  mouseDrag: false,
+  navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  items: 1
+});
+
 // BRANDS SLIDER
 $('.brands .owl-carousel').owlCarousel({
   responsiveRefreshRate: 0,

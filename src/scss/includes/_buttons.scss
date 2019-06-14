@@ -60,6 +60,16 @@ a {
 
   }
 
+  &.yellow {
+    background-color: $yellowColor;
+    color: $baseColor;
+
+    &:hover {
+      background-color: darken($yellowColor, 10%);
+    }
+
+  }
+
   &.white {
     background-color: white;
     color: $primaryColor;

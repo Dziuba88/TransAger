@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>TransAger | Каталог товаров</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
@@ -74,6 +75,14 @@
                       <svg class="icon">
                         <use xlink:href="#tyres"></use>
                       </svg><span>автошины</span></a></li>
+                  <li role="presentation"><a href="#oils" aria-controls="oils" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#gasoline"></use>
+                      </svg><span>Масла</span></a></li>
+                  <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#otherparts"></use>
+                      </svg><span>Разное</span></a></li>
                 </ul>
               </nav>
               <div class="tab-content">
@@ -186,6 +195,30 @@
                     </div>
                   </div>
                 </div>
+                <div class="tab-pane fade" role="tabpanel" id="oils">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="other">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -201,24 +234,32 @@
             <li class="breadcrumb-item active" aria-current="page">Аккумуляторы</li>
           </ol>
         </nav>
+        <h1 class="page__title">Магазин аккумуляторов</h1>
       </div>
       <section class="catalog-list">
         <div class="container">
-          <h1 class="page__title">Магазин аккумуляторов</h1>
           <div class="catalog-categories">
             <div class="row">
-              <div class="col md-4"><a class="category-link" href="">
+              <div class="col md-4 sm-6"><a class="category-link" href="">
                   <svg class="item-icon">
                     <use xlink:href="#tools"></use>
                   </svg><span class="item-name"> <strong class="item-title">запчасти </strong><small class="item-action">перейти в каталог</small></span><span class="item-counts"> <strong class="counter">1756 </strong><small class="counter-type">товаров</small></span></a></div>
-              <div class="col md-4"><a class="category-link current" href="">
+              <div class="col md-4 sm-6"><a class="category-link current" href="">
                   <svg class="item-icon">
                     <use xlink:href="#batteries"></use>
                   </svg><span class="item-name"> <strong class="item-title">Аккумуляторы </strong><small class="item-action">перейти в каталог</small></span><span class="item-counts"> <strong class="counter">1756 </strong><small class="counter-type">товаров</small></span></a></div>
-              <div class="col md-4"><a class="category-link" href="">
+              <div class="col md-4 sm-6"><a class="category-link" href="">
                   <svg class="item-icon">
                     <use xlink:href="#tyres"></use>
                   </svg><span class="item-name"> <strong class="item-title">Шины </strong><small class="item-action">перейти в каталог</small></span><span class="item-counts"> <strong class="counter">1756 </strong><small class="counter-type">товаров</small></span></a></div>
+              <div class="col md-4 sm-6"><a class="category-link" href="">
+                  <svg class="item-icon">
+                    <use xlink:href="#gasoline"></use>
+                  </svg><span class="item-name"> <strong class="item-title">Масла </strong><small class="item-action">перейти в каталог</small></span><span class="item-counts"> <strong class="counter">1756 </strong><small class="counter-type">товаров</small></span></a></div>
+              <div class="col md-4 sm-6"><a class="category-link" href="">
+                  <svg class="item-icon">
+                    <use xlink:href="#otherparts"></use>
+                  </svg><span class="item-name"> <strong class="item-title">Разное </strong><small class="item-action">перейти в каталог</small></span><span class="item-counts"> <strong class="counter">1756 </strong><small class="counter-type">товаров</small></span></a></div>
             </div>
           </div>
           <div class="catalog-filters">

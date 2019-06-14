@@ -2,7 +2,8 @@
   &__input {
     margin-bottom: 10px;
 
-    input {
+    input,
+    textarea {
       box-sizing: border-box;
       display: block;
       width: 100%;
@@ -58,7 +59,8 @@
       }
     }
 
-    &.error input {
+    &.error input,
+    &.error textarea {
       color: $accentColor;
       border-color: $accentColor;
 
@@ -82,6 +84,12 @@
         color: $baseColor;
         border-color: $grayColor;
       }
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+      padding: 10px;
     }
 
     .selectric-wrapper {
@@ -125,7 +133,6 @@
     .selectric-open .fa {
       transform: rotate(180deg)
     }
-
 
     .selectric-focus .selectric {
       border-color: $grayColor;
@@ -293,20 +300,6 @@
     .selectric-items .selectric-group li {
       padding-left: 25px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   }
 
@@ -530,6 +523,61 @@
     .col.flex {
       flex: none;
       width: 100%;
+    }
+  }
+}
+
+
+.service-feedback {
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  .feedback {
+    background-color: $primaryColor;
+    position: relative;
+    padding: 0 20px 10px;
+
+    &__icon {
+      position: absolute;
+      top: -30px;
+      right: 20px;
+      display: block;
+      width: 60px;
+      height: 60px;
+    }
+
+    &__header {
+      margin: 0;
+      padding: 10px 80px 10px 0;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .form__control {
+      justify-content: flex-end;
+    }
+
+  }
+
+  @include mobile {
+    padding-top: 0;
+
+    .feedback {
+
+      &__icon {
+        display: none;
+      }
+
+      &__header {
+        padding: 20px 20px 10px;
+        text-align: center;
+      }
+
+      .form__control {
+        justify-content: space-around;
+      }
+
     }
   }
 }

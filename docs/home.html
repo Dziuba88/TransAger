@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>TransAger | Главная страница</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
@@ -79,6 +80,14 @@
                         <svg class="icon">
                           <use xlink:href="#tyres"></use>
                         </svg><span>автошины</span></a></li>
+                    <li role="presentation"><a href="#oils" aria-controls="oils" role="tab" data-toggle="tab">
+                        <svg class="icon">
+                          <use xlink:href="#gasoline"></use>
+                        </svg><span>Масла</span></a></li>
+                    <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">
+                        <svg class="icon">
+                          <use xlink:href="#otherparts"></use>
+                        </svg><span>Разное</span></a></li>
                   </ul>
                 </nav>
                 <div class="tab-content">
@@ -184,6 +193,30 @@
                             <option>Зимние</option>
                             <option>Летние</option>
                           </select>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" role="tabpanel" id="oils">
+                    <div class="form search-form autoparts">
+                      <div class="col flex">
+                        <div class="form__input">
+                          <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" role="tabpanel" id="other">
+                    <div class="form search-form autoparts">
+                      <div class="col flex">
+                        <div class="form__input">
+                          <input type="search" name="partsSearch" placeholder="Введите название товара"/>
                         </div>
                       </div>
                       <div class="col">

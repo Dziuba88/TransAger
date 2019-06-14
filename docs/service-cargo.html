@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>TransAger | Ремонт и эвакуация транспорта</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body class="page">
+    <header class="page-header inside">
+      <div class="topbar">
+        <div class="container">
+          <div class="topbar__contacts">
+            <div class="topbar__phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37360097755">+373 60 097 755</a></div>
+            <div class="topbar__schedule"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Пн-Пт 9:00 - 18:00</span><span>Сб 09:00 - 13:00 </span></div>
+          </div>
+          <div class="topbar__contols"><a class="topbar__cabinet" href=""><i class="fa fa-address-book" aria-hidden="true"></i><span>Личный кабинет</span></a>
+            <div class="dropdown topbar__lang">
+              <div class="dropdown__toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Ru</span><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+              <div class="dropdown__menu">
+                <ul>
+                  <li><a href="">Română (Md)</a></li>
+                  <li class="current"><a href="">Русский (Ru)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="navbar__wraper">
+          <div class="container">
+            <div class="row"><a class="navbar__brand" href="index.html"><img src="img/logo.svg" alt=""/></a>
+              <div class="navbar__catalog"><a class="btn sm primary" href=""><span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span><span>магазин<br>запчастей</span></a></div>
+              <div class="navbar__separator"></div>
+              <nav class="navbar__nav">
+                <ul class="main-menu">
+                  <li class="dropdown"><a class="dropdown__toggle" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Услуги</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown__menu">
+                      <ul class="child-menu">
+                        <li><a href=""><span>Магазин запчастей</span></a></li>
+                        <li><a class="current" href=""><span>Ремонт и эвакуация транспорта</span></a></li>
+                        <li><a href=""><span>Грузоперевозки и экспедиция </span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a class="current" href=""><span>Акции</span></a></li>
+                  <li><a href=""><span>О компании</span></a></li>
+                  <li><a href=""><span>Контакты</span></a></li>
+                </ul>
+              </nav>
+              <button class="navbar__toggle"><i class="fa fa-navicon" aria-hidden="true"></i></button><a class="btn accent navbar__basket" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i><small>0</small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col lg-8 lg-off-2 md-10 md-off-1">
+            <div class="search">
+              <nav>
+                <ul class="nav-tabs" role="tablist">
+                  <li class="active" role="presentation"><a href="#autoparts" aria-controls="autoparts" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tools"></use>
+                      </svg><span>запчасти</span></a></li>
+                  <li role="presentation"><a href="#accumulators" aria-controls="accumulators" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#batteries"></use>
+                      </svg><span>аккумуляторы</span></a></li>
+                  <li role="presentation"><a href="#autotyres" aria-controls="autotyres" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tyres"></use>
+                      </svg><span>автошины</span></a></li>
+                  <li role="presentation"><a href="#oils" aria-controls="oils" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#gasoline"></use>
+                      </svg><span>Масла</span></a></li>
+                  <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#otherparts"></use>
+                      </svg><span>Разное</span></a></li>
+                </ul>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active fade in" role="tabpanel" id="autoparts">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите код товара или название"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="accumulators"> 
+                  <div class="form search-form accumulators">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="capacity">
+                          <option>Емкость (Ah)</option>
+                          <option>Емкость 1</option>
+                          <option>Емкость 2</option>
+                          <option>Емкость 3</option>
+                          <option>Емкость 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="voltage">
+                          <option>Напряжение (В)</option>
+                          <option>Напряжение 1</option>
+                          <option>Напряжение 2</option>
+                          <option>Напряжение 3</option>
+                          <option>Напряжение 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="polarity">
+                          <option>Полярность</option>
+                          <option>Полярность 1</option>
+                          <option>Полярность 2</option>
+                          <option>Полярность 3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="auto">
+                          <option>Тип авто</option>
+                          <option>Легковой</option>
+                          <option>Грузовой</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="autotyres"> 
+                  <div class="form search-form autotyres">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="diameter">
+                          <option>Диаметр</option>
+                          <option>Диаметр 1</option>
+                          <option>Диаметр 2</option>
+                          <option>Диаметр 3</option>
+                          <option>Диаметр 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="width">
+                          <option>Ширина</option>
+                          <option>Ширина 1</option>
+                          <option>Ширина 2</option>
+                          <option>Ширина 3</option>
+                          <option>Ширина 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="height">
+                          <option>Высота</option>
+                          <option>Высота 1</option>
+                          <option>Высота 2</option>
+                          <option>Высота 3</option>
+                          <option>Высота 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="season">
+                          <option>Сезонность</option>
+                          <option>Зимние</option>
+                          <option>Летние</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="oils">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="other">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page-content">
+      <div class="container">
+        <nav class="content__breadcrumbs" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">международные перевозки и экспедиция</li>
+          </ol>
+        </nav>
+        <h1 class="page__title">международные перевозки и экспедиция</h1>
+      </div>
+      <section class="service-page__description">
+        <div class="container">
+          <div class="row">
+            <div class="col md-7">
+              <div class="intro-text more-info">
+                <p><strong>«Trans Ager» – надёжный партнёр, предлагающий клиентам разнообразный автопарк, а также полный комплекс логистических решений для осуществления грузовых перевозок.</strong></p>
+                <p><strong>Наши направления:</strong> Республика Молдова, Европа, СНГ, Турция</p>
+                <p>Спустя четверть века деятельности на международном рынке грузовых перевозок, мы знаем карту мира, как свои пять пальцев. Мы гарантируем профессионализм и оперативность, самых опытных водителей, оптимизацию маршрутов и идеальное соотношение между «надёжной» и «быстрой» доставкой грузов.</p>
+                <p>Все рейсы компании «Trans Ager» тщательно отслеживаются нашими диспетчерами, а это значит, что ваш товар доставят в пункт назначения в установленные сроки и в условиях максимальной безопасности.</p>
+              </div>
+            </div>
+            <div class="col md-5">
+              <div class="slider-module owl-carousel"><img src="img/slides_cargo/1.png" alt=""/><img src="img/slides_cargo/2.png" alt=""/><img src="img/slides_cargo/3.png" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-page__directions">
+        <div class="container">
+          <div class="row">
+            <div class="col lg-8 lg-off-2 md-10 md-off-1">
+              <h3>Транспортные услуги, которые мы предоставляем</h3>
+              <p>Перевозка негабаритных грузов, Перевозки «от двери до двери», Перевозка спецтехники</p>
+            </div>
+          </div>
+          <div class="cargo-list">
+            <div class="row">
+              <div class="col md-3 sm-6">
+                <div class="cargo-item"><img src="img/serv_cargo_1.png" alt=""/>
+                  <h5>Перевозка комплектных грузов</h5>
+                  <p>Оптимальное решение для компаний, перевозящих большие объемы грузов. Груз, по объему занимающий все транспортное средство, принадлежит одному клиенту и разгружается непосредственно на складе получателя, что сокращает сроки доставки.</p>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="cargo-item"><img src="img/serv_cargo_2.png" alt=""/>
+                  <h5>Перевозка сборных грузов</h5>
+                  <p>Услуга предназначена для клиентов, которым необходима транспортировка небольших партий товаров или грузов малого объема. Сборный груз объединяет в себе несколько видов товара от разных отправителей, что позволяет заказчикам значительно сэкономить на доставке.</p>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="cargo-item"><img src="img/serv_cargo_3.png" alt=""/>
+                  <h5>Перевозка термолабильных грузов</h5>
+                  <p>Услуга предназначена для товаров, требующих соблюдения температурного режима в течении всего пути: скоропортящиеся продукты питания, цветы, лекарства. Наши грузовые автомобили позволяют поддерживать определенную температуру в пределах от -20°С до + 25°С.</p>
+                </div>
+              </div>
+              <div class="col md-3 sm-6">
+                <div class="cargo-item"><img src="img/serv_cargo_4.png" alt=""/>
+                  <h5>Перевозка текстильной продукции</h5>
+                  <p>Перевозка осуществляется в грузовиках, оснащенных штангами для размещения одежды на вешалках, что позволяет избежать нежелательных складок и гарантирует сохранность изделий. Благодаря правильным условиям транспортировки товар прибывает в магазины в надлежащем виде.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col lg-8 lg-off-2 md-10 md-off-1">
+              <div class="contacts">
+                <h4>Позвоните сейчас</h4>
+                <div class="actions"><a href="tel:+37322474282">+373 22 474 282</a></div>
+                <p>наши сотрудиники ответят на ваши вопросы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-page__description">
+        <div class="container">
+          <div class="row">
+            <div class="col md-5"><img class="description__image" src="img/expedition.png" alt=""/></div>
+            <div class="col md-7">
+              <div class="intro-text more-info">
+                <h2>Услуги транспортной логистики</h2>
+                <p>А там, куда не доезжают грузовики «Trans Ager», ситуацию берут под свой контроль менеджеры по перевозкам нашей компании. Выполнить требования клиента в кратчайшие сроки – наш приоритет, вот почему, в дополнение к нашему собственному автопарку, мы предлагаем услуги наших субподрядчиков, соответствующие стандартам качества, установленным нашей компанией.</p>
+                <p>Мы гарантируем, что итоговые затраты будут приемлемыми для всех сторон, вовлеченных в процесс перевозки грузов.</p>
+                <p><strong>Услуги транспортной логистики, которые мы предоставляем:</strong></p>
+                <ul>
+                  <li><strong>хранение</strong> (мы располагаем двумя собственными складами в Турции и   одним – в Германии)</li>
+                  <li><strong>дистрибуция</strong></li>
+                  <li><strong>страхование</strong> грузов и <strong>CMR</strong> страхование</li>
+                  <li><strong>консультация</strong> относительно таможенных формальностей</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-feedback">
+        <div class="container">
+          <div class="feedback">
+            <svg class="feedback__icon">
+              <use xlink:href="#feedback"></use>
+            </svg>
+            <h2 class="feedback__header">Задать вопрос</h2>
+            <div class="feedback__form">
+              <div class="row">
+                <div class="col md-6">
+                  <div class="row">
+                    <div class="col sm-6">
+                      <div class="form__input">
+                        <input type="text" name="feedbackName" placeholder="Ваше имя"/>
+                      </div>
+                    </div>
+                    <div class="col sm-6">
+                      <div class="form__input">
+                        <input type="email" name="feedbackEmail" placeholder="Ваш e-Mail"/>
+                      </div>
+                    </div>
+                    <div class="col xs-12">
+                      <div class="form__input">
+                        <input type="text" name="feedbackCompany" placeholder="Название компании"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col md-6">
+                  <div class="form__input">
+                    <textarea name="feedbackMessage" cols="30" rows="10" placeholder="Текст сообщения"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="form__control">
+                <button class="btn yellow">отправить сообщение</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="brands">
+        <div class="container">
+          <div class="owl-carousel">
+            <div class="brand"><img src="img/brand_1.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_2.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_3.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_4.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_5.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_6.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_7.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_8.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__wraper">
+        <div class="container">
+          <div class="row">
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Информация</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">О компании</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Поставщикам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Розничным клиентам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Услуги</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин автошин </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин аккумуляторов</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Ремонт и эвакуация автотранспорта</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Грузоперевозки и экспедиция</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Покупателю</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Акции</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Личный кабинет</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Гарантия и возврат </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Доставка и оплата</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="contacts">
+                <ul>
+                  <li class="title">КОНТАКТЫ</li>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>MD-2037, mun.Chișinău,<br>str.Uzinelor, 171-A</span></li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37360097755">+373 60 097 755</a></li>
+                  <li><i class="fa fa-print" aria-hidden="true"></i><a href="tel:+37322428749">+373 22 42 87 49</a></li>
+                  <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:transager@yandex.ru">transager@yandex.ru</a></li>
+                  <li class="social"><a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square" aria-hidden="true"></i></a><a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a><a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__copy">
+        <div class="container"><span>© 2019 Trans Ager SRL.</span><a href="">Политика конфидициальности</a><a href="">Общие положения и условия</a></div>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -5,17 +5,18 @@ block headerContent
   .container: .row
     .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
 block content
-  .container: nav(aria-label='breadcrumb').content__breadcrumbs
-    ol.breadcrumb
-      li.breadcrumb-item
-        a(href='#') Главная
-      li.breadcrumb-item
-        a(href='#') Магазин запчастей
-      li.breadcrumb-item.active(aria-current='page') Аккумуляторы
-  section.catalog-list: .container
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item
+          a(href='#') Магазин запчастей
+        li.breadcrumb-item.active(aria-current='page') Аккумуляторы
     h1.page__title Магазин аккумуляторов
+  section.catalog-list: .container
     .catalog-categories: .row
-      .col.md-4: a(href="").category-link
+      .col.md-4.sm-6: a(href="").category-link
         svg.item-icon: use(xlink:href="#tools")
         span.item-name 
           strong.item-title запчасти 
@@ -23,7 +24,7 @@ block content
         span.item-counts 
           strong.counter 1756 
           small.counter-type товаров
-      .col.md-4: a(href="").category-link.current
+      .col.md-4.sm-6: a(href="").category-link.current
         svg.item-icon: use(xlink:href="#batteries")
         span.item-name 
           strong.item-title Аккумуляторы 
@@ -31,10 +32,26 @@ block content
         span.item-counts 
           strong.counter 1756 
           small.counter-type товаров
-      .col.md-4: a(href="").category-link
+      .col.md-4.sm-6: a(href="").category-link
         svg.item-icon: use(xlink:href="#tyres")
         span.item-name 
           strong.item-title Шины 
+          small.item-action перейти в каталог
+        span.item-counts 
+          strong.counter 1756 
+          small.counter-type товаров
+      .col.md-4.sm-6: a(href="").category-link
+        svg.item-icon: use(xlink:href="#gasoline")
+        span.item-name 
+          strong.item-title Масла 
+          small.item-action перейти в каталог
+        span.item-counts 
+          strong.counter 1756 
+          small.counter-type товаров
+      .col.md-4.sm-6: a(href="").category-link
+        svg.item-icon: use(xlink:href="#otherparts")
+        span.item-name 
+          strong.item-title Разное 
           small.item-action перейти в каталог
         span.item-counts 
           strong.counter 1756 
