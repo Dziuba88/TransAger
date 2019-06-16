@@ -1,0 +1,31 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Корзина'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item.active(aria-current='page') Корзина
+  section.basket__thanks
+    .container: .row: .col.md-6.sm-8: .thanks
+          .thanks__icon: i.fa.fa-check(aria-hidden="true")
+          h1 СПАСИБО!
+          p Ваш <strong>заказ #<span>1234567890</span></strong> был принят в обработку!
+          p Наш менеджер свяжеться с Вами для проверки введенных Вами данных и уточнит детали заказа.
+          p: a(href="index.html").btn.md.primary на главную
+  .container
+    .row: .col.lg-6.lg-off-3.md-8.md-off-2.sm-10.sm-off-1
+      a(href="uploads/transager_stocks_15.06.19.xls", download="transager_stocks_15.06.19.xls").service-add.stocks
+        span.service-add__text
+          span ликвидация стоков! 
+          strong Скидки до 50%
+        span.service-add__download
+          .btn.btn__download
+            svg.icon: use(xlink:href="#exel")
+            span скачать документ
+            small 39.5 KiB

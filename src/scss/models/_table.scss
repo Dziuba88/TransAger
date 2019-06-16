@@ -212,7 +212,114 @@
     font-size: 14px;
     line-height: 20px;
     font-weight: 700;
+  }
+}
 
-    &:hover {}
+.basket--table {
+  th {
+    white-space: nowrap;
+  }
+
+  .basket__item {
+    background-color: white !important;
+  }
+
+  .item-link {
+    display: inline-flex;
+    align-items: center;
+    max-width: 280px;
+    min-width: 280px;
+
+    .thumb {
+      flex: none;
+      width: 45px;
+      height: 45px;
+      border: 1px solid $lightColor;
+      box-sizing: border-box;
+      margin-right: 10px;
+      padding: 4px;
+      transition: .15s ease-in-out;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      .thumb {
+        border-color: $primaryColor;
+      }
+    }
+  }
+
+  .item-summ {
+    font-size: 14px;
+  }
+
+  .form__input.input__number {
+    display: inline-flex;
+    padding-right: 15px;
+
+    input {
+      font-size: 12px;
+      width: 60px;
+      height: 30px;
+    }
+
+    .input-minus,
+    .input-plus {
+      font-size: 13px;
+    }
+  }
+}
+
+
+.summary--table {
+  margin-bottom: 20px;
+
+  thead tr {
+    border-bottom: 1px solid $lightColor;
+
+    th {
+      font-size: 18px;
+      line-height: 1;
+    }
+  }
+
+  tbody tr {
+    &:nth-child(even) {
+      background-color: white;
+    }
+
+    th {
+      font-weight: 400;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: $grayColor;
+      text-transform: uppercase;
+    }
+
+    td {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    &.total {
+      background-color: $lightColor;
+
+      th {
+        font-weight: 700;
+        font-size: 14px;
+        color: $baseColor;
+      }
+
+      td {
+        font-size: 18px;
+      }
+
+    }
+
   }
 }

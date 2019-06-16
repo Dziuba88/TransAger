@@ -257,3 +257,56 @@ p {
     display: block;
   }
 }
+
+
+.messages {
+  .row {
+    justify-content: space-around;
+  }
+
+  .message-item {
+    padding: 10px;
+    margin: 0 0 20px;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+
+    p {
+      font-size: 12px;
+      line-height: 15px;
+      margin: 0;
+    }
+
+    a,
+    strong {
+      font-weight: 700;
+    }
+
+    a {
+      color: currentColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.danger {
+      color: $accentColor;
+      background-color: rgba($accentColor, .15);
+    }
+
+    &.success {
+      color: $successColor;
+      background-color: rgba($successColor, .15);
+    }
+
+    &.warning {
+      color: $warningColor;
+      background-color: rgba($warningColor, .15);
+    }
+
+    &.info {
+      color: $infoColor;
+      background-color: rgba($infoColor, .15);
+    }
+  }
+}

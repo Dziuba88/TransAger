@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>TransAger | Личный кабинет</title>
+    <title>TransAger | Корзина</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -230,213 +230,151 @@
         <nav class="content__breadcrumbs" aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Главная</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Личный кабинет</li>
+            <li class="breadcrumb-item active" aria-current="page">Корзина</li>
           </ol>
         </nav>
-        <h1 class="page__title cabinet-header">Личный кабинет</h1>
-        <nav class="page-nav">
-          <ul class="tab-menu">
-            <li><a class="current" href="cabinet-profile.html">Профиль</a></li>
-            <li><a href="cabinet-history.html">История заказов</a></li>
-          </ul>
-        </nav>
+        <h1 class="page__title">Корзина</h1>
       </div>
-      <section class="cabinet--profile">
+      <section class="basket">
         <div class="container">
-          <div class="row">
-            <div class="col md-9">
-              <div class="profile--form">
-                <div class="form__section">
-                  <h3>Тип профиля</h3>
-                  <div class="form__row">
-                    <div class="form__checkbox">
-                      <input type="radio" name="accountType" checked="" value="0" id="account-single"/>
-                      <label for="account-single" data-target="#single"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><span class="text">Физическое лицо</span></label>
-                    </div>
-                    <div class="form__checkbox">
-                      <input type="radio" name="accountType" value="1" id="account-company"/>
-                      <label for="account-company" data-target="#company"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><span class="text">Юридическое лицо</span></label>
-                    </div>
-                  </div>
+          <div class="messages">
+            <div class="row">
+              <div class="col md-7">
+                <div class="message-item danger">
+                  <p><strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.</p>
                 </div>
-                <div class="tab-content">
-                  <div class="tab-pane active fade in" role="tabpanel" id="single">
-                    <form class="form">
-                      <div class="form__section">
-                        <h3>Персональные Данные</h3>
-                        <div class="row">
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="singleFirstName" placeholder="Имя" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="singleLastName" placeholder="Фамилия" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="singlePhone" placeholder="Телефон" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="email" name="singleEmail" value="dziuba88@gmail.com" disabled="disabled"/>
-                            </div>
-                          </div>
-                          <div class="col md-8">
-                            <div class="form__input">
-                              <input type="tel" name="singleFiscal" placeholder="Фискальный код" required="required"/>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form__action">
-                        <button class="btn sm primary">сохранить</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="tab-pane fade" role="tabpanel" id="company">
-                    <form class="form">
-                      <div class="form__section">
-                        <h3>Контактное лицо</h3>
-                        <div class="row">
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="companyFirstName" placeholder="Имя" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="companyLastName" placeholder="Фамилия" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="companyPosition" placeholder="Должность" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="email" name="companyEmail" value="dziuba88@gmail.com" disabled="disabled"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="companyPhone" placeholder="Телефон" required="required"/>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form__section">
-                        <h3>Реквизиты компании</h3>
-                        <div class="row">
-                          <div class="col md-12">
-                            <div class="form__input">
-                              <input type="text" name="companyName" placeholder="Юридическое название предприятия" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-12">
-                            <div class="form__input">
-                              <input type="text" name="companyAddress" placeholder="Юридический адрес" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="tel" name="companyFiscal" placeholder="Фискальный код" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4 sm-6">
-                            <div class="form__input">
-                              <input type="tel" name="companyTVA" placeholder="Код плательщика НДС" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-4 sm-6">
-                            <div class="form__checkbox">
-                              <input type="checkbox" name="hasTVA" value="true" checked="checked" id="hastva"/>
-                              <label for="hastva" data-enable="tva"><span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span><span class="text">плательщик НДС</span></label>
-                            </div>
-                          </div>
-                          <div class="col md-4">
-                            <div class="form__input">
-                              <input type="text" name="companyBankID" placeholder="Код Банка" required="required"/>
-                            </div>
-                          </div>
-                          <div class="col md-8">
-                            <div class="form__input">
-                              <input type="text" name="companyIBAN" placeholder="Расчетный счет" required="required"/>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form__action">
-                        <button class="btn sm primary">сохранить</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <form class="form address--form">
-                  <div class="form__section">
-                    <h3>Адрес доставки</h3>
-                    <div class="row">
-                      <div class="col md-4">
-                        <div class="form__input">
-                          <input type="text" name="addressCountry" value="Молдова" disabled="disabled"/>
-                        </div>
-                      </div>
-                      <div class="col md-4">
-                        <div class="form__input">
-                          <input type="text" name="addressRegion" placeholder="Регион / Область" required="required"/>
-                        </div>
-                      </div>
-                      <div class="col md-4">
-                        <div class="form__input">
-                          <input type="text" name="addressCity" placeholder="Город" required="required"/>
-                        </div>
-                      </div>
-                      <div class="col md-12">
-                        <div class="form__input">
-                          <input type="text" name="addressCity" placeholder="Улица, дом, кв./оф." required="required"/>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__action">
-                    <button class="btn sm primary">сохранить</button>
-                  </div>
-                </form>
+                <!--.message-item.successp <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+                -->
+                <!--.message-item.warningp <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+                -->
+                <!--.message-item.infop <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+                -->
               </div>
             </div>
-            <div class="col md-3 sm-6">
-              <form class="form security--form">
-                <div class="form__section">
-                  <h3>Безопасность</h3>
-                  <div class="form__input">
-                    <input type="password" name="oldPass" placeholder="Старый пароль" required="required"/>
-                  </div>
-                  <div class="form__input">
-                    <input type="password" name="newPass" placeholder="Новый пароль" required="required"/>
-                  </div>
-                  <div class="form__input">
-                    <input type="password" name="confirm" placeholder="Повторить пароль" required="required"/>
-                  </div>
-                </div>
-                <div class="form__action">
-                  <button class="btn sm accent">сохранить</button>
-                </div>
-              </form>
+          </div>
+          <div class="basket__items">
+            <div class="table__wraper">
+              <table class="table basket--table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>товар</th>
+                    <th>Склад</th>
+                    <th>Цена (MDL)</th>
+                    <th>кол-во (шт.)</th>
+                    <th>скидка (%)</th>
+                    <th>сумма (MDL)</th>
+                    <th> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="basket__item">
+                    <td>1</td>
+                    <td><a class="item-link" href=""><span class="thumb"><img src="img/th_shop-item_1.png" alt=""/></span><span>Компрессор кондиционера Volvo FH12 D13 Euro 6 </span></a></td>
+                    <td><span>Филиал Кишинев</span></td>
+                    <td><span>4690.00</span></td>
+                    <td>
+                      <div class="form__input input__number">
+                        <input type="number" name="quantity" min="1" max="100" value="1" step="1"/>
+                        <button class="input-plus"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                        <button class="input-minus"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
+                      </div>
+                    </td>
+                    <td><span>0.00</span></td>
+                    <td><strong class="item-summ">4690.00</strong></td>
+                    <td>
+                      <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
+                  </tr>
+                  <tr class="basket__item">
+                    <td>2</td>
+                    <td><a class="item-link" href=""><span class="thumb"><img src="img/th_shop-item_2.png" alt=""/></span><span>Компрессор кондиционера Volvo FH12 D13 Euro 6 </span></a></td>
+                    <td><span>Филиал Кишинев</span></td>
+                    <td><span>4690.00</span></td>
+                    <td>
+                      <div class="form__input input__number">
+                        <input type="number" name="quantity" min="1" max="100" value="1" step="1"/>
+                        <button class="input-plus"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                        <button class="input-minus"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
+                      </div>
+                    </td>
+                    <td><span>0.00</span></td>
+                    <td><strong class="item-summ">4690.00</strong></td>
+                    <td>
+                      <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
+                  </tr>
+                  <tr class="basket__item">
+                    <td>3</td>
+                    <td><a class="item-link" href=""><span class="thumb"><img src="img/th_no-image.png" alt=""/></span><span>Компрессор кондиционера Volvo FH12 D13 Euro 6 </span></a></td>
+                    <td><span>Филиал Кишинев</span></td>
+                    <td><span>4690.00</span></td>
+                    <td>
+                      <div class="form__input input__number">
+                        <input type="number" name="quantity" min="1" max="100" value="1" step="1"/>
+                        <button class="input-plus"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+                        <button class="input-minus"><i class="fa fa-minus-square" aria-hidden="true"></i></button>
+                      </div>
+                    </td>
+                    <td><span>0.00</span></td>
+                    <td><strong class="item-summ">4690.00</strong></td>
+                    <td>
+                      <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+              <div class="col md-8 sm-6"></div>
+              <div class="col md-4 sm-6">
+                <table class="table summary--table">
+                  <thead>
+                    <tr>
+                      <th>Итого:</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>Стоимость</th>
+                      <td>7640.00 MDL</td>
+                    </tr>
+                    <tr>
+                      <th>В том числе НДС</th>
+                      <td>1528.00 MDL</td>
+                    </tr>
+                    <tr>
+                      <th>Скидка</th>
+                      <td>0.00 MDL</td>
+                    </tr>
+                    <tr class="total">
+                      <th>Сумма</th>
+                      <td>7640.00 MDL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="basket__steps">
+            <div class="row">
+              <div class="col sm-6"><a class="btn sm primary" href="">продолжить покупки</a></div>
+              <div class="col sm-6"><a class="btn accent" href="">оформить заказ</a></div>
             </div>
           </div>
         </div>
       </section>
-      <section class="cabinet--bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col lg-6 lg-off-3 md-8 md-off-2 sm-10 sm-off-1"><a class="service-add repair" href=""><img class="service-add__img" src="img/repair_add_img.png" alt=""/><span class="service-add__text"><span>Ремонт и эвакуация транспорта</span><strong>+373 79 408 806</strong></span></a></div>
-          </div>
+      <div class="container">
+        <div class="row">
+          <div class="col lg-6 lg-off-3 md-8 md-off-2 sm-10 sm-off-1"><a class="service-add stocks" href="uploads/transager_stocks_15.06.19.xls" download="transager_stocks_15.06.19.xls"><span class="service-add__text"><span>ликвидация стоков! </span><strong>Скидки до 50%</strong></span><span class="service-add__download">
+                <div class="btn btn__download">
+                  <svg class="icon">
+                    <use xlink:href="#exel"></use>
+                  </svg><span>скачать документ</span><small>39.5 KiB</small>
+                </div></span></a></div>
         </div>
-      </section>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="brands">

@@ -388,6 +388,7 @@
           border: 1px solid $lightColor;
           box-sizing: border-box;
           transition: .15s ease-in-out;
+          flex: none;
 
           .fa {
             display: block;
@@ -441,6 +442,49 @@
 
 
 
+      }
+    }
+
+
+    &.filial {
+
+      input {
+        &+label {
+          border: 1px solid $lightColor;
+          border-radius: 3px;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+          transition: .25s ease-in-out;
+          display: flex;
+
+          .icon {
+            background-color: white;
+          }
+
+          .text {
+            padding-left: 20px;
+          }
+        }
+
+        &:checked+label {
+          border-color: $successColor;
+          background-color: rgba($lightColor, .25);
+        }
+      }
+
+      .filial__title {
+        font-size: 16px;
+        min-height: 1px;
+      }
+
+      .filial__address {
+        opacity: 0.5;
+        font-size: 12px;
+        line-height: 1.2;
+
+        span {
+          display: block;
+        }
       }
     }
   }

@@ -1,0 +1,174 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Корзина'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item.active(aria-current='page') Корзина
+    h1.page__title Корзина
+  section.basket
+    .container
+      .messages
+        .row: .col.md-7
+          .message-item.danger
+            p <strong>Внимание!</strong> Вам необходимо заполнить форму, поля отмеченые * являются обязательными. После завершения оформления заказа с Вами свяжется менеджер. Данные заполненые в этой форме будут доступны при следующем заказе и их можно изменить в <a href="">Личном Кабинете</a>.
+          //.message-item.success
+            p <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+          //.message-item.warning
+            p <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+          //.message-item.info
+            p <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+      .basket__checkout
+        .row
+          .col.lg-8: .profile--form
+            .form__section
+              h3 Оформить как
+              .form__row
+                .form__checkbox
+                  input(type="radio", name="accountType", checked="", value="0")#account-single
+                  label(for="account-single" data-target="#single")
+                    span.icon: i.fa.fa-check(aria-hidden="true")
+                    span.text Физическое лицо
+                .form__checkbox
+                  input(type="radio", name="accountType", value="1")#account-company
+                  label(for="account-company" data-target="#company")
+                    span.icon: i.fa.fa-check(aria-hidden="true")
+                    span.text Юридическое лицо
+            .tab-content
+              .tab-pane.active.fade.in(role="tabpanel")#single: form.form
+                .form__section
+                  h3 Персональные Данные
+                  .row
+                    .col.md-4: .form__input: input(type="text", name="singleFirstName", placeholder="Имя", required)
+                    .col.md-4: .form__input: input(type="text", name="singleLastName", placeholder="Фамилия", required)
+                    .col.md-4: .form__input: input(type="text", name="singlePhone", placeholder="Телефон", required)
+                    .col.md-4: .form__input: input(type="email", name="singleEmail", value="dziuba88@gmail.com", disabled)
+                    .col.md-8: .form__input: input(type="tel", name="singleFiscal", placeholder="Фискальный код", required)
+              .tab-pane.fade(role="tabpanel")#company: form.form
+                .form__section
+                  h3 Контактное лицо
+                  .row
+                    .col.md-4: .form__input: input(type="text", name="companyFirstName", placeholder="Имя", required)
+                    .col.md-4: .form__input: input(type="text", name="companyLastName", placeholder="Фамилия", required)
+                    .col.md-4: .form__input: input(type="text", name="companyPosition", placeholder="Должность", required)
+                    .col.md-4: .form__input: input(type="email", name="companyEmail", value="dziuba88@gmail.com", disabled)
+                    .col.md-4: .form__input: input(type="text", name="companyPhone", placeholder="Телефон", required)
+                .form__section
+                  h3 Реквизиты компании
+                  .row
+                    .col.md-12: .form__input: input(type="text", name="companyName", placeholder="Юридическое название предприятия", required)
+                    .col.md-12: .form__input: input(type="text", name="companyAddress", placeholder="Юридический адрес", required)
+                    .col.md-4: .form__input: input(type="tel", name="companyFiscal", placeholder="Фискальный код", required)
+                    .col.md-4.sm-6: .form__input: input(type="tel", name="companyTVA", placeholder="Код плательщика НДС", required)
+                    .col.md-4.sm-6: .form__checkbox
+                      input(type="checkbox", name="hasTVA", value="true", checked)#hastva
+                      label(for="hastva" data-enable="tva")
+                        span.icon: i.fa.fa-check(aria-hidden="true")
+                        span.text плательщик НДС
+                    .col.md-4: .form__input: input(type="text", name="companyBankID", placeholder="Код Банка", required)
+                    .col.md-8: .form__input: input(type="text", name="companyIBAN", placeholder="Расчетный счет", required)
+            .form__section: .form__input: textarea(name="orderComment", placeholder="Комментарий к заказу")
+          .col.lg-4: .profile--form
+            form.form.address--form
+              .form__section
+                h3 Доставка
+                .form__row
+                  .form__checkbox
+                    input(type="radio", name="deliveryType", checked="", value="0")#delivery-self
+                    label(for="delivery-self" data-target="#self")
+                      span.icon: i.fa.fa-check(aria-hidden="true")
+                      span.text Самовывоз
+                  .form__checkbox
+                    input(type="radio", name="deliveryType", value="1")#delivery-curier
+                    label(for="delivery-curier" data-target="#curier")
+                      span.icon: i.fa.fa-check(aria-hidden="true")
+                      span.text Курьером
+                .tab-content
+                  .tab-pane.fade(role="tabpanel")#curier: form.form
+                    .form__section
+                      .form__input: input(type="text", name="addressCountry", value="Молдова", disabled)
+                      .form__input: input(type="text", name="addressRegion", placeholder="Регион / Область", required)
+                      .form__input: input(type="text", name="addressCity", placeholder="Город", required)
+                      .form__input: input(type="text", name="addressCity", placeholder="Улица, дом, кв./оф.", required)
+                  .tab-pane.active.fade.in(role="tabpanel")#self: form.form
+                    .form__section
+                      .form__checkbox.filial
+                        input(type="radio", name="filial", checked="", value="0")#filial-1
+                        label(for="filial-1")
+                          span.icon: i.fa.fa-check(aria-hidden="true")
+                          span.text
+                            .filial__title Филиал Кишинэу
+                            .filial__address
+                              span Кишинэу, ул. Хынчешть 142
+                              span Пн-Пт 9:00 - 18:00, Сб 09:00 - 13:00 
+                      .form__checkbox.filial
+                        input(type="radio", name="filial", value="1")#filial-2
+                        label(for="filial-2")
+                          span.icon: i.fa.fa-check(aria-hidden="true")
+                          span.text
+                            .filial__title Филиал Кишинэу
+                            .filial__address
+                              span Кишинэу, ул. Узинилор, 171-A
+                              span Пн-Пт 9:00 - 18:00, Сб 09:00 - 13:00 
+        hr
+        .row
+          .col.md-8.sm-6
+          .col.md-4.sm-6
+            table.table.summary--table
+              thead: tr
+                th Итого:
+                th
+              tbody
+                tr
+                  th Стоимость
+                  td 7640.00 MDL
+                tr
+                  th Доставка
+                  td 0.00 MDL
+                tr
+                  th Оплата
+                  td по перечислению
+                tr.total
+                  th К оплате
+                  td 7640.00 MDL
+      .basket__steps
+        .row
+          .col.sm-6: a(href="").btn.sm.primary редактировать корзину
+          .col.sm-6: a(href="").btn.accent подтвердить заказ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container
+    .row: .col.lg-6.lg-off-3.md-8.md-off-2.sm-10.sm-off-1
+      a(href="uploads/transager_stocks_15.06.19.xls", download="transager_stocks_15.06.19.xls").service-add.stocks
+        span.service-add__text
+          span ликвидация стоков! 
+          strong Скидки до 50%
+        span.service-add__download
+          .btn.btn__download
+            svg.icon: use(xlink:href="#exel")
+            span скачать документ
+            small 39.5 KiB

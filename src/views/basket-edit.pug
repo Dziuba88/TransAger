@@ -1,0 +1,138 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Корзина'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item.active(aria-current='page') Корзина
+    h1.page__title Корзина
+  section.basket
+    .container
+      .messages
+        .row: .col.md-7
+          .message-item.danger
+            p <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+          //.message-item.success
+            p <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+          //.message-item.warning
+            p <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+          //.message-item.info
+            p <strong>Внимание!</strong> В корзину должны быть добавлены товары только с одного из филиалов магазина TransAger SRL. Подробную информацию Вы можете получить в статье <a href="">Оплата и доставка</a>.
+      .basket__items
+        .table__wraper: table.table.basket--table
+          thead: tr
+            th #
+            th товар
+            th Склад
+            th Цена (MDL)
+            th кол-во (шт.)
+            th скидка (%)
+            th сумма (MDL)
+            th 
+          tbody
+            tr.basket__item
+              td 1
+              td
+                a(href="").item-link
+                  span.thumb: img(src="img/th_shop-item_1.png", alt="")
+                  span Компрессор кондиционера Volvo FH12 D13 Euro 6 
+              td: span Филиал Кишинев
+              td: span 4690.00
+              td: .form__input.input__number
+                input(type="number", name="quantity", min="1", max="100", value="1", step="1")
+                button.input-plus: i.fa.fa-plus-square(aria-hidden="true")
+                button.input-minus: i.fa.fa-minus-square(aria-hidden="true")
+              td: span 0.00
+              td: strong.item-summ 4690.00
+              td: button.btn.delete: i.fa.fa-trash(aria-hidden="true")
+            tr.basket__item
+              td 2
+              td
+                a(href="").item-link
+                  span.thumb: img(src="img/th_shop-item_2.png", alt="")
+                  span Компрессор кондиционера Volvo FH12 D13 Euro 6 
+              td: span Филиал Кишинев
+              td: span 4690.00
+              td: .form__input.input__number
+                input(type="number", name="quantity", min="1", max="100", value="1", step="1")
+                button.input-plus: i.fa.fa-plus-square(aria-hidden="true")
+                button.input-minus: i.fa.fa-minus-square(aria-hidden="true")
+              td: span 0.00
+              td: strong.item-summ 4690.00
+              td: button.btn.delete: i.fa.fa-trash(aria-hidden="true")
+            tr.basket__item
+              td 3
+              td
+                a(href="").item-link
+                  span.thumb: img(src="img/th_no-image.png", alt="")
+                  span Компрессор кондиционера Volvo FH12 D13 Euro 6 
+              td: span Филиал Кишинев
+              td: span 4690.00
+              td: .form__input.input__number
+                input(type="number", name="quantity", min="1", max="100", value="1", step="1")
+                button.input-plus: i.fa.fa-plus-square(aria-hidden="true")
+                button.input-minus: i.fa.fa-minus-square(aria-hidden="true")
+              td: span 0.00
+              td: strong.item-summ 4690.00
+              td: button.btn.delete: i.fa.fa-trash(aria-hidden="true")
+        .row
+          .col.md-8.sm-6
+          .col.md-4.sm-6
+            table.table.summary--table
+              thead: tr
+                th Итого:
+                th
+              tbody
+                tr
+                  th Стоимость
+                  td 7640.00 MDL
+                tr
+                  th В том числе НДС
+                  td 1528.00 MDL
+                tr
+                  th Скидка
+                  td 0.00 MDL
+                tr.total
+                  th Сумма
+                  td 7640.00 MDL
+      .basket__steps
+        .row
+          .col.sm-6: a(href="").btn.sm.primary продолжить покупки
+          .col.sm-6: a(href="").btn.accent оформить заказ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container
+    .row: .col.lg-6.lg-off-3.md-8.md-off-2.sm-10.sm-off-1
+      a(href="uploads/transager_stocks_15.06.19.xls", download="transager_stocks_15.06.19.xls").service-add.stocks
+        span.service-add__text
+          span ликвидация стоков! 
+          strong Скидки до 50%
+        span.service-add__download
+          .btn.btn__download
+            svg.icon: use(xlink:href="#exel")
+            span скачать документ
+            small 39.5 KiB
