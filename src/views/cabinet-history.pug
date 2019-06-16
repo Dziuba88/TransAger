@@ -1,0 +1,78 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'История заказов'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item.active(aria-current='page') История заказов
+    h1.page__title.cabinet-header История заказов
+    nav.page-nav: ul.tab-menu
+      li: a(href="cabinet-profile.html") Профиль
+      li: a(href="cabinet-history.html").current История заказов
+  section.cabinet--history: .container
+    .table__wraper: table.table.history--table
+      thead: tr
+        th # ID
+        th Дата
+        th Стоимость
+        th Доставка
+        th Оплата
+        th К оплате
+        th статус
+        th
+      tbody
+        -for(i=1;i<=2;i++)
+          tr
+            td(data-title="# ID"): span 1234567890
+            td(data-title="Дата"): span 15-06-2019
+            td(data-title="Стоимость"): span 7640.00 MDL
+            td(data-title="Доставка")
+              span Самовывоз
+              small.address Филиал Кишинев
+            td(data-title="Способ оплаты"): small.payment перечислением
+            td(data-title="К оплате"): strong 7640.00 MDL
+            td(data-title="Статус"): small.label.text--success завершен
+            td
+              button.btn.edit: i.fa.fa-pencil-square(aria-hidden="true")
+              button.btn.delete: i.fa.fa-trash(aria-hidden="true")
+          tr
+            td(data-title="# ID"): span 1234567890
+            td(data-title="Дата"): span 15-06-2019
+            td(data-title="Стоимость"): span 7640.00 MDL
+            td(data-title="Доставка")
+              span Самовывоз
+              small.address Филиал Кишинев
+            td(data-title="Способ оплаты"): small.payment наличными
+            td(data-title="К оплате"): strong 7640.00 MDL
+            td(data-title="Статус"): small.label.text--danger отменен
+            td
+              button.btn.edit: i.fa.fa-pencil-square(aria-hidden="true")
+              button.btn.delete: i.fa.fa-trash(aria-hidden="true")
+          tr
+            td(data-title="# ID"): span 1234567890
+            td(data-title="Дата"): span 15-06-2019
+            td(data-title="Стоимость"): span 7640.00 MDL
+            td(data-title="Доставка")
+              span Доставка
+              small.address or.Chișinău, str.Uzinelor, 171-Aor.Chișinău, str.Uzinelor, 171-Aor.Chișinău, str.Uzinelor, 171-A
+            td(data-title="Способ оплаты"): small.payment перечислением
+            td(data-title="К оплате"): strong 7640.00 MDL
+            td(data-title="Статус"): small.label.text--warning обработка
+            td
+              button.btn.edit: i.fa.fa-pencil-square(aria-hidden="true")
+              button.btn.delete: i.fa.fa-trash(aria-hidden="true")
+  section.cabinet--bottom: .container
+    .row: .col.lg-6.lg-off-3.md-8.md-off-2.sm-10.sm-off-1
+      a(href="").service-add.repair
+        img(src="img/repair_add_img.png", alt="").service-add__img
+        span.service-add__text
+          span Ремонт и эвакуация транспорта
+          strong +373 79 408 806
+
+

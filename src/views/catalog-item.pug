@@ -1,0 +1,146 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Аккумулятор Akuma'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item
+          a(href='#') Каталог продукции
+        li.breadcrumb-item
+          a(href='#') Аккумуляторы
+        li.breadcrumb-item.active(aria-current='page') Аккумулятор 12V 80Ah (680 EN) Akuma (- +)
+  section.catalog-item: .container
+    .row
+      .col.lg-3.md-4.sm-3
+        .catalog-item__image
+          .item-stats
+            svg: use(xlink:href="#new-item")
+            svg: use(xlink:href="#hot-item")
+            svg: use(xlink:href="#sale-item")
+          img(src="img/th_no-image.png", alt="")
+      .col.lg-off-1.md-8.sm-9
+        .catalog-item__card
+          .item-header
+            h2.item-title Аккумулятор 12V 80Ah (680 EN) Akuma (- +)
+            ul.item-identy
+              li.oem
+                small О.Е.М
+                strong 9438850025
+              li.id
+                small ID: 
+                strong 18100382
+              li.availability
+                span.plenty В наличии больше 6
+                //span.stocks В наличии меньше 4
+                //span.not-available Нет в наличии
+          .item-storage
+            .form__row
+              .form__checkbox
+                input(type="radio", name="item-storage", checked="", value="0")#storage_1
+                label(for="storage_1" data-target="#single")
+                  span.icon: i.fa.fa-check(aria-hidden="true")
+                  span.text Филиал Кишинев
+                    span.counts 120 шт.
+              .form__checkbox
+                input(type="radio", name="item-storage", value="1", disabled)#storage_2
+                label(for="storage_2" data-target="#company")
+                  span.icon: i.fa.fa-check(aria-hidden="true")
+                  span.text Филиал Бельцы
+                    span.counts 0 шт.
+              .form__checkbox
+                input(type="radio", name="item-storage", value="2")#storage_3
+                label(for="storage_3" data-target="#company")
+                  span.icon: i.fa.fa-check(aria-hidden="true")
+                  span.text Филиал Комрат
+                    span.counts 20 шт.
+          .item-actions: .row
+            .col.sm-6
+              .item-seal
+                svg.icon: use(xlink:href="#medal")
+                small Гарантия 
+                  span.value 2 года
+              .mob-flex
+              .item-price
+                .item-price__label цена:
+                .item-price__new
+                  span 1380.00
+                  small MDL
+                .item-price__old
+                  span 1675.00
+                  small MDL
+            .col.sm-6
+              .item-quantity
+                .form__input.input__number
+                  input(type="number", name="quantity", min="1", max="100", value="1", step="1")
+                  button.input-plus: i.fa.fa-plus-square(aria-hidden="true")
+                  button.input-minus: i.fa.fa-minus-square(aria-hidden="true")
+              .item-add: button.btn.btn__basket
+                .icon: i.fa.fa-shopping-cart(aria-hidden="true")
+                span в корзину
+    .catalog-item__details
+      .row: .col.md-8.md-off-4.lg-off-4
+        nav.page-nav: ul.tab-menu
+          li.active(role="presentation"): a(href="#specifications" aria-controls="specifications" role="tab" data-toggle="tab") Характеристики
+          li(role="presentation"): a(href="#similar" aria-controls="similar" role="tab" data-toggle="tab") Похожие товары
+        .tab-content
+          .tab-pane.active.fade.in(role="tabpanel")#specifications
+            table.table.specifications--table
+              thead: tr
+                th Свойство
+                th Значение
+              tbody
+                tr
+                  td: span Ширина
+                  td: span 175
+                tr
+                  td: span Высота 
+                  td: span 190
+                tr
+                  td: span Длинна 
+                  td: span 278
+                tr
+                  td: span Ампераж 
+                  td: span 80
+                tr
+                  td: span Пусковой ток
+                  td: span 680
+          .tab-pane.fade(role="tabpanel")#similar
+            //p.no-details Нет похожих товаров
+            table.table.similar--table
+              tbody
+                tr
+                  td: a(href="").similar__image: img(src="img/th_shop-item_1.png", alt="")
+                  td: a(href="").similar__title Аккумулятор 12V 80Ah (680 EN) Akuma (- +)
+                tr
+                  td: a(href="").similar__image: img(src="img/th_shop-item_2.png", alt="")
+                  td: a(href="").similar__title Аккумулятор 12V 80Ah (680 EN) Akuma (- +)
+                tr
+                  td: a(href="").similar__image: img(src="img/th_no-image.png", alt="")
+                  td: a(href="").similar__title Аккумулятор 12V 80Ah (680 EN) Akuma (- +)
+                tr
+                  td: a(href="").similar__image: img(src="img/th_shop-item_1.png", alt="")
+                  td: a(href="").similar__title Аккумулятор 12V 80Ah (680 EN) Akuma (- +)
+                tr
+                  td: a(href="").similar__image: img(src="img/th_shop-item_2.png", alt="")
+                  td: a(href="").similar__title Аккумулятор 12V 80Ah (680 EN) Akuma (- +)
+            p.text--center: a(href="").btn.sm.primary вернуться в каталог
+  section.anounses-list: .container
+    h2.section__title: span Новое в каталоге
+    .owl-carousel: include ./includes/items_carousel.pug
+  .container
+    .row: .col.lg-6.lg-off-3.md-8.md-off-2.sm-10.sm-off-1
+      a(href="uploads/transager_stocks_15.06.19.xls", download="transager_stocks_15.06.19.xls").service-add.stocks
+        span.service-add__text
+          span ликвидация стоков! 
+          strong Скидки до 50%
+        span.service-add__download
+          .btn.btn__download
+            svg.icon: use(xlink:href="#exel")
+            span скачать документ
+            small 39.5 KiB
