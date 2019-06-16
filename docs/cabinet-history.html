@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>TransAger | Ремонт и эвакуация транспорта</title>
+    <title>TransAger | История заказов</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
     <link rel="stylesheet" href="css/style.css"/>
@@ -230,195 +230,121 @@
         <nav class="content__breadcrumbs" aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Главная</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Ремонт и эвакуация транспорта</li>
+            <li class="breadcrumb-item active" aria-current="page">История заказов</li>
           </ol>
         </nav>
-        <h1 class="page__title">Ремонт и эвакуация транспорта</h1>
+        <h1 class="page__title cabinet-header">История заказов</h1>
+        <nav class="page-nav">
+          <ul class="tab-menu">
+            <li><a href="cabinet-profile.html">Профиль</a></li>
+            <li><a class="current" href="cabinet-history.html">История заказов</a></li>
+          </ul>
+        </nav>
       </div>
-      <section class="service-page__description">
+      <section class="cabinet--history">
         <div class="container">
-          <div class="row">
-            <div class="col md-7">
-              <div class="intro-subtitle">
-                <h2>РЕМОНТ И ОБСЛУЖИВАНИЕ АВТОПАРКА</h2>
-                <p>26 ремонтных залов и 50 автомехаников</p>
-              </div>
-              <div class="intro-text">
-                <h3>твой автопарк в надёжных руках!</h3>
-                <p>Компания «Trans Ager» располагает наибольшим количеством ремонтных залов в стране, что позволяет одновременно оказывать техническую помощь 26 грузовым авто. Команда из 50 автомехаников предлагает клиентам уникальную комбинацию услуг, направленных на обеспечение оптимального функционирования транспортного средства, прицепа и шин – в рамках одного осмотра.</p>
-              </div>
-              <div class="service-page__contacts">
-                <h4>Позвоните сейчас</h4>
-                <div class="actions"><a href="tel:+37379400416">+373 79 400 416</a> или <a href="tel:+37322475379">+373 22 47 53 79</a></div>
-                <p>сотрудиники нашего автосервиса ответят на ваши вопросы</p>
-              </div>
-            </div>
-            <div class="col md-5">
-              <div class="slider-module owl-carousel"><img src="img/slides_repair/1.png" alt=""/><img src="img/slides_repair/2.png" alt=""/><img src="img/slides_repair/3.png" alt=""/><img src="img/slides_repair/4.png" alt=""/><img src="img/slides_repair/5.png" alt=""/><img src="img/slides_repair/6.png" alt=""/><img src="img/slides_repair/7.png" alt=""/><img src="img/slides_repair/8.png" alt=""/>
-              </div>
-            </div>
+          <div class="table__wraper">
+            <table class="table history--table">
+              <thead>
+                <tr>
+                  <th># ID</th>
+                  <th>Дата</th>
+                  <th>Стоимость</th>
+                  <th>Доставка</th>
+                  <th>Оплата</th>
+                  <th>К оплате</th>
+                  <th>статус</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-title="# ID"><span>1234567890</span></td>
+                  <td data-title="Дата"><span>15-06-2019</span></td>
+                  <td data-title="Стоимость"><span>7640.00 MDL</span></td>
+                  <td data-title="Доставка"><span>Самовывоз</span><small class="address">Филиал Кишинев</small></td>
+                  <td data-title="Способ оплаты"><small class="payment">перечислением</small></td>
+                  <td data-title="К оплате"><strong>7640.00 MDL</strong></td>
+                  <td data-title="Статус"><small class="label text--success">завершен</small></td>
+                  <td>
+                    <button class="btn edit"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+                    <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-title="# ID"><span>1234567890</span></td>
+                  <td data-title="Дата"><span>15-06-2019</span></td>
+                  <td data-title="Стоимость"><span>7640.00 MDL</span></td>
+                  <td data-title="Доставка"><span>Самовывоз</span><small class="address">Филиал Кишинев</small></td>
+                  <td data-title="Способ оплаты"><small class="payment">наличными</small></td>
+                  <td data-title="К оплате"><strong>7640.00 MDL</strong></td>
+                  <td data-title="Статус"><small class="label text--danger">отменен</small></td>
+                  <td>
+                    <button class="btn edit"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+                    <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-title="# ID"><span>1234567890</span></td>
+                  <td data-title="Дата"><span>15-06-2019</span></td>
+                  <td data-title="Стоимость"><span>7640.00 MDL</span></td>
+                  <td data-title="Доставка"><span>Доставка</span><small class="address">or.Chișinău, str.Uzinelor, 171-Aor.Chișinău, str.Uzinelor, 171-Aor.Chișinău, str.Uzinelor, 171-A</small></td>
+                  <td data-title="Способ оплаты"><small class="payment">перечислением</small></td>
+                  <td data-title="К оплате"><strong>7640.00 MDL</strong></td>
+                  <td data-title="Статус"><small class="label text--warning">обработка</small></td>
+                  <td>
+                    <button class="btn edit"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+                    <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-title="# ID"><span>1234567890</span></td>
+                  <td data-title="Дата"><span>15-06-2019</span></td>
+                  <td data-title="Стоимость"><span>7640.00 MDL</span></td>
+                  <td data-title="Доставка"><span>Самовывоз</span><small class="address">Филиал Кишинев</small></td>
+                  <td data-title="Способ оплаты"><small class="payment">перечислением</small></td>
+                  <td data-title="К оплате"><strong>7640.00 MDL</strong></td>
+                  <td data-title="Статус"><small class="label text--success">завершен</small></td>
+                  <td>
+                    <button class="btn edit"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+                    <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-title="# ID"><span>1234567890</span></td>
+                  <td data-title="Дата"><span>15-06-2019</span></td>
+                  <td data-title="Стоимость"><span>7640.00 MDL</span></td>
+                  <td data-title="Доставка"><span>Самовывоз</span><small class="address">Филиал Кишинев</small></td>
+                  <td data-title="Способ оплаты"><small class="payment">наличными</small></td>
+                  <td data-title="К оплате"><strong>7640.00 MDL</strong></td>
+                  <td data-title="Статус"><small class="label text--danger">отменен</small></td>
+                  <td>
+                    <button class="btn edit"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+                    <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-title="# ID"><span>1234567890</span></td>
+                  <td data-title="Дата"><span>15-06-2019</span></td>
+                  <td data-title="Стоимость"><span>7640.00 MDL</span></td>
+                  <td data-title="Доставка"><span>Доставка</span><small class="address">or.Chișinău, str.Uzinelor, 171-Aor.Chișinău, str.Uzinelor, 171-Aor.Chișinău, str.Uzinelor, 171-A</small></td>
+                  <td data-title="Способ оплаты"><small class="payment">перечислением</small></td>
+                  <td data-title="К оплате"><strong>7640.00 MDL</strong></td>
+                  <td data-title="Статус"><small class="label text--warning">обработка</small></td>
+                  <td>
+                    <button class="btn edit"><i class="fa fa-pencil-square" aria-hidden="true"></i></button>
+                    <button class="btn delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
-      <section class="service-page__directions">
+      <section class="cabinet--bottom">
         <div class="container">
           <div class="row">
-            <div class="col lg-8 lg-off-2 md-10 md-off-1">
-              <h3>Виды ремонтных работ грузовых транспортных средств</h3>
-              <p>Сервис «Trans Ager» предоставляет услуги по техническому обслуживанию, техническому осмотру и ВСЕ виды ремонтных работ ВСЕХ типов грузовых транспортных средств:</p>
-            </div>
-          </div>
-          <div class="directions-list">
-            <div class="row">
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_1"></use>
-                    </svg>
-                  </div>
-                  <h5>шиномонтаж</h5>
-                </div>
-              </div>
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_2"></use>
-                    </svg>
-                  </div>
-                  <h5>Подвеска и направление</h5>
-                </div>
-              </div>
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_3"></use>
-                    </svg>
-                  </div>
-                  <h5>ремонт двигателей</h5>
-                </div>
-              </div>
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_4"></use>
-                    </svg>
-                  </div>
-                  <h5>Покраска</h5>
-                </div>
-              </div>
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_5"></use>
-                    </svg>
-                  </div>
-                  <h5>Рихтовка кузова</h5>
-                </div>
-              </div>
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_6"></use>
-                    </svg>
-                  </div>
-                  <h5>Электрика и электроника</h5>
-                </div>
-              </div>
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_7"></use>
-                    </svg>
-                  </div>
-                  <h5>Сварочные работы</h5>
-                </div>
-              </div>
-              <div class="col md-3 sm-6">
-                <div class="direction-item">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="#repair_8"></use>
-                    </svg>
-                  </div>
-                  <h5>Ремонт холодильных агрегатов</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col lg-8 lg-off-2 md-10 md-off-1">
-              <p>С нами срок службы вашего грузового автомобиля будет максимальным. Сосредоточьтесь на бизнесе, а мы обеспечим вам уверенность в хорошо выполненной работе!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="service-page__description">
-        <div class="container">
-          <div class="row">
-            <div class="col md-5">
-              <div class="slider-module owl-carousel"><img src="img/slides_evacuation/1.png" alt=""/><img src="img/slides_evacuation/2.png" alt=""/><img src="img/slides_evacuation/3.png" alt=""/><img src="img/slides_evacuation/4.png" alt=""/><img src="img/slides_evacuation/5.png" alt=""/><img src="img/slides_evacuation/6.png" alt=""/><img src="img/slides_evacuation/7.png" alt=""/>
-              </div>
-            </div>
-            <div class="col md-7">
-              <div class="intro-text more-info">
-                <h2>БУКСИРОВКА ГРУЗОВЫХ АВТО в МОЛДОВе и ЗА РУБЕЖОМ</h2>
-                <p>Дорожно-транспортные происшествия – весьма неприятный опыт, особенно когда они случаются за пределами страны. В любой точке Молдовы и не только вы можете рассчитывать на услугу буксировки грузовых авто в режиме 24/7.</p>
-                <p>При необходимости мы можем предоставить грузовой авто с водителем на замену, осуществить перегрузку груза и т. д.</p>
-              </div>
-              <div class="service-page__contacts">
-                <h4>Позвоните сейчас</h4>
-                <div class="actions"><a href="tel:+37379408806">+373 79 408 806</a></div>
-                <p>закажите доставку аварийного транспортного средства</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="service-feedback">
-        <div class="container">
-          <div class="feedback">
-            <svg class="feedback__icon">
-              <use xlink:href="#feedback"></use>
-            </svg>
-            <h2 class="feedback__header">Задать вопрос</h2>
-            <div class="feedback__form">
-              <div class="row">
-                <div class="col md-6">
-                  <div class="row">
-                    <div class="col sm-6">
-                      <div class="form__input">
-                        <input type="text" name="feedbackName" placeholder="Ваше имя"/>
-                      </div>
-                    </div>
-                    <div class="col sm-6">
-                      <div class="form__input">
-                        <input type="email" name="feedbackEmail" placeholder="Ваш e-Mail"/>
-                      </div>
-                    </div>
-                    <div class="col xs-12">
-                      <div class="form__input">
-                        <input type="text" name="feedbackCompany" placeholder="Название компании"/>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col md-6">
-                  <div class="form__input">
-                    <textarea name="feedbackMessage" cols="30" rows="10" placeholder="Текст сообщения"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="form__control">
-                <button class="btn yellow">отправить сообщение</button>
-              </div>
-            </div>
+            <div class="col lg-6 lg-off-3 md-8 md-off-2 sm-10 sm-off-1"><a class="service-add repair" href=""><img class="service-add__img" src="img/repair_add_img.png" alt=""/><span class="service-add__text"><span>Ремонт и эвакуация транспорта</span><strong>+373 79 408 806</strong></span></a></div>
           </div>
         </div>
       </section>
