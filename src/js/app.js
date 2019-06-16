@@ -50,7 +50,6 @@ $('.anounses-list .owl-carousel').owlCarousel({
     }
   }
 })
-
 // IMAGE SLIDER
 $('.slider-module').owlCarousel({
   loop: true,
@@ -89,7 +88,6 @@ $('.brands .owl-carousel').owlCarousel({
     }
   }
 })
-
 // ADD to BASKET EFFECT
 $('.add-to-basket').click(function (e) {
   if ($(this).hasClass('disabled')) {
@@ -134,83 +132,3 @@ $('.add-to-basket').click(function (e) {
   }
 
 })
-$('.btn__basket').click(function (e) {
-  if ($(this).hasClass('disabled')) {
-    return
-  }
-  var cart = $('.navbar__basket');
-  $(cart).addClass('animated');
-  setTimeout(() => {
-    $(cart).removeClass('animated');
-  }, 1000);
-})
-// Change Profile Type
-$('.profile--form [data-target]').on('click', function (e) {
-  $(this).tab('show')
-})
-// Enable TVA
-$('#hastva').on('change', function (e) {
-  var isChecked = $('#hastva:checkbox:checked').length > 0;
-  if (isChecked) {
-    return $('input[name=companyTVA]').removeAttr("disabled").attr('required', 'required');
-  }
-  $('input[name=companyTVA]').attr('disabled', 'disabled').removeAttr("required");
-})
-// Input NUMBER
-$('.input__number .input-plus').on('click', function (e) {
-  var inp = $(this).parent('.input__number').children('input')[0];
-
-  $(inp).val(function (i, oldval) {
-    return parseInt(oldval, 10) + 1;
-  });
-});
-$('.input__number .input-minus').on('click', function (e) {
-  var inp = $(this).parent('.input__number').children('input')[0];
-
-  if (inp.value <= 1) {
-    return
-  }
-
-  $(inp).val(function (i, oldval) {
-    return parseInt(oldval, 10) - 1;
-  });
-});
-
-// MAP Settings
-if (document.getElementById('google-map')) {
-  var map_location = [46.994165, 28.908851];
-  var contentString = '<div id="content"><h3 id="firstHeading" class="firstHeading">«TRANS AGER» S.R.L.</h3><div id="bodyContent"><p><b>MD-2037, mun.Chișinău, str.Uzinelor, 171-A</b></p><p><b>tel:</b> +373 60 097 755</p><p><b>tel/fax:</b> +373 22 42 87 49</p><p><b>e-Mail:</b> transager@company.md</p></div></div>';
-  var map = new google.maps.Map(document.getElementById('google-map'), {
-    zoom: 15,
-    center: new google.maps.LatLng(map_location[0], map_location[1]),
-    disableDefaultUI: true
-  });
-
-  var map_marker = new google.maps.Marker({
-    position: new google.maps.LatLng(map_location[0], map_location[1]),
-    map: map,
-    title: '"Trans Ager" SRL',
-    icon: {
-      url: 'img/marker.png',
-      scaledSize: new google.maps.Size(48, 48)
-    }
-  });
-
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
-  });
-
-  map_marker.addListener('click', function () {
-    console.log(1);
-
-    infowindow.open(map, map_marker);
-  });
-
-  window.addEventListener("resize", function () {
-    window.setTimeout(function () {
-      map.panTo(map_marker.getPosition());
-    }, 250);
-
-  });
-
-}

@@ -136,34 +136,6 @@ p {
   &__danger {
     color: $accentColor;
   }
-
-  &--muted {
-    opacity: 0.5;
-  }
-
-  &--left {
-    text-align: left;
-  }
-
-  &--right {
-    text-align: right;
-  }
-
-  &--center {
-    text-align: center;
-  }
-
-  &--success {
-    color: $successColor;
-  }
-
-  &--danger {
-    color: $accentColor;
-  }
-
-  &--warning {
-    color: $warningColor;
-  }
 }
 
 .page {
@@ -181,23 +153,14 @@ p {
 
   .page-header {
     margin-bottom: 50px;
-    position: relative;
-    z-index: 3;
 
     &.inside {
       margin-bottom: 0;
     }
   }
 
-  .page-footer {
-    position: relative;
-    z-index: 1;
-  }
-
   .page-content {
     flex: 1;
-    position: relative;
-    z-index: 0;
   }
 
   &.auth-layout {
