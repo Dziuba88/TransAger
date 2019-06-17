@@ -10,13 +10,19 @@ html(lang="ru")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=cyrillic-ext,latin-ext")
     link(rel="stylesheet", href="css/style.css")
   body.page.auth-layout
+    // START HEADER
     header.page-header
       include ../includes/topbar.pug
       include ../includes/navbar.pug
+    // END HEADER
+    // START MAIN CONTENT
     main.page-content
       block content
+    // END MAIN CONTENT
+    // START FOOTER
     footer.page-footer
       include ../includes/copyrights.pug
-    
+    // END FOOTER
+    // SCRIPTS
     script(src="js/scripts.js")
     script(src="js/app.js")
