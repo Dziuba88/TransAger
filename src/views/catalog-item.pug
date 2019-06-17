@@ -42,23 +42,29 @@ block content
           .item-storage
             .form__row
               .form__checkbox
-                input(type="radio", name="item-storage", checked="", value="0")#storage_1
+                input(type="radio", name="item-storage", checked="", value="0")#storage_0
+                label(for="storage_0" data-target="#single")
+                  span.icon: i.fa.fa-check(aria-hidden="true")
+                  span.text Магазин Кишинев
+                    span.counts Больше 6
+              .form__checkbox
+                input(type="radio", name="item-storage", checked="", value="1")#storage_1
                 label(for="storage_1" data-target="#single")
                   span.icon: i.fa.fa-check(aria-hidden="true")
                   span.text Филиал Кишинев
-                    span.counts 120 шт.
+                    span.counts Больше 6
               .form__checkbox
-                input(type="radio", name="item-storage", value="1", disabled)#storage_2
+                input(type="radio", name="item-storage", value="2", disabled)#storage_2
                 label(for="storage_2" data-target="#company")
                   span.icon: i.fa.fa-check(aria-hidden="true")
                   span.text Филиал Бельцы
-                    span.counts 0 шт.
+                    span.counts Нет в наличии
               .form__checkbox
-                input(type="radio", name="item-storage", value="2")#storage_3
+                input(type="radio", name="item-storage", value="3")#storage_3
                 label(for="storage_3" data-target="#company")
                   span.icon: i.fa.fa-check(aria-hidden="true")
                   span.text Филиал Комрат
-                    span.counts 20 шт.
+                    span.counts Меньше 4
           .item-actions: .row
             .col.sm-6
               .item-seal
