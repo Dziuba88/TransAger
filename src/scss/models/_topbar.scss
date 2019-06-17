@@ -4,6 +4,8 @@
   padding: 5px 0;
   font-size: 12px;
   line-height: 20px;
+  position: relative;
+  z-index: 100;
 
   .container {
     display: flex;
@@ -19,9 +21,11 @@
 
   &__phone {
     padding-right: 1em;
+
     .fa {
       width: 1.5em;
     }
+
     a {
       color: $lightColor;
       text-decoration: none;
@@ -57,6 +61,7 @@
     .fa {
       width: 1.5em;
     }
+
     &:hover {
       color: $lightColor;
       opacity: 0.75;
@@ -70,6 +75,7 @@
         opacity: 0.75;
       }
     }
+
     .dropdown__menu {
       right: 0;
       margin-top: 6px;

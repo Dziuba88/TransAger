@@ -36,13 +36,17 @@
   margin: 0;
   padding: 0 ($gutter / 2);
   box-sizing: border-box;
-  flex: 0 0 100%;
+  //flex: 0 0 100%;
   min-width: 0;
+  flex-basis: 100%;
+  max-width: 100%;
 
   &.xs {
     @for $i from 1 through $columns {
       &-#{$i} {
-        flex: 0 0 colWidth($i);
+        //flex: 0 0 colWidth($i);
+        flex-basis: colWidth($i);
+        max-width: colWidth($i);
       }
     }
   }
@@ -51,7 +55,8 @@
     &.sm {
       @for $i from 1 through $columns {
         &-#{$i} {
-          flex: 0 0 colWidth($i);
+          flex-basis: colWidth($i);
+          max-width: colWidth($i);
         }
       }
     }
@@ -61,7 +66,8 @@
     &.md {
       @for $i from 1 through $columns {
         &-#{$i} {
-          flex: 0 0 colWidth($i);
+          flex-basis: colWidth($i);
+          max-width: colWidth($i);
         }
       }
     }
@@ -71,7 +77,8 @@
     &.lg {
       @for $i from 1 through $columns {
         &-#{$i} {
-          flex: 0 0 colWidth($i);
+          flex-basis: colWidth($i);
+          max-width: colWidth($i);
         }
       }
     }

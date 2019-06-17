@@ -7,12 +7,23 @@ body {
   min-width: 320px;
 }
 
+html {
+  min-height: 100%;
+  height: 100%;
+
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   background-color: white;
   color: $baseColor;
+}
+
+
+* {
+  box-sizing: border-box;
 }
 
 nav ul,
@@ -74,6 +85,10 @@ p {
   text-transform: uppercase;
   text-align: center;
   margin-top: 0;
+
+  @include mobile {
+    font-size: 28px;
+  }
 }
 
 .section__title {
@@ -167,10 +182,11 @@ p {
 }
 
 .page {
-  display: flex;
-  align-items: stretch;
-  flex-direction: column;
-  min-height: 100vh;
+  //display: flex;
+  //align-items: stretch;
+  //flex-direction: column;
+  //min-height: 100vh;
+  //height: 100vh;
 
   .page-header,
   .page-footer {
@@ -195,12 +211,21 @@ p {
   }
 
   .page-content {
-    flex: 1;
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+
     position: relative;
     z-index: 0;
   }
 
   &.auth-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: 100%;
+
+
     .page-header {
       margin-bottom: 0;
     }

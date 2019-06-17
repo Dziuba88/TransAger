@@ -262,6 +262,10 @@
         display: block;
         margin-right: 10px;
         user-select: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
@@ -317,6 +321,7 @@
         text-transform: uppercase;
         font-weight: 700;
         color: $grayColor;
+        margin-left: 0;
       }
 
       &__item {
@@ -346,6 +351,19 @@
           color: white;
         }
       }
+    }
+  }
+
+  @include mobile {
+    display: block;
+
+    &__views {
+      border-bottom: 1px solid rgba($grayColor, .15);
+    }
+
+    &__sort .sort__title,
+    &__views .views__title {
+      flex: 1;
     }
   }
 }
