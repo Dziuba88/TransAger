@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title TransAger | 404
+    link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=cyrillic-ext,latin-ext")
+    link(rel="stylesheet", href="css/style.css")
+  body.page.auth-layout
+    // START HEADER
+    header.page-header
+      include ./includes/topbar.pug
+      include ./includes/navbar.pug
+    // END HEADER
+    // START MAIN CONTENT
+    main.page-content
+      .container: .row.align-end
+          .col.md-6
+            .error-body
+              h1.error-title 404
+                small.error-desc Страница не найдена
+              p.error-text Возможно, она была перемещена, или Вы просто неверно указали адрес страницы.
+              a(href="").btn.primary.sm Перейти на главную
+    // END MAIN CONTENT
+    // START FOOTER
+    footer.page-footer
+      include ./includes/copyrights.pug
+    // END FOOTER
+    // SCRIPTS
+    script(src="js/scripts.js")
+    script(src="js/app.js")
+    //body.page.error-layout
+      main.page-content

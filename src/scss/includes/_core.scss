@@ -10,17 +10,15 @@ body {
 html {
   min-height: 100%;
   height: 100%;
-
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   background-color: white;
   color: $baseColor;
 }
-
 
 * {
   box-sizing: border-box;
@@ -32,7 +30,6 @@ nav ol {
   padding: 0;
   list-style: none;
 }
-
 
 h1,
 h2,
@@ -225,7 +222,6 @@ p {
     min-height: 100%;
     height: 100%;
 
-
     .page-header {
       margin-bottom: 0;
     }
@@ -264,25 +260,54 @@ p {
       }
     }
   }
+  .error-body {
+    text-align: center;
+    padding: 0 40px;
+  }
+  .error-title {
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 100px;
+    display: block;
+    margin: 0 0 10px;
+    line-height: 1;
+    color: $accentColor;
+    text-align: center;
+    user-select: none;
+  }
+  .error-desc {
+    display: block;
+    color: $baseColor;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    opacity: 0.5;
+    margin-top: -10px;
+  }
+  .error-text {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
 }
 
 .fade {
   opacity: 0;
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
 
   &.in {
     opacity: 1;
   }
 }
 
-.tab-content>.tab-pane {
+.tab-content > .tab-pane {
   display: none;
 
   &.active {
     display: block;
   }
 }
-
 
 .messages {
   .row {
@@ -316,22 +341,22 @@ p {
 
     &.danger {
       color: $accentColor;
-      background-color: rgba($accentColor, .15);
+      background-color: rgba($accentColor, 0.15);
     }
 
     &.success {
       color: $successColor;
-      background-color: rgba($successColor, .15);
+      background-color: rgba($successColor, 0.15);
     }
 
     &.warning {
       color: $warningColor;
-      background-color: rgba($warningColor, .15);
+      background-color: rgba($warningColor, 0.15);
     }
 
     &.info {
       color: $infoColor;
-      background-color: rgba($infoColor, .15);
+      background-color: rgba($infoColor, 0.15);
     }
   }
 }
