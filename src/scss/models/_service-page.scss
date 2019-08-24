@@ -139,12 +139,6 @@
     h3 {
       text-transform: uppercase;
       margin-top: 0;
-
-      small {
-        display: block;
-        text-transform: none;
-        font-weight: 400;
-      }
     }
 
     .directions-list {
@@ -154,6 +148,14 @@
         padding: 20px;
         text-align: center;
         user-select: none;
+
+        h5 {
+          small {
+            display: block;
+            text-transform: none;
+            font-weight: 400;
+          }
+        }
 
         .icon {
           display: flex;
