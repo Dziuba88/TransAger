@@ -1,0 +1,76 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Ремонт и эвакуация транспорта'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item.active(aria-current='page') Сезонное хранение шин
+    h1.page__title Сезонное хранение шин
+  section.service-page__description: .container: .row
+    .col.md-7
+      .intro-subtitle
+        h2 Сезонное хранение шин в Молдове
+        p Мы создаем оптимальные условия для хранения шин!
+      .intro-text
+        p Компания TRANS AGER SRL предоставляет услугу сезонного хранения шин для легковых авто размером R13-R21.
+      .intro-text-light
+        p Шины хранятся в складском помещении в вертикальном положении с соблюдением допустимых колебаний температуры и влажности, без соприкосновения с корродирующими веществами. 
+        p В нашей шиномонтажной станции, Вам будет оказана услуга сезонной смены шин, с последующим приемом на склад несезонных шин, оформленных по договору и акту приема - передачи на период сезонного хранения 6 месяцев. На хранение принимаются автомобильные шины отдельно и шины в сборе с дисками.
+      .service-page__contacts
+        h4 Позвоните сейчас
+        .actions <a href="tel:+37378808089">+373 78 808 089</a>
+        p сотрудиники нашего автосервиса ответят на ваши вопросы
+    .col.md-5
+      .intro-image
+        img(src="img/tyres_add_img.png", alt="")
+        small Стоимость ответственного хранения комплекта шин в составе 4 шт. за сезон составляет 500 леев, без НДС на условиях полной предоплаты за период сезонного хранения.
+  section.service-page__directions: .container
+    .row: .col.lg-8.lg-off-2.md-10.md-off-1
+      h3 О Храниении шин
+      p Хранение шин в условиях гаража, балкона или кладовки чревато для резины потерей своих функциональных характеристик. Специалисты TRANS AGER SRL знают, в каких условиях должны храниться ваши шины.
+    .directions-list: .row
+      .col.md-3.sm-6: .direction-item
+        .icon: svg: use(xlink:href="#tyres_1")
+        h5 Продлить срок службы автошин
+      .col.md-3.sm-6: .direction-item
+        .icon: svg: use(xlink:href="#tyres_2")
+        h5 Освободить свое пространство 
+          small (балкон, коридор, кладовку и т.д.)
+      .col.md-3.sm-6: .direction-item
+        .icon: svg: use(xlink:href="#tyres_3")
+        h5 Обеспечить сохранность Вашего имущества
+      .col.md-3.sm-6: .direction-item
+        .icon: svg: use(xlink:href="#tyres_4")
+        h5 Избавиться от хлопот связанных с сезонной переобувкой 
+    .row: .col.lg-6.lg-off-3.md-8.md-off-2
+      .row
+        .col.sm-6: p <strong>г. Кишинёв, ул. Узинелор, 171-A</strong><br>Тел: +373 78 808 089<br>Email: serviсе.nani@transager.md
+        .col.sm-6: p <strong>График работы:</strong><br>Понедельник-пятница: с 9:00 до 18:00<br>Суббота: с 9:00 до 13:00, Воск
+
+
+  section.service-page__description: .container: .row
+    .col.md-5
+      .slider-module.owl-carousel
+        -for(i=1;i<=6;i++)
+          img(src="img/slides_tyres/"+i+".png", alt="")
+    .col.md-7
+      .intro-text.more-info
+        h2 ПОЧЕМУ НЕ СТОИТ ХРАНИТЬ АВТОШИНЫ В ГАРАЖЕ?
+        p <strong>Во время летнего или зимнего хранения шин автомобильной резине необходимо обеспечить условия, которые создать дома или в гараже непросто.</strong>
+        p Чтобы сохранить качество и свойства покрышек, они должны храниться:
+        p <strong>в специально оборудованных помещениях</strong> (резину нельзя держать на открытом воздухе, при низких температурах или повышенной влажности, а также подвергать длительному воздействию ультрафиолета и прямых солнечных лучей);
+        p <strong>в вертикальном положении на стеллажах</strong> (длительное складирование колес в стопках или штабелях влечет за собой деформирование боковин и протектора).
+        p <strong>Сезонное хранение колес на специально оборудованном складе компании «TRANS AGER » – это гарантия содержания покрышек в оптимальных условиях.</strong>
+
+      //.service-page__contacts
+        h4 Позвоните сейчас
+        .actions: a(href="tel:+37379408806") +373 79 408 806
+        p закажите доставку аварийного транспортного средства
+  section.service-feedback
+    .container: include ./includes/feedbackform.pug
