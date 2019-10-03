@@ -28,9 +28,8 @@
     opacity: 0.25;
 
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
-
 
     .fa {
       display: block;
@@ -122,13 +121,12 @@
   padding: 10px 0;
   filter: grayscale(1);
   user-select: none;
-  transition: .15s ease-in-out;
+  transition: 0.15s ease-in-out;
 
   &:hover {
     filter: grayscale(0);
   }
 }
-
 
 .service-add {
   display: flex;
@@ -195,9 +193,36 @@
     }
   }
 
+  &.tyres {
+    background: url(../img/tyres_add_bg.png) no-repeat left center;
+    background-size: cover;
+    justify-content: flex-end;
 
+    .service-add__text {
+      display: inline-block;
+      width: auto;
+      flex: none;
+      padding: 0 20px;
 
+      strong {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 1;
+      }
+    }
+  }
 
+  &.tuning {
+    background: url(../img/tuning_add_bg.png) no-repeat right center;
+    background-size: cover;
+
+    .service-add__text {
+      display: inline-block;
+      width: auto;
+      flex: none;
+      padding: 0 20px;
+    }
+  }
 
   @include mobile {
     font-size: 14px;
@@ -205,12 +230,31 @@
     &__img {
       display: none;
     }
+
+    &.tyres {
+      .service-add__text {
+        padding: 0 10px;
+
+        strong {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &.tuning {
+      .service-add__text {
+        padding: 0 10px;
+
+        strong {
+          font-size: 20px;
+        }
+      }
+    }
   }
 }
 
-
 .slider-module {
-  box-shadow: 0 3px 7px rgba($baseColor, .15);
+  box-shadow: 0 3px 7px rgba($baseColor, 0.15);
 
   .owl-nav {
     position: absolute;
@@ -221,7 +265,7 @@
 
     button.owl-next,
     button.owl-prev {
-      background-color: rgba(white, .5);
+      background-color: rgba(white, 0.5);
       width: 40px;
       color: $baseColor;
       font-size: 16px;
@@ -233,11 +277,5 @@
         background-color: white;
       }
     }
-
-
-
-
   }
-
-
 }
