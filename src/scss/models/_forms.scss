@@ -565,6 +565,112 @@
     }
   }
 
+  .inputbox {
+    position: relative;
+    margin-bottom: 15px;
+
+    .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .inputfile+label {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 500;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .inputfile+label .icon {
+      width: 1em;
+      height: 1em;
+    }
+
+    .inputfile+label {
+      color: $darkColor;
+    }
+
+    .inputfile+label {
+      border: 1px solid $lightColor;
+      background-color: white;
+      padding: 0;
+    }
+
+    .inputfile:focus+label,
+    .inputfile.has-focus+label,
+    .inputfile+label:hover {
+      border-color: $darkColor;
+    }
+
+    small {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 15px;
+      color: $darkColor;
+      padding-top: 5px;
+    }
+
+    .inputfile+label span {
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+      padding: 6px 15px;
+      line-height: 20px;
+      min-height: 32px;
+      box-sizing: border-box;
+    }
+
+    .inputfile+label strong {
+      display: block;
+      flex: none;
+      white-space: nowrap;
+      background-color: $primaryColor;
+      border: 1px solid currentColor;
+      color: white;
+      transition: 0.15s ease;
+      padding: 6px 15px;
+      line-height: 20px;
+      font-weight: 500;
+      box-sizing: border-box;
+
+      .icon {
+        margin-right: 0.5em;
+      }
+    }
+
+    .inputfile:focus+label strong,
+    .inputfile.has-focus+label strong,
+    .inputfile+label:hover strong {
+      background-color: $primaryColor;
+    }
+
+    @include mobile {
+      .inputfile+label {
+        display: block;
+
+        span,
+        strong {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
 }
 
 .auth-form {

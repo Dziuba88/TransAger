@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>TransAger | Вакансии</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body class="page">
+    <!-- START HEADER-->
+    <header class="page-header inside">
+      <div class="topbar">
+        <div class="container">
+          <div class="topbar__contacts">
+            <div class="topbar__phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37322472525">+373 22 47 25 25</a></div>
+            <div class="topbar__schedule"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Пн-Пт 9:00 - 18:00</span><span>Сб 09:00 - 13:00 </span></div>
+          </div>
+          <div class="topbar__contols"><a class="topbar__cabinet" href=""><i class="fa fa-address-book" aria-hidden="true"></i><span>Личный кабинет</span></a>
+            <div class="dropdown topbar__lang">
+              <div class="dropdown__toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Ru</span><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+              <div class="dropdown__menu">
+                <ul>
+                  <li><a href="">Română (Md)</a></li>
+                  <li class="current"><a href="">Русский (Ru)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="navbar__wraper">
+          <div class="container">
+            <div class="row"><a class="navbar__brand" href="index.html"><img src="img/logo.svg" alt=""/></a>
+              <div class="navbar__catalog"><a class="btn sm primary" href=""><span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span><span>каталог<br>товаров</span></a></div>
+              <div class="navbar__separator"></div>
+              <nav class="navbar__nav">
+                <ul class="main-menu">
+                  <li class="dropdown"><a class="dropdown__toggle" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Услуги</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown__menu">
+                      <ul class="child-menu">
+                        <li><a href=""><span>Магазин запчастей</span></a></li>
+                        <li><a class="current" href=""><span>Ремонт и эвакуация транспорта</span></a></li>
+                        <li><a href=""><span>Грузоперевозки и экспедиция </span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a class="current" href=""><span>Акции</span></a></li>
+                  <li><a href=""><span>О компании</span></a></li>
+                  <li><a href=""><span>Контакты</span></a></li>
+                </ul>
+              </nav>
+              <button class="navbar__toggle"><i class="fa fa-navicon" aria-hidden="true"></i></button><a class="btn accent navbar__basket" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i><small>0</small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col lg-8 lg-off-2 md-10 md-off-1">
+            <div class="search">
+              <nav>
+                <ul class="nav-tabs" role="tablist">
+                  <li class="active" role="presentation"><a href="#autoparts" aria-controls="autoparts" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tools"></use>
+                      </svg><span>запчасти</span></a></li>
+                  <li role="presentation"><a href="#accumulators" aria-controls="accumulators" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#batteries"></use>
+                      </svg><span>аккумуляторы</span></a></li>
+                  <li role="presentation"><a href="#autotyres" aria-controls="autotyres" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tyres"></use>
+                      </svg><span>автошины</span></a></li>
+                  <li role="presentation"><a href="#oils" aria-controls="oils" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#gasoline"></use>
+                      </svg><span>Масла</span></a></li>
+                  <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#otherparts"></use>
+                      </svg><span>Разное</span></a></li>
+                </ul>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active fade in" role="tabpanel" id="autoparts">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите код товара или название"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="accumulators"> 
+                  <div class="form search-form accumulators">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="capacity">
+                          <option>Емкость (Ah)</option>
+                          <option>Емкость 1</option>
+                          <option>Емкость 2</option>
+                          <option>Емкость 3</option>
+                          <option>Емкость 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="voltage">
+                          <option>Напряжение (В)</option>
+                          <option>Напряжение 1</option>
+                          <option>Напряжение 2</option>
+                          <option>Напряжение 3</option>
+                          <option>Напряжение 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="polarity">
+                          <option>Полярность</option>
+                          <option>Полярность 1</option>
+                          <option>Полярность 2</option>
+                          <option>Полярность 3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="auto">
+                          <option>Тип авто</option>
+                          <option>Легковой</option>
+                          <option>Грузовой</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="autotyres"> 
+                  <div class="form search-form autotyres">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="diameter">
+                          <option>Диаметр</option>
+                          <option>Диаметр 1</option>
+                          <option>Диаметр 2</option>
+                          <option>Диаметр 3</option>
+                          <option>Диаметр 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="width">
+                          <option>Ширина</option>
+                          <option>Ширина 1</option>
+                          <option>Ширина 2</option>
+                          <option>Ширина 3</option>
+                          <option>Ширина 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="height">
+                          <option>Высота</option>
+                          <option>Высота 1</option>
+                          <option>Высота 2</option>
+                          <option>Высота 3</option>
+                          <option>Высота 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="season">
+                          <option>Сезонность</option>
+                          <option>Зимние</option>
+                          <option>Летние</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="oils">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="other">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER-->
+    <!-- START MAIN CONTENT-->
+    <main class="page-content">
+      <div class="container">
+        <nav class="content__breadcrumbs" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Вакансии</li>
+          </ol>
+        </nav>
+        <h1 class="page__title">Вакансии</h1>
+      </div>
+      <div class="vacancies__positions">
+        <div class="container">
+          <div class="panel-group" id="positions" role="tablist" aria-multiselectable="true">
+            <div class="panel">
+              <div class="panel__heading" role="tab"><a data-toggle="collapse" data-parent="#positions" href="#positionID-1" aria-expanded="true"><span>Бухгалтер</span><i class="fa fa-angle-right"></i></a></div>
+              <div class="collapse fade in" id="positionID-1" role="tabpanel">
+                <div class="position">
+                  <div class="position__left">
+                    <div class="position__params">
+                      <ul>
+                        <li>Город: <strong>Кишинев</strong></li>
+                        <li>Образование: <strong>Высшее</strong></li>
+                        <li>Опыт работы: <strong>От 2-х до 5-и лет</strong></li>
+                        <li>Зарплата: <strong>По договорённости</strong></li>
+                        <li>График работы: <strong>Полный рабочий день</strong></li>
+                      </ul>
+                    </div>
+                    <div class="position__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                  </div>
+                  <div class="position__right">
+                    <div class="position__hr">
+                      <div class="position__hr__title">Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail</div>
+                      <div class="position__hr__contacts">
+                        <ul>
+                          <li><span>Телефон:</span><a href="tel:+37369000000">+373 69 000 000</a></li>
+                          <li><span>Контактное лицо:</span><strong>Имя Фамилия</strong></li>
+                          <li><span>E-mail:</span><a href="mailto:hr@transager.md">hr@transager.md</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel__heading" role="tab"><a class="collapsed" data-toggle="collapse" data-parent="#positions" href="#positionID-2" aria-expanded="false"><span>водитель</span><i class="fa fa-angle-right"></i></a></div>
+              <div class="collapse fade" id="positionID-2" role="tabpanel">
+                <div class="position">
+                  <div class="position__left">
+                    <div class="position__params">
+                      <ul>
+                        <li>Город: <strong>Кишинев</strong></li>
+                        <li>Образование: <strong>Высшее</strong></li>
+                        <li>Опыт работы: <strong>От 2-х до 5-и лет</strong></li>
+                        <li>Зарплата: <strong>По договорённости</strong></li>
+                        <li>График работы: <strong>Полный рабочий день</strong></li>
+                      </ul>
+                    </div>
+                    <div class="position__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                  </div>
+                  <div class="position__right">
+                    <div class="position__hr">
+                      <div class="position__hr__title">Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail</div>
+                      <div class="position__hr__contacts">
+                        <ul>
+                          <li><span>Телефон:</span><a href="tel:+37369000000">+373 69 000 000</a></li>
+                          <li><span>Контактное лицо:</span><strong>Имя Фамилия</strong></li>
+                          <li><span>E-mail:</span><a href="mailto:hr@transager.md">hr@transager.md</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel__heading" role="tab"><a class="collapsed" data-toggle="collapse" data-parent="#positions" href="#positionID-3" aria-expanded="false"><span>менеджер по продажам</span><i class="fa fa-angle-right"></i></a></div>
+              <div class="collapse fade" id="positionID-3" role="tabpanel">
+                <div class="position">
+                  <div class="position__left">
+                    <div class="position__params">
+                      <ul>
+                        <li>Город: <strong>Кишинев</strong></li>
+                        <li>Образование: <strong>Высшее</strong></li>
+                        <li>Опыт работы: <strong>От 2-х до 5-и лет</strong></li>
+                        <li>Зарплата: <strong>По договорённости</strong></li>
+                        <li>График работы: <strong>Полный рабочий день</strong></li>
+                      </ul>
+                    </div>
+                    <div class="position__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                  </div>
+                  <div class="position__right">
+                    <div class="position__hr">
+                      <div class="position__hr__title">Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail</div>
+                      <div class="position__hr__contacts">
+                        <ul>
+                          <li><span>Телефон:</span><a href="tel:+37369000000">+373 69 000 000</a></li>
+                          <li><span>Контактное лицо:</span><strong>Имя Фамилия</strong></li>
+                          <li><span>E-mail:</span><a href="mailto:hr@transager.md">hr@transager.md</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel__heading" role="tab"><a class="collapsed" data-toggle="collapse" data-parent="#positions" href="#positionID-4" aria-expanded="false"><span>монтажник</span><i class="fa fa-angle-right"></i></a></div>
+              <div class="collapse fade" id="positionID-4" role="tabpanel">
+                <div class="position">
+                  <div class="position__left">
+                    <div class="position__params">
+                      <ul>
+                        <li>Город: <strong>Кишинев</strong></li>
+                        <li>Образование: <strong>Высшее</strong></li>
+                        <li>Опыт работы: <strong>От 2-х до 5-и лет</strong></li>
+                        <li>Зарплата: <strong>По договорённости</strong></li>
+                        <li>График работы: <strong>Полный рабочий день</strong></li>
+                      </ul>
+                    </div>
+                    <div class="position__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                  </div>
+                  <div class="position__right">
+                    <div class="position__hr">
+                      <div class="position__hr__title">Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail</div>
+                      <div class="position__hr__contacts">
+                        <ul>
+                          <li><span>Телефон:</span><a href="tel:+37369000000">+373 69 000 000</a></li>
+                          <li><span>Контактное лицо:</span><strong>Имя Фамилия</strong></li>
+                          <li><span>E-mail:</span><a href="mailto:hr@transager.md">hr@transager.md</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vacancies__form">
+        <div class="container">
+          <h2 class="page__title">Отправить заявку</h2>
+          <div class="row">
+            <div class="col md-8 md-off-2 lg-6 lg-off-3">
+              <form class="form" action="">
+                <div class="form__input">
+                  <input type="text" placeholder="Ваше Имя Фамилия *" required="required" name="cnt_name"/>
+                </div>
+                <div class="row">
+                  <div class="col sm-6">
+                    <div class="form__input">
+                      <input type="tel" placeholder="Телефон *" required="required" name="cnt_tel"/>
+                    </div>
+                  </div>
+                  <div class="col sm-6">
+                    <div class="form__input">
+                      <input type="email" placeholder="e-Mail *" required="required" name="cnt_email"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__input">
+                  <textarea cols="30" rows="10" placeholder="Текст сообщения *" required="required" name="cnt_message"></textarea>
+                </div>
+                <p class="small">приложите один или несколько файлов до 10МБ в формате PDF, Word</p>
+                <div class="form__footer">
+                  <div class="form__footer__left">
+                    <div class="inputbox">
+                      <input class="inputfile" id="sv_files" type="file" name="cnt_files" data-multiple-caption="{count} файлов выбрано" multiple=""/>
+                      <label for="sv_files"><span></span><strong>
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-upload"></use>
+                          </svg>Выберите файлы&mldr;</strong></label>
+                    </div>
+                  </div>
+                  <div class="form__footer__right">
+                    <button class="btn yellow" type="submit">отправить Ваше SV </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- END MAIN CONTENT-->
+    <!-- START FOOTER-->
+    <footer class="page-footer">
+      <div class="brands">
+        <div class="container">
+          <div class="owl-carousel">
+            <div class="brand"><img src="img/brand_1.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_2.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_3.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_4.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_5.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_6.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__wraper">
+        <div class="container">
+          <div class="row">
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Информация</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">О компании</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Поставщикам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Розничным клиентам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Услуги</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Каталог запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Каталог автошин </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Каталог аккумуляторов</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Ремонт и эвакуация автотранспорта</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Грузоперевозки и экспедиция</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Покупателю</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Акции</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Личный кабинет</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Гарантия и возврат </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Доставка и оплата</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="contacts">
+                <ul>
+                  <li class="title">КОНТАКТЫ</li>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>MD-2037, mun.Chișinău,<br>str.Uzinelor, 171-A</span></li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37360097755">+373 60 097 755</a></li>
+                  <li><i class="fa fa-print" aria-hidden="true"></i><a href="tel:+37322428749">+373 22 42 87 49</a></li>
+                  <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:transager@company.md">transager@company.md</a></li>
+                  <li class="social"><a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square" aria-hidden="true"></i></a><a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a><a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__copy">
+        <div class="container"><span>© 2019 Trans Ager SRL.</span><a href="">Политика конфидициальности</a><a href="">Общие положения и условия</a></div>
+      </div>
+    </footer>
+    <!-- END FOOTER-->
+    <!-- SCRIPTS-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
