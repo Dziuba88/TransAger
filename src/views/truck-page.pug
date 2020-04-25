@@ -1,0 +1,52 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Вакансии'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item.active(aria-current='page') Продажа грузовиков и полуприцепов
+
+  .truck__page: .container: .row
+    .col.md-6.lg-7: .truck__img.largest: img(src="img/truck_img.jpg", alt="")
+    .col.md-6.lg-5
+      .truck__title DAF XF 105-460, SSC, EURO 5 2007 
+      .truck__category: a(href="") Грузовики
+      .truck__img.smalest: .truck__page__image: img(src="img/truck_img.jpg", alt="")
+      .truck__price
+        i.fa.fa-tags
+        .truck__price__text
+          small цена
+          span Договорная
+      .truck__params: ul
+        -for(j=1;j<=7;j++)
+          li: .param
+            .param__label Param label #{j}
+            .param__value Param value #{j}
+      .truck__contacts
+        .contacts__header
+          .text 
+            span Связаться
+            small с продавцом
+          .phone
+            small +373
+            span 79 400 416 
+        .contacts__buttons: .row
+          .col.sm-6: a(href="mailto:camion- serviсе@transager.md?subject=DAF XF 105-460, SSC, EURO 5 2007").btn.white связаться по почте
+          .col.sm-6: a(href="tel:+37379400416").btn.accent Звоните сейчас
+
+  section.truck-list: .container
+    h2.section__title: span смотрите так же
+    .owl-carousel
+      -for(i=0;i<10;i++)
+        .truck__card
+          .item__image
+            a(href=""): img(src="img/truck_img.jpg", alt="")
+          .item__title: a(href="") DAF XF 105-460, SSC, EURO 5 2007 
+          .item__category: a(href="") Грузовики
+

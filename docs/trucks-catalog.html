@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>TransAger | Вакансии</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;display=swap&amp;subset=cyrillic-ext,latin-ext"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body class="page">
+    <!-- START HEADER-->
+    <header class="page-header inside">
+      <div class="topbar">
+        <div class="container">
+          <div class="topbar__contacts">
+            <div class="topbar__phone"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37322472525">+373 22 47 25 25</a></div>
+            <div class="topbar__schedule"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Пн-Пт 9:00 - 18:00</span><span>Сб 09:00 - 13:00 </span></div>
+          </div>
+          <div class="topbar__contols"><a class="topbar__cabinet" href=""><i class="fa fa-address-book" aria-hidden="true"></i><span>Личный кабинет</span></a>
+            <div class="dropdown topbar__lang">
+              <div class="dropdown__toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Ru</span><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+              <div class="dropdown__menu">
+                <ul>
+                  <li><a href="">Română (Md)</a></li>
+                  <li class="current"><a href="">Русский (Ru)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <div class="navbar__wraper">
+          <div class="container">
+            <div class="row"><a class="navbar__brand" href="index.html"><img src="img/logo.svg" alt=""/></a>
+              <div class="navbar__catalog"><a class="btn sm primary" href=""><span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span><span>каталог<br>товаров</span></a></div>
+              <div class="navbar__separator"></div>
+              <nav class="navbar__nav">
+                <ul class="main-menu">
+                  <li class="dropdown"><a class="dropdown__toggle" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Услуги</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div class="dropdown__menu">
+                      <ul class="child-menu">
+                        <li><a href=""><span>Магазин запчастей</span></a></li>
+                        <li><a class="current" href=""><span>Ремонт и эвакуация транспорта</span></a></li>
+                        <li><a href=""><span>Грузоперевозки и экспедиция </span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a class="current" href=""><span>Акции</span></a></li>
+                  <li><a href=""><span>О компании</span></a></li>
+                  <li><a href=""><span>Контакты</span></a></li>
+                </ul>
+              </nav>
+              <button class="navbar__toggle"><i class="fa fa-navicon" aria-hidden="true"></i></button><a class="btn accent navbar__basket" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i><small>0</small></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col lg-8 lg-off-2 md-10 md-off-1">
+            <div class="search">
+              <nav>
+                <ul class="nav-tabs" role="tablist">
+                  <li class="active" role="presentation"><a href="#autoparts" aria-controls="autoparts" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tools"></use>
+                      </svg><span>запчасти</span></a></li>
+                  <li role="presentation"><a href="#accumulators" aria-controls="accumulators" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#batteries"></use>
+                      </svg><span>аккумуляторы</span></a></li>
+                  <li role="presentation"><a href="#autotyres" aria-controls="autotyres" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#tyres"></use>
+                      </svg><span>автошины</span></a></li>
+                  <li role="presentation"><a href="#oils" aria-controls="oils" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#gasoline"></use>
+                      </svg><span>Масла</span></a></li>
+                  <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">
+                      <svg class="icon">
+                        <use xlink:href="#otherparts"></use>
+                      </svg><span>Разное</span></a></li>
+                </ul>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane active fade in" role="tabpanel" id="autoparts">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите код товара или название"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="accumulators"> 
+                  <div class="form search-form accumulators">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="capacity">
+                          <option>Емкость (Ah)</option>
+                          <option>Емкость 1</option>
+                          <option>Емкость 2</option>
+                          <option>Емкость 3</option>
+                          <option>Емкость 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="voltage">
+                          <option>Напряжение (В)</option>
+                          <option>Напряжение 1</option>
+                          <option>Напряжение 2</option>
+                          <option>Напряжение 3</option>
+                          <option>Напряжение 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="polarity">
+                          <option>Полярность</option>
+                          <option>Полярность 1</option>
+                          <option>Полярность 2</option>
+                          <option>Полярность 3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="auto">
+                          <option>Тип авто</option>
+                          <option>Легковой</option>
+                          <option>Грузовой</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="autotyres"> 
+                  <div class="form search-form autotyres">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="diameter">
+                          <option>Диаметр</option>
+                          <option>Диаметр 1</option>
+                          <option>Диаметр 2</option>
+                          <option>Диаметр 3</option>
+                          <option>Диаметр 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="width">
+                          <option>Ширина</option>
+                          <option>Ширина 1</option>
+                          <option>Ширина 2</option>
+                          <option>Ширина 3</option>
+                          <option>Ширина 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="height">
+                          <option>Высота</option>
+                          <option>Высота 1</option>
+                          <option>Высота 2</option>
+                          <option>Высота 3</option>
+                          <option>Высота 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col flex">
+                      <div class="form__input">
+                        <select name="season">
+                          <option>Сезонность</option>
+                          <option>Зимние</option>
+                          <option>Летние</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="oils">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" role="tabpanel" id="other">
+                  <div class="form search-form autoparts">
+                    <div class="col flex">
+                      <div class="form__input">
+                        <input type="search" name="partsSearch" placeholder="Введите название товара"/>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button class="btn primary"><i class="fa fa-search" aria-hidden="true"></i> поиск</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER-->
+    <!-- START MAIN CONTENT-->
+    <main class="page-content">
+      <div class="container">
+        <nav class="content__breadcrumbs" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Продажа грузовиков и полуприцепов</li>
+          </ol>
+        </nav>
+        <h1 class="page__title">Продажа<small>грузовиков и полуприцепов</small></h1>
+        <div class="trucks__filters">
+          <div class="row">
+            <div class="col sm-6 md-3">
+              <div class="form__input">
+                <select>
+                  <option>Все марки</option>
+                  <option>Марка авто 1</option>
+                  <option>Марка авто 2</option>
+                  <option>Марка авто 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col sm-6 md-3">
+              <div class="form__input">
+                <select>
+                  <option>Все года выпуска</option>
+                  <option>2010 год выпуска</option>
+                  <option>2015 год выпуска</option>
+                  <option>2017 год выпуска</option>
+                </select>
+              </div>
+            </div>
+            <div class="col sm-6 md-3">
+              <div class="form__input">
+                <select>
+                  <option>Мощность двигателя (лс)</option>
+                  <option>123</option>
+                  <option>456</option>
+                  <option>789</option>
+                </select>
+              </div>
+            </div>
+            <div class="col sm-6 md-3">
+              <div class="form__input">
+                <select>
+                  <option>Пробег (км)</option>
+                  <option>123123123</option>
+                  <option>456456456</option>
+                  <option>789789789</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="trucks__list">
+        <div class="container">
+          <div class="catalog-filters">
+            <div class="catalog-filters__views">
+              <nav class="nav-tabs">
+                <ul>
+                  <li class="views__title">Показать:</li>
+                  <li class="views__item active" role="presentation"><span role="tab" data-toggle="tab">Все</span></li>
+                  <li class="views__item" role="presentation"><span role="tab" data-toggle="tab">Грузовики</span></li>
+                  <li class="views__item" role="presentation"><span role="tab" data-toggle="tab">Полуприцепы</span></li>
+                </ul>
+              </nav>
+            </div>
+            <!--.catalog-filters__sort: nav.nav-tabs: ul
+            li.sort__title Сортировать:
+            li.sort__item.active(role="presentation")
+              span(role="tab" data-toggle="tab") Цена
+              i.fa.fa-sort-amount-asc(aria-hidden="true")
+            li.sort__item(role="presentation")
+              span(role="tab" data-toggle="tab") Название
+              i.fa.fa-sort-alpha-asc(aria-hidden="true")
+            -->
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="trucks__list__item">
+            <div class="item__image"><a href=""><img src="img/truck_img.jpg" alt=""/></a></div>
+            <div class="item__body">
+              <div class="item__title"><a href="">DAF XF 105-460, SSC, EURO 5 2007 </a></div>
+              <div class="item__category"><a href="">Грузовики</a></div>
+              <div class="item__params">
+                <ul>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 1</div>
+                      <div class="param__value">Param value 1</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 2</div>
+                      <div class="param__value">Param value 2</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 3</div>
+                      <div class="param__value">Param value 3</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 4</div>
+                      <div class="param__value">Param value 4</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 5</div>
+                      <div class="param__value">Param value 5</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="param">
+                      <div class="param__label">Param label 6</div>
+                      <div class="param__value">Param value 6</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item__readmore"><a class="btn primary" href="">подробнее</a></div>
+            </div>
+          </div>
+          <div class="catalog-list__pagination">
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li><a class="page-link first" href=""><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                <li><a class="page-link prev" href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                <li><a class="page-link active" href="">1496</a></li>
+                <li><a class="page-link" href="">1497</a></li>
+                <li><a class="page-link" href="">1498</a></li>
+                <li><a class="page-link" href="">1499</a></li>
+                <li><a class="page-link" href="">1500</a></li>
+                <li><a class="page-link next disabled" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li><a class="page-link last disabled" href=""><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- END MAIN CONTENT-->
+    <!-- START FOOTER-->
+    <footer class="page-footer">
+      <div class="brands">
+        <div class="container">
+          <div class="owl-carousel">
+            <div class="brand"><img src="img/brand_1.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_2.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_3.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_4.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_5.png" alt=""/></div>
+            <div class="brand"><img src="img/brand_6.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__wraper">
+        <div class="container">
+          <div class="row">
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Информация</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">О компании</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Магазин запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Поставщикам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Розничным клиентам</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Услуги</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Каталог запчастей</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Каталог автошин </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Каталог аккумуляторов</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Ремонт и эвакуация автотранспорта</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Грузоперевозки и экспедиция</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="nav">
+                <ul>
+                  <li class="title">Покупателю</li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Акции</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Личный кабинет</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Гарантия и возврат </a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Доставка и оплата</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col md-3 sm-6">
+              <nav class="contacts">
+                <ul>
+                  <li class="title">КОНТАКТЫ</li>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>MD-2037, mun.Chișinău,<br>str.Uzinelor, 171-A</span></li>
+                  <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+37360097755">+373 60 097 755</a></li>
+                  <li><i class="fa fa-print" aria-hidden="true"></i><a href="tel:+37322428749">+373 22 42 87 49</a></li>
+                  <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:transager@company.md">transager@company.md</a></li>
+                  <li class="social"><a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square" aria-hidden="true"></i></a><a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a><a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__copy">
+        <div class="container"><span>© 2019 Trans Ager SRL.</span><a href="">Политика конфидициальности</a><a href="">Общие положения и условия</a></div>
+      </div>
+    </footer>
+    <!-- END FOOTER-->
+    <!-- SCRIPTS-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

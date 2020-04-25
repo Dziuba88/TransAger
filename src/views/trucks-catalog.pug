@@ -1,0 +1,70 @@
+extends layouts/inside.pug
+block variables
+  - pageTitle = 'Вакансии'
+block headerContent
+  .container: .row
+    .col.lg-8.lg-off-2.md-10.md-off-1: include ./includes/searchform.pug
+block content
+  .container
+    nav(aria-label='breadcrumb').content__breadcrumbs
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href='#') Главная
+        li.breadcrumb-item.active(aria-current='page') Продажа грузовиков и полуприцепов
+    h1.page__title Продажа<small>грузовиков и полуприцепов</small>
+    .trucks__filters
+      .row
+        .col.sm-6.md-3: .form__input
+          select
+            option Все марки
+            option Марка авто 1
+            option Марка авто 2
+            option Марка авто 3
+        .col.sm-6.md-3: .form__input
+          select
+            option Все года выпуска
+            option 2010 год выпуска
+            option 2015 год выпуска
+            option 2017 год выпуска
+        .col.sm-6.md-3: .form__input
+          select
+            option Мощность двигателя (лс)
+            option 123
+            option 456
+            option 789
+        .col.sm-6.md-3: .form__input
+          select
+            option Пробег (км)
+            option 123123123
+            option 456456456
+            option 789789789
+
+  .trucks__list: .container
+    .catalog-filters
+      .catalog-filters__views: nav.nav-tabs: ul
+        li.views__title Показать:
+        li.views__item.active(role="presentation"): span(role="tab" data-toggle="tab") Все
+        li.views__item(role="presentation"): span(role="tab" data-toggle="tab") Грузовики
+        li.views__item(role="presentation"): span(role="tab" data-toggle="tab") Полуприцепы
+      //.catalog-filters__sort: nav.nav-tabs: ul
+        li.sort__title Сортировать:
+        li.sort__item.active(role="presentation")
+          span(role="tab" data-toggle="tab") Цена
+          i.fa.fa-sort-amount-asc(aria-hidden="true")
+        li.sort__item(role="presentation")
+          span(role="tab" data-toggle="tab") Название
+          i.fa.fa-sort-alpha-asc(aria-hidden="true")
+    -for(i=1;i<11;i++)
+      .trucks__list__item
+        .item__image
+          a(href=""): img(src="img/truck_img.jpg", alt="")
+        .item__body
+          .item__title: a(href="") DAF XF 105-460, SSC, EURO 5 2007 
+          .item__category: a(href="") Грузовики
+          .item__params: ul
+            -for(j=1;j<=6;j++)
+              li: .param
+                .param__label Param label #{j}
+                .param__value Param value #{j}
+          .item__readmore: a(href="").btn.primary подробнее
+    .catalog-list__pagination: include ./includes/pagination.pug

@@ -1,0 +1,358 @@
+.trucks {
+  &__list {
+    margin-bottom: 40px;
+    &__item {
+      display: flex;
+      margin-bottom: 20px;
+
+      .item__image {
+        flex: none;
+        width: 280px;
+
+        a {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-top: 75%;
+          overflow: hidden;
+          background-color: $baseColor;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            transition: 0.35s ease-in-out;
+          }
+
+          &:hover img {
+            opacity: 0.8;
+            transform: scale(1.25);
+            filter: grayscale(0.5);
+          }
+        }
+      }
+
+      .item__body {
+        flex: 1;
+        padding-left: 20px;
+      }
+
+      .item__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 5px;
+
+        a {
+          color: $baseColor;
+          text-decoration: none;
+
+          &:hover {
+            color: $accentColor;
+          }
+        }
+      }
+
+      .item__category {
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        a {
+          color: $primaryColor;
+          &:hover {
+            color: $infoColor;
+          }
+        }
+      }
+
+      .item__params {
+        padding-bottom: 10px;
+        ul {
+          margin: 0 -10px;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            display: block;
+            flex: none;
+            width: 33.33333333%;
+            padding: 10px;
+          }
+        }
+
+        .param {
+          border-bottom: 1px solid rgba($grayColor, 0.5);
+          color: $grayColor;
+          font-size: 14px;
+          line-height: 20px;
+          display: flex;
+
+          &__label,
+          &__value {
+            flex: none;
+            width: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          &__label {
+            padding-right: 10px;
+          }
+          &__value {
+            padding-left: 10px;
+            color: $baseColor;
+            text-align: right;
+          }
+        }
+
+        @include tablet-down {
+          ul li {
+            width: 50%;
+            &:nth-child(5),
+            &:nth-child(6) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .item__readmore {
+        text-align: right;
+      }
+
+      @include mobile {
+        display: block;
+
+        .item__body {
+          padding: 10px 0;
+        }
+
+        .item__image {
+          width: 100%;
+
+          a {
+            padding-top: 56.25%;
+          }
+        }
+
+        .item__title {
+          font-size: 18px;
+          line-height: 20px;
+        }
+        .item__category {
+          margin-bottom: 10px;
+        }
+        .item__params {
+          padding-bottom: 0;
+          ul {
+            display: block;
+            li {
+              width: 100%;
+              &:nth-child(4) {
+                display: none;
+              }
+            }
+          }
+        }
+        .item__readmore {
+          text-align: center;
+        }
+      }
+    }
+
+    .catalog-list__pagination {
+      padding-top: 20px;
+    }
+  }
+}
+
+.truck__page {
+  .truck {
+    &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 5px;
+
+      a {
+        color: $baseColor;
+        text-decoration: none;
+
+        &:hover {
+          color: $accentColor;
+        }
+      }
+    }
+    &__category {
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      a {
+        color: $primaryColor;
+        &:hover {
+          color: $infoColor;
+        }
+      }
+    }
+    &__img {
+      display: block;
+      margin-bottom: 10px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      &.smalest {
+        display: none;
+      }
+
+      @include tablet-down {
+        display: none;
+
+        &.smalest {
+          display: block;
+        }
+      }
+    }
+    &__price {
+      display: flex;
+      align-items: center;
+      user-select: none;
+      padding: 5px 0 20px;
+
+      .fa {
+        display: block;
+        color: $grayColor;
+        margin-right: 10px;
+        font-size: 32px;
+        opacity: 0.5;
+      }
+      &__text {
+        small {
+          display: block;
+          font-size: 12px;
+          line-height: 1;
+          text-transform: uppercase;
+        }
+
+        span {
+          font-size: 24px;
+          font-weight: 700;
+          color: $accentColor;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &__params {
+      padding-bottom: 20px;
+      ul {
+        margin: 0 -10px;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          display: block;
+          flex: none;
+          width: 50%;
+          padding: 10px;
+
+          @include mobile {
+            width: 100%;
+          }
+        }
+      }
+
+      .param {
+        border-bottom: 1px solid rgba($grayColor, 0.5);
+        color: $grayColor;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+
+        &__label,
+        &__value {
+          flex: none;
+          width: 50%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        &__label {
+          padding-right: 10px;
+        }
+        &__value {
+          padding-left: 10px;
+          color: $baseColor;
+          text-align: right;
+        }
+      }
+    }
+    &__contacts {
+      background-color: $primaryColor;
+      color: $lightColor;
+      padding: 10px;
+
+      .contacts__header {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+
+        .text {
+          font-size: 24px;
+          line-height: 1;
+          flex: 1;
+          small,
+          span {
+            display: block;
+          }
+
+          span {
+            text-transform: uppercase;
+          }
+
+          small {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+        .phone {
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 1;
+
+          small {
+            margin-right: 0.5em;
+            font-weight: 300;
+            font-size: 16px;
+          }
+        }
+
+        @include mobile {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        @include mobile {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
