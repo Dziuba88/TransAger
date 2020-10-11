@@ -6,3 +6,4 @@
 //@prepros-append ./plugins/selectric.js
 //@prepros-append ./plugins/carousel.js
 //@prepros-append ./plugins/upload.js
+//@prepros-append ./plugins/popup.js

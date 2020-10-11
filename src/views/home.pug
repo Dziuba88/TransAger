@@ -25,7 +25,6 @@ block headerContent
       .col.md-3.sm-6: a(href="").services-list__item
         img(src="img/th_service_4.png", alt="")
         .caption: span Буксировка грузовых авто
-
 block content
   section.anounses-list: .container
     h2.section__title: span Новое в каталоге
@@ -79,3 +78,117 @@ block content
     .anounses-list__footer
       p Trans Ager - это сеть магазинов в Республике Молдова
       p: a(href="").btn.primary перейти в каталог
+  #vacancies.modal.mfp-hide
+    .modal__header Posturi vacante
+    .modal__body
+      .vacancies__positions: #positions.panel-group(role='tablist' aria-multiselectable='true')
+        .panel
+          .panel__heading(role='tab')
+            a(data-toggle='collapse' data-parent='#positions' href='#positionID-1' aria-expanded='true')
+              span Бухгалтер
+              i.fa.fa-angle-right
+          #positionID-1.collapse.fade.in(role='tabpanel'): .position
+            .position__left
+              .position__params: ul
+                li Город: <strong>Кишинев</strong>
+                li Образование: <strong>Высшее</strong>
+                li Опыт работы: <strong>От 2-х до 5-и лет</strong>
+                li Зарплата: <strong>По договорённости</strong>
+                li График работы: <strong>Полный рабочий день</strong>
+              .position__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .position__right
+              .position__hr
+                .position__hr__title Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail
+                .position__hr__contacts: ul
+                  li
+                    span Телефон:
+                    a(href="tel:+37369000000") +373 69 000 000
+                  li
+                    span Контактное лицо:
+                    strong Имя Фамилия
+                  li
+                    span E-mail:
+                    a(href="mailto:hr@transager.md") hr@transager.md
+        .panel
+          .panel__heading(role='tab')
+            a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-2' aria-expanded='false')
+              span водитель
+              i.fa.fa-angle-right
+          #positionID-2.collapse.fade(role='tabpanel'): .position
+            .position__left
+              .position__params: ul
+                li Город: <strong>Кишинев</strong>
+                li Образование: <strong>Высшее</strong>
+                li Опыт работы: <strong>От 2-х до 5-и лет</strong>
+                li Зарплата: <strong>По договорённости</strong>
+                li График работы: <strong>Полный рабочий день</strong>
+              .position__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .position__right
+              .position__hr
+                .position__hr__title Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail
+                .position__hr__contacts: ul
+                  li
+                    span Телефон:
+                    a(href="tel:+37369000000") +373 69 000 000
+                  li
+                    span Контактное лицо:
+                    strong Имя Фамилия
+                  li
+                    span E-mail:
+                    a(href="mailto:hr@transager.md") hr@transager.md
+        .panel
+          .panel__heading(role='tab')
+            a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-3' aria-expanded='false')
+              span менеджер по продажам
+              i.fa.fa-angle-right
+          #positionID-3.collapse.fade(role='tabpanel'): .position
+            .position__left
+              .position__params: ul
+                li Город: <strong>Кишинев</strong>
+                li Образование: <strong>Высшее</strong>
+                li Опыт работы: <strong>От 2-х до 5-и лет</strong>
+                li Зарплата: <strong>По договорённости</strong>
+                li График работы: <strong>Полный рабочий день</strong>
+              .position__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .position__right
+              .position__hr
+                .position__hr__title Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail
+                .position__hr__contacts: ul
+                  li
+                    span Телефон:
+                    a(href="tel:+37369000000") +373 69 000 000
+                  li
+                    span Контактное лицо:
+                    strong Имя Фамилия
+                  li
+                    span E-mail:
+                    a(href="mailto:hr@transager.md") hr@transager.md
+        .panel
+          .panel__heading(role='tab')
+            a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-4' aria-expanded='false')
+              span монтажник
+              i.fa.fa-angle-right
+          #positionID-4.collapse.fade(role='tabpanel'): .position
+            .position__left
+              .position__params: ul
+                li Город: <strong>Кишинев</strong>
+                li Образование: <strong>Высшее</strong>
+                li Опыт работы: <strong>От 2-х до 5-и лет</strong>
+                li Зарплата: <strong>По договорённости</strong>
+                li График работы: <strong>Полный рабочий день</strong>
+              .position__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            .position__right
+              .position__hr
+                .position__hr__title Свяжитесь с менеджером<br>или отправте SV на указанный е-Mail
+                .position__hr__contacts: ul
+                  li
+                    span Телефон:
+                    a(href="tel:+37369000000") +373 69 000 000
+                  li
+                    span Контактное лицо:
+                    strong Имя Фамилия
+                  li
+                    span E-mail:
+                    a(href="mailto:hr@transager.md") hr@transager.md
+    .modal__footer
+      a.btn.accent(href="vacancies.html") toate Posturi vacante
