@@ -17,25 +17,25 @@
       text-align: left;
       outline: none;
       padding: 5px 10px;
-      transition: .15s ease-in-out;
+      transition: 0.15s ease-in-out;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
 
       &::-webkit-input-placeholder {
-        transition: .15s ease-in-out
+        transition: 0.15s ease-in-out;
       }
 
       &::-moz-placeholder {
-        transition: .15s ease-in-out
+        transition: 0.15s ease-in-out;
       }
 
       &:-ms-input-placeholder {
-        transition: .15s ease-in-out
+        transition: 0.15s ease-in-out;
       }
 
       &:-moz-placeholder {
-        transition: .15s ease-in-out
+        transition: 0.15s ease-in-out;
       }
 
       &:focus {
@@ -163,7 +163,7 @@
       border-radius: 3px;
       position: relative;
       overflow: hidden;
-      transition: .15s ease-in-out;
+      transition: 0.15s ease-in-out;
       box-sizing: border-box;
     }
 
@@ -187,11 +187,11 @@
       top: 50%;
       margin-top: -6px;
       font-size: 12px;
-      transition: .25s ease-in-out;
+      transition: 0.25s ease-in-out;
     }
 
     .selectric-open .fa {
-      transform: rotate(180deg)
+      transform: rotate(180deg);
     }
 
     .selectric-focus .selectric {
@@ -282,7 +282,7 @@
       left: 0;
       background: #fff;
       z-index: -1;
-      box-shadow: 0 3px 7px rgba($baseColor, .15);
+      box-shadow: 0 3px 7px rgba($baseColor, 0.15);
     }
 
     .selectric-items .selectric-scroll {
@@ -360,7 +360,6 @@
     .selectric-items .selectric-group li {
       padding-left: 25px;
     }
-
   }
 
   &__checkbox {
@@ -371,7 +370,7 @@
     input {
       display: none;
 
-      &+label {
+      & + label {
         display: inline-flex;
         align-items: center;
         text-align: left;
@@ -387,13 +386,13 @@
           color: $successColor;
           border: 1px solid $lightColor;
           box-sizing: border-box;
-          transition: .15s ease-in-out;
+          transition: 0.15s ease-in-out;
           flex: none;
 
           .fa {
             display: block;
             font-size: 16px;
-            transition: .15s ease-in-out;
+            transition: 0.15s ease-in-out;
             transform: scale(0);
           }
         }
@@ -414,17 +413,17 @@
         }
       }
 
-      &:checked+label {
+      &:checked + label {
         .icon {
           border-color: $successColor;
 
           .fa {
-            transform: scale(1)
+            transform: scale(1);
           }
         }
       }
 
-      &:disabled+label {
+      &:disabled + label {
         cursor: default;
 
         .icon {
@@ -439,22 +438,17 @@
             color: $grayColor;
           }
         }
-
-
-
       }
     }
 
-
     &.filial {
-
       input {
-        &+label {
+        & + label {
           border: 1px solid $lightColor;
           border-radius: 3px;
           padding: 10px 20px;
           margin-bottom: 10px;
-          transition: .25s ease-in-out;
+          transition: 0.25s ease-in-out;
           display: flex;
 
           .icon {
@@ -466,9 +460,9 @@
           }
         }
 
-        &:checked+label {
+        &:checked + label {
           border-color: $successColor;
-          background-color: rgba($lightColor, .25);
+          background-color: rgba($lightColor, 0.25);
         }
       }
 
@@ -497,14 +491,12 @@
     &--separator {
       flex: 1;
     }
-
-
   }
 
   &__links {
     font-size: 0;
 
-    ul>li {
+    ul > li {
       display: inline-block;
       font-size: 14px;
       line-height: 20px;
@@ -526,7 +518,7 @@
         display: none;
       }
 
-      >a {
+      > a {
         color: $primaryColor;
         text-decoration: none;
 
@@ -578,7 +570,7 @@
       z-index: -1;
     }
 
-    .inputfile+label {
+    .inputfile + label {
       display: flex;
       align-items: center;
       font-size: 12px;
@@ -589,24 +581,24 @@
       overflow: hidden;
     }
 
-    .inputfile+label .icon {
+    .inputfile + label .icon {
       width: 1em;
       height: 1em;
     }
 
-    .inputfile+label {
+    .inputfile + label {
       color: $darkColor;
     }
 
-    .inputfile+label {
+    .inputfile + label {
       border: 1px solid $lightColor;
       background-color: white;
       padding: 0;
     }
 
-    .inputfile:focus+label,
-    .inputfile.has-focus+label,
-    .inputfile+label:hover {
+    .inputfile:focus + label,
+    .inputfile.has-focus + label,
+    .inputfile + label:hover {
       border-color: $darkColor;
     }
 
@@ -619,7 +611,7 @@
       padding-top: 5px;
     }
 
-    .inputfile+label span {
+    .inputfile + label span {
       display: block;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -633,7 +625,7 @@
       box-sizing: border-box;
     }
 
-    .inputfile+label strong {
+    .inputfile + label strong {
       display: block;
       flex: none;
       white-space: nowrap;
@@ -651,14 +643,14 @@
       }
     }
 
-    .inputfile:focus+label strong,
-    .inputfile.has-focus+label strong,
-    .inputfile+label:hover strong {
+    .inputfile:focus + label strong,
+    .inputfile.has-focus + label strong,
+    .inputfile + label:hover strong {
       background-color: $primaryColor;
     }
 
     @include mobile {
-      .inputfile+label {
+      .inputfile + label {
         display: block;
 
         span,
@@ -670,7 +662,112 @@
     }
   }
 
+  &__rate {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    margin-bottom: 10px;
+    .label {
+      flex: 1;
+    }
+    .rtg {
+      flex: none;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin: 0 -12px 0 0;
+      position: relative;
+      padding-left: 30px;
 
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        transform: scale(0);
+        opacity: 0;
+
+        &:checked ~ label {
+          color: goldenrod;
+        }
+
+        + label {
+          display: block;
+          margin-right: 12px;
+          cursor: pointer;
+          color: #edf0f7;
+          font-size: 24px;
+          line-height: 1;
+          transition: 0.15s linear;
+
+          &:hover ~ label {
+            color: goldenrod;
+          }
+
+          &:hover {
+            color: goldenrod;
+          }
+        }
+      }
+    }
+  }
+
+  &__file {
+    position: relative;
+    margin-bottom: 10px;
+
+    input {
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      z-index: 2;
+      border-radius: 3px;
+      background-color: $primaryColor;
+      color: white;
+      width: 41px;
+      height: 41px;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primaryColor, 10%);
+      }
+    }
+
+    span {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 45px;
+      line-height: 24px;
+      font-size: 14px;
+      padding: 10px;
+      color: rgba($baseColor, 0.5);
+      border: 1px solid $lightColor;
+      border-radius: 3px;
+      user-select: none;
+
+      &.active {
+        color: $baseColor;
+        border-color: $grayColor;
+      }
+    }
+  }
 }
 
 .auth-form {
@@ -702,7 +799,6 @@
   }
 
   &.thanks {
-
     .auth-form__title {
       color: $baseColor;
       margin: 0 0 10px;
@@ -752,7 +848,6 @@
       flex: 1;
     }
   }
-
 
   .btn {
     font-size: 12px;
@@ -812,14 +907,12 @@
     .form__control {
       justify-content: flex-end;
     }
-
   }
 
   @include mobile {
     padding-top: 0;
 
     .feedback {
-
       &__icon {
         display: none;
       }
@@ -832,7 +925,6 @@
       .form__control {
         justify-content: space-around;
       }
-
     }
   }
 }
@@ -840,13 +932,11 @@
 .profile--form,
 .address--form,
 .security--form {
-
   .form__action {
     text-align: right;
     padding-top: 0;
   }
 }
-
 
 input[type="number"] {
   -webkit-appearance: textfield;
@@ -854,7 +944,7 @@ input[type="number"] {
   appearance: textfield;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }

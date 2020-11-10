@@ -267,4 +267,17 @@ if (document.getElementById("google-map")) {
       });
     }
   }, 20000);
+  $('[data-show="modal"]').magnificPopup({ type: "inline" });
+  $("#reviewFile").change(function () {
+    var filename = $(this)
+      .val()
+      .replace(/C:\\fakepath\\/i, "");
+    $("#reviewFilePlaceholder").addClass("active").html(filename);
+  });
+  /*document.getElementById("reviewFile").onchange = function () {
+    document.getElementById(
+      "reviewFilePlaceholder"
+    ).innerHTML = this.value.replace(/C:\\fakepath\\/i, "");
+  document.getElementById("reviewFilePlaceholder").classList.add("active");
+  };*/
 })();

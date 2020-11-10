@@ -249,6 +249,7 @@
             <div class="col md-3 sm-6"><a class="services-list__item" href=""><img src="img/th_service_4.png" alt=""/>
                 <div class="caption"><span>Буксировка грузовых авто</span></div></a></div>
           </div>
+          <div class="review-button"><a class="btn white" href="#review" data-show="modal"><i class="fa fa-thumbs-up"></i><span>оставить отзыв</span></a></div>
         </div>
       </section>
     </header>
@@ -713,7 +714,7 @@
         </div>
       </section>
       <div class="modal mfp-hide" id="vacancies">
-        <div class="modal__header">Posturi vacante</div>
+        <div class="modal__header">Posturi vacante </div>
         <div class="modal__body">
           <div class="vacancies__positions">
             <div class="panel-group" id="positions" role="tablist" aria-multiselectable="true">
@@ -846,6 +847,75 @@
         </div>
         <div class="modal__footer"><a class="btn accent" href="vacancies.html">toate Posturi vacante</a></div>
       </div>
+      <div class="modal sm mfp-hide" id="review">
+        <div class="modal__header">Добавить отзыв</div>
+        <div class="modal__subheader">
+          <p>Уважаемый клиент! Используй эту анкету, чтобы донести до нашего сведения свои продложения и жалобы. Нам очень важно каждое мнение о качестве нашего сервиса товаров.</p>
+        </div>
+        <div class="modal__body">
+          <div class="row">
+            <div class="col sm-6">
+              <div class="form__input">
+                <input type="text" name="reviewName" placeholder="Ваше имя"/>
+              </div>
+            </div>
+            <div class="col sm-6">
+              <div class="form__input">
+                <input type="text" name="reviewCompany" placeholder="Название компании"/>
+              </div>
+            </div>
+            <div class="col sm-6">
+              <div class="form__input">
+                <input type="email" name="reviewEmail" placeholder="Ваш e-Mail"/>
+              </div>
+            </div>
+            <div class="col sm-6">
+              <div class="form__input">
+                <input type="tel" name="reviewPhone" placeholder="Ваш телефон"/>
+              </div>
+            </div>
+            <div class="col sm-6">
+              <div class="form__input">
+                <select name="reviewService">
+                  <option>Выберите тип услуги</option>
+                  <option value="1">Магазин автозапчастей</option>
+                  <option value="2">Грузоперевозки и экспедиция</option>
+                  <option value="3">Ремонт и обслуживание</option>
+                  <option value="4">Буксировка грузовых авто</option>
+                </select>
+              </div>
+            </div>
+            <div class="col sm-6">
+              <div class="form__rate"><span class="label">Оценка</span>
+                <div class="rtg">
+                  <input id="rate5" type="radio" name="rate"/>
+                  <label for="rate5"><i class="fa fa-star"></i></label>
+                  <input id="rate4" type="radio" name="rate"/>
+                  <label for="rate4"><i class="fa fa-star"></i></label>
+                  <input id="rate3" type="radio" name="rate"/>
+                  <label for="rate3"><i class="fa fa-star"></i></label>
+                  <input id="rate2" type="radio" name="rate"/>
+                  <label for="rate2"><i class="fa fa-star"></i></label>
+                  <input id="rate1" type="radio" name="rate"/>
+                  <label for="rate1"><i class="fa fa-star"></i></label>
+                </div>
+              </div>
+            </div>
+            <div class="col sm-6">
+              <div class="form__file">
+                <input type="file" name="reviewFile" id="reviewFile"/>
+                <label for="reviewFile"><i class="fa fa-upload"></i></label><span id="reviewFilePlaceholder">Добавить фото ...</span>
+              </div>
+            </div>
+            <div class="col xs-12">
+              <div class="form__input">
+                <textarea name="reviewMessage" cols="30" rows="10" placeholder="Ваше мнение о предоставленой услуге или товаре ..."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__footer"><a class="btn accent" href="">отправить отзыв</a></div>
+      </div>
     </main>
     <!-- END MAIN CONTENT-->
     <!-- START FOOTER-->
@@ -897,6 +967,7 @@
                   <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Личный кабинет</a></li>
                   <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Гарантия и возврат </a></li>
                   <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="">Доставка и оплата</a></li>
+                  <li><i class="fa fa-caret-right" aria-hidden="true"></i><a href="#review" data-show="modal">Oставить отзыв</a></li>
                 </ul>
               </nav>
             </div>

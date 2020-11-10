@@ -25,6 +25,9 @@ block headerContent
       .col.md-3.sm-6: a(href="").services-list__item
         img(src="img/th_service_4.png", alt="")
         .caption: span Буксировка грузовых авто
+    .review-button: a.btn.white(href="#review" data-show="modal")
+      i.fa.fa-thumbs-up
+      span оставить отзыв
 block content
   section.anounses-list: .container
     h2.section__title: span Новое в каталоге
@@ -79,7 +82,7 @@ block content
       p Trans Ager - это сеть магазинов в Республике Молдова
       p: a(href="").btn.primary перейти в каталог
   #vacancies.modal.mfp-hide
-    .modal__header Posturi vacante
+    .modal__header Posturi vacante 
     .modal__body
       .vacancies__positions: #positions.panel-group(role='tablist' aria-multiselectable='true')
         .panel
@@ -192,3 +195,38 @@ block content
                     a(href="mailto:hr@transager.md") hr@transager.md
     .modal__footer
       a.btn.accent(href="vacancies.html") toate Posturi vacante
+  #review.modal.sm.mfp-hide
+    .modal__header Добавить отзыв
+    .modal__subheader: p Уважаемый клиент! Используй эту анкету, чтобы донести до нашего сведения свои продложения и жалобы. Нам очень важно каждое мнение о качестве нашего сервиса товаров.
+    .modal__body
+      .row
+        .col.sm-6: .form__input: input(type="text", name="reviewName", placeholder="Ваше имя")
+        .col.sm-6: .form__input: input(type="text", name="reviewCompany", placeholder="Название компании")
+        .col.sm-6: .form__input: input(type="email", name="reviewEmail", placeholder="Ваш e-Mail")
+        .col.sm-6: .form__input: input(type="tel", name="reviewPhone", placeholder="Ваш телефон")
+        .col.sm-6: .form__input: select(name="reviewService")
+          option Выберите тип услуги
+          option(value="1") Магазин автозапчастей
+          option(value="2") Грузоперевозки и экспедиция
+          option(value="3") Ремонт и обслуживание
+          option(value="4") Буксировка грузовых авто
+        .col.sm-6: .form__rate
+          span.label Оценка
+          .rtg
+            input#rate5(type="radio", name="rate")
+            label(for="rate5"): i.fa.fa-star
+            input#rate4(type="radio", name="rate")
+            label(for="rate4"): i.fa.fa-star
+            input#rate3(type="radio", name="rate")
+            label(for="rate3"): i.fa.fa-star
+            input#rate2(type="radio", name="rate")
+            label(for="rate2"): i.fa.fa-star
+            input#rate1(type="radio", name="rate")
+            label(for="rate1"): i.fa.fa-star
+        .col.sm-6: .form__file
+          input(type="file", name="reviewFile")#reviewFile
+          label(for="reviewFile"): i.fa.fa-upload
+          span#reviewFilePlaceholder Добавить фото ...
+        .col.xs-12: .form__input: textarea(name="reviewMessage", cols="30", rows="10", placeholder="Ваше мнение о предоставленой услуге или товаре ...")
+    .modal__footer
+      a.btn.accent(href="") отправить отзыв
